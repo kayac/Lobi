@@ -33,7 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-
+- v5.2.31 - 2014/06/17
+	[ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.31.zip)
+	- マイグレーション時の不具合を修正    
+	[https://github.com/kayac/Lobi/issues/168](https://github.com/kayac/Lobi/issues/168)
+	
 - v5.2.30 - 2014/06/13
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.30.zip)
     - Android 特定条件での色ずれを修正
