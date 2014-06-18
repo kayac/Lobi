@@ -4,6 +4,19 @@
     <string name="lobirec_profile">プロフィール</string>
     <string name="lobirec_playlist">動画一覧</string>
     <string name="lobirec_help">ヘルプ</string>
-    <string name="lobirec_video_list_none">動画を投稿していません</string>
+    <string name="lobirec_too_long_title">タイトルが長過ぎます</string>
+    <string name="lobirec_too_long_description">コメントが長過ぎます</string>
+    <string name="lobirec_duplicated_video">既に投稿済みです</string>
+    <string name="locirec_connection_error">接続に失敗しました</string>
+    <string name="lobirec_share_this_video">この動画を友だちにも送ってみよう!</string>
+    <string name="lobirec_posted_successfully">投稿が成功しました。</string>
+    <string name="lobirec_share">共有する</string>
+    <string name="lobirec_close">閉じる</string>
+    <string name="lobirec_accuse_title">通報タイトル</string>
+    <string name="lobirec_accuse_ok">通報OK</string>
+    <string name="lobirec_failed">失敗しました</string>
+    <string name="lobirec_accuse_cancel">通報キャンセル</string>
+    <string name="lobirec_insert_name">名前を入力してください</string>
+    <string name="lobirec_cant_open_image">画像が開けません</string>
 
 </resources>
