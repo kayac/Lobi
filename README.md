@@ -33,6 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.2.33 - 2014/06/20  
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.33.zip)  
+    iOS Unityでの録画中の画面揺れを修正  
+    非RetinaDisplayデザイン追加  
+
 - v5.2.32 - 2014/06/18
 	[ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.32.zip)
 	- Android Unityでの録画中の画面揺れを修正
