@@ -37,6 +37,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.35.zip)  
     - nullチェック漏れを修正  
     [https://github.com/kayac/Lobi/issues/174](https://github.com/kayac/Lobi/issues/174)
+    - アプリサスペンド時に録画を継続するフラグを追加    
 
 - v5.2.34 - 2014/06/20  
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.34.zip)  
