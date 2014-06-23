@@ -33,6 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.2.35 - 2014/06/22  
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.35.zip)  
+    - nullチェック漏れを修正  
+    [https://github.com/kayac/Lobi/issues/174](https://github.com/kayac/Lobi/issues/174)
+
 - v5.2.34 - 2014/06/20  
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.34.zip)  
     - お知らせ欄から返信画面に遷移した時に不正な表示となる問題  
