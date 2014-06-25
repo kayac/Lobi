@@ -240,9 +240,9 @@
 /**
  * テキストと画像を指定してチャットを投稿します。
  *
- * @param groupExternalID 暗号化されたUserExternalIDを指定してください。
- * @param message UserExternalIDの暗号化に使用したIVを指定してください。
- * @param image UserExternalIDの暗号化に使用したIVを指定してください。
+ * @param groupExternalID GroupExternalIDを指定します。
+ * @param message チャット本文を指定します。画像のみの投稿の際は nil を指定してください。
+ * @param image 画像を指定します。チャット本文のみの投稿の際は nil を指定してください。
  */
 + (void)postChatWithGroupExternalID:(NSString *)groupExternalID
                             message:(NSString *)message

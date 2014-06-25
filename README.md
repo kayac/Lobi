@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.2.36 - 2014/06/25  
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.36.zip)  
+    - iPad popOverViewのwebViewサイズの不正表示を修正  
+
 - v5.2.35 - 2014/06/22  
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.35.zip)  
     - nullチェック漏れを修正  
