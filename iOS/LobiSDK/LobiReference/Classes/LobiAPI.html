@@ -45,7 +45,7 @@
 	
 	<option value="//api/name/askStampUnlocked:completion:">&nbsp;&nbsp;&nbsp;&nbsp;+ askStampUnlocked:completion:</option>
 	
-	<option value="//api/name/callAPI:params:completion:">&nbsp;&nbsp;&nbsp;&nbsp;+ callAPI:params:completion:</option>
+	<option value="//api/name/callAPI:method:params:completion:">&nbsp;&nbsp;&nbsp;&nbsp;+ callAPI:method:params:completion:</option>
 	
 	<option value="//api/name/changeLeaderWithExternalID:groupExternalID:completion:">&nbsp;&nbsp;&nbsp;&nbsp;+ changeLeaderWithExternalID:groupExternalID:completion:</option>
 	
@@ -111,9 +111,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Manage Account">Manage Account</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Ranking Methods">Ranking Methods</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Chat Methods">Chat Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Ranking Methods">Ranking Methods</a></span></li>
 	
 </ul></li>
 
@@ -131,7 +131,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/askStampUnlocked:completion:">askStampUnlocked:completion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/callAPI:params:completion:">callAPI:params:completion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/callAPI:method:params:completion:">callAPI:method:params:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/changeLeaderWithExternalID:groupExternalID:completion:">changeLeaderWithExternalID:groupExternalID:completion:</a></span></li>
 	
@@ -254,45 +254,13 @@
 						</ul>
 						
 						
-						<a title="Ranking Methods" name="task_Ranking Methods"></a>
-						<h3 class="subsubtitle task-title">Ranking Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/sendRanking:score:handler:">+&nbsp;sendRanking:score:handler:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/getRanking:type:origin:cursor:limit:handler:">+&nbsp;getRanking:type:origin:cursor:limit:handler:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/getRankingList:handler:">+&nbsp;getRankingList:handler:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/getRankingList:user:handler:">+&nbsp;getRankingList:user:handler:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
 						<a title="Chat Methods" name="task_Chat Methods"></a>
 						<h3 class="subsubtitle task-title">Chat Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/callAPI:params:completion:">+&nbsp;callAPI:params:completion:</a></code>
+		<code><a href="#//api/name/callAPI:method:params:completion:">+&nbsp;callAPI:method:params:completion:</a></code>
 	</span>
 	
 	
@@ -401,6 +369,38 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/postChatWithGroupExternalID:message:image:completion:">+&nbsp;postChatWithGroupExternalID:message:image:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Ranking Methods" name="task_Ranking Methods"></a>
+						<h3 class="subsubtitle task-title">Ranking Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sendRanking:score:handler:">+&nbsp;sendRanking:score:handler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getRanking:type:origin:cursor:limit:handler:">+&nbsp;getRanking:type:origin:cursor:limit:handler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getRankingList:handler:">+&nbsp;getRankingList:handler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getRankingList:user:handler:">+&nbsp;getRankingList:user:handler:</a></code>
 	</span>
 	
 	
@@ -565,8 +565,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/callAPI:params:completion:" title="callAPI:params:completion:"></a>
-	<h3 class="subsubtitle method-title">callAPI:params:completion:</h3>
+	<a name="//api/name/callAPI:method:params:completion:" title="callAPI:method:params:completion:"></a>
+	<h3 class="subsubtitle method-title">callAPI:method:params:completion:</h3>
 	
 	
 	
@@ -576,7 +576,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (void)callAPI:(NSString *)<em>path</em> params:(NSDictionary *)<em>params</em> completion:(LobiNetworkHandler)<em>handler</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (void)callAPI:(NSString *)<em>path</em> method:(LobiHTTPMethod)<em>method</em> params:(NSDictionary *)<em>params</em> completion:(LobiNetworkHandler)<em>handler</em></code></div>
 
     
 	
@@ -589,13 +589,13 @@
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>params</em></dt>
-			<dd><p>パラメータを指定します。</p></dd>
+			<dt><em>method</em></dt>
+			<dd><p>LobiHTTPMethodGETまたは、LobiHTTPMethodPOSTを指定します。</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>method</em></dt>
-			<dd><p>LobiHTTPMethodGETまたは、LobiHTTPMethodPOSTを指定します。</p></dd>
+			<dt><em>params</em></dt>
+			<dd><p>パラメータを指定します。</p></dd>
 		</dl>
 		
 	</div>
@@ -1378,17 +1378,17 @@ groupNameで指定した名前のグループが作成されます。</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>groupExternalID</em></dt>
-			<dd><p>暗号化されたUserExternalIDを指定してください。</p></dd>
+			<dd><p>GroupExternalIDを指定します。</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>message</em></dt>
-			<dd><p>UserExternalIDの暗号化に使用したIVを指定してください。</p></dd>
+			<dd><p>チャット本文を指定します。画像のみの投稿の際は nil を指定してください。</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>image</em></dt>
-			<dd><p>UserExternalIDの暗号化に使用したIVを指定してください。</p></dd>
+			<dd><p>画像を指定します。チャット本文のみの投稿の際は nil を指定してください。</p></dd>
 		</dl>
 		
 	</div>
@@ -1826,7 +1826,7 @@ groupNameで指定した名前のグループが作成されます。</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 KAYAC. All rights reserved. (Last updated: 2014-05-28)</span><br />
+						<p><span class="copyright">&copy; 2014 KAYAC. All rights reserved. (Last updated: 2014-06-25)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
