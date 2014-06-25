@@ -33,15 +33,12 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- v5.2.36 - 2014/06/25  
-    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.36.zip)  
-    - iPad popOverViewのwebViewサイズの不正表示を修正  
-
-- v5.2.35 - 2014/06/22  
+- v5.2.35 - 2014/06/25  
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.35.zip)  
     - nullチェック漏れを修正  
     [https://github.com/kayac/Lobi/issues/174](https://github.com/kayac/Lobi/issues/174)
     - アプリサスペンド時に録画を継続するフラグを追加    
+    - iPad popOverViewのwebViewサイズの不正表示を修正  
 
 - v5.2.34 - 2014/06/20  
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.34.zip)  
