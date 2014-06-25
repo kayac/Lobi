@@ -72,6 +72,7 @@ void LobiInterface::recStart()
     [LobiRec sharedInstance].hideFaceOnPreview = NO;
     [LobiRec sharedInstance].preventSpoiler    = NO;
     [LobiRec sharedInstance].capturePerFrame   = 3;
+    [LobiRec sharedInstance].stickyRecording   = YES;
     [LobiRec  startCapturing];
 }
 

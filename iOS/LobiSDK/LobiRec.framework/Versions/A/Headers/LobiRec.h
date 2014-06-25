@@ -124,6 +124,11 @@
 @property (nonatomic, readonly) EAGLContext *context;
 
 /**
+ * 録画中にアプリサスペンド時、アプリが復帰した場合に録画を自動的に再開します。
+ */
+@property (nonatomic, assign) BOOL stickyRecording;
+
+/**
  *  OpenGLコンテキストとviewをゲーム録画エンジンに設定します。
  *
  *  @param context ゲームにて生成したコンテキストを設定します。
