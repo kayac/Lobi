@@ -33,6 +33,12 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.2.36 - 2014/05/26
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.36.zip)  
+    
+    - 導入先アプリとのカテゴリ名の重複を防ぐ対応  
+    [https://github.com/kayac/Lobi/issues/176](https://github.com/kayac/Lobi/issues/176)
+
 - v5.2.35 - 2014/06/25  
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.35.zip)  
     - nullチェック漏れを修正  
