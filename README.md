@@ -34,14 +34,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 リリースノート
 ----------------------------
 - v5.2.36 - 2014/07/01
-    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.37.zip)
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.36.zip)
       
     - アイコンアップデートのLobiAPIを修正。  
-    [https://github.com/kayac/Lobi/issues/178](https://github.com/kayac/Lobi/issues/178)
-    
-- v5.2.36 - 2014/06/29
-    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.36.zip)  
-    
+    [https://github.com/kayac/Lobi/issues/178](https://github.com/kayac/Lobi/issues/178) 
     - 導入先アプリとのカテゴリ名の重複を防ぐ対応  
     [https://github.com/kayac/Lobi/issues/176](https://github.com/kayac/Lobi/issues/176)
 
