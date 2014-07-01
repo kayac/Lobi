@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lobi_group_list_no_groups"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/lobi_padding_high"
+    android:paddingTop="80dp"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lobi_arrow_home_top_01" />
+
+        <TextView
+            style="@style/lobi_textview_gray_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:paddingTop="@dimen/lobi_margin_low"
+            android:text="@string/lobi_create_private_group_button_tutorial" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="70dp" >
+
+        <TextView
+            android:id="@+id/lobi_group_list_no_groups_friend"
+            style="@style/lobi_textview_gray_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:lineSpacingExtra="6dp"
+            android:paddingRight="@dimen/lobi_margin_middle"
+            android:paddingTop="3dp"
+            android:text="@string/lobi_add_friend_button_tutorial" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lobi_arrow_home_bottom_01" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -33,6 +33,12 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.0 - 2014/07/01
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.0.zip)
+    - Android LobiSDKモジュール化  
+    - **AndroidのSDKについて、ディレクトリ構成やメソッド名が大きく変更されています。**
+    - **詳しくは、[移行ガイド](https://github.com/kayac/Lobi/wiki/transfer-5.3.0)を御覧ください。**
+
 - v5.2.36 - 2014/07/01
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.36.zip)
       
