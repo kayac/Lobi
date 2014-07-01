@@ -4,15 +4,16 @@ Lobi
 ダウンロード
 ------------
 
-[各バージョンごとのダウンロードはこちら](https://github.com/kayac/Lobi/releases)  
+バージョン毎のSDK及びサンプルコードがパッケージされたものが取得できます。  
 
-上記リンクからバージョン毎のSDK及びサンプルコードがパッケージされたものが取得できます。  
 - iOS
 	- チャット / LobiRec /ランキング
 		- CocoaTouch / Unity / Cocos2d / Cocos2d-x  
 - Android
 	- LobiRec / ランキング
 		- AndroidOS / Unity / Cocos2d-x  
+
+[https://github.com/kayac/Lobi/releases](https://github.com/kayac/Lobi/releases)
 
 登録
 ----
@@ -32,7 +33,13 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- v5.2.36 - 2014/05/26
+- v5.2.36 - 2014/07/01
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.37.zip)
+      
+    - アイコンアップデートのLobiAPIを修正。  
+    [https://github.com/kayac/Lobi/issues/178](https://github.com/kayac/Lobi/issues/178)
+    
+- v5.2.36 - 2014/06/29
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.36.zip)  
     
     - 導入先アプリとのカテゴリ名の重複を防ぐ対応  
