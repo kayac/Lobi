@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lobi="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- The main content view -->
+
+    <FrameLayout
+        android:id="@+id/content_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <view
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.kayac.lobi.libnakamap.components.MenuDrawer$ContentFrame"
+            android:background="@drawable/lobi_bg_light_repeat"
+            android:orientation="vertical" >
+
+            <com.kayac.lobi.libnakamap.components.ActionBar
+                android:id="@+id/lobi_action_bar"
+                style="@style/lobi_action_bar"
+                lobi:lobi_content_type="lobi_select_account"
+                lobi:lobi_text="lobi_accounts" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <com.kayac.lobi.libnakamap.components.FixedTab
+                    android:id="@+id/lobi_sample_fixed_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    lobi:lobi_icons="@array/lobi_group_list_fixed_tab_icons"
+                    lobi:lobi_titles="@array/lobi_group_list_fixed_tab_titles" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <com.kayac.lobi.libnakamap.components.InterceptableViewPager
+                        android:id="@+id/lobi_sample_view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lobi_img_shadow" />
+                </FrameLayout>
+            </LinearLayout>
+        </view>
+
+        <FrameLayout
+            android:id="@+id/lobi_group_list_footer_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:paddingBottom="@dimen/lobi_padding_high"
+            android:paddingRight="@dimen/lobi_padding_high" >
+
+            <ImageView
+                android:id="@+id/lobi_group_list_footer_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/lobi_icn_btn_addgroup" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lobi_sdk_terms_of_use"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- The navigation drawer -->
+
+    <include
+        android:id="@+id/menu_drawer"
+        layout="@layout/lobi_menu_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

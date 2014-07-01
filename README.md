@@ -8,10 +8,10 @@ Lobi
 
 - iOS
 	- チャット / LobiRec /ランキング
-		- CocoaTouch / Unity / Cocos2d / Cocos2d-x  
+		- CocoaTouch / Unity (4.5は対応予定) / Cocos2d / Cocos2d-x  
 - Android
-	- LobiRec / ランキング
-		- AndroidOS / Unity / Cocos2d-x  
+	- チャット / LobiRec / ランキング
+		- AndroidOS / Unity (4.5は対応予定) / Cocos2d-x  
 
 [https://github.com/kayac/Lobi/releases](https://github.com/kayac/Lobi/releases)
 
@@ -33,6 +33,14 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.0 - 2014/07/01
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.0.zip)
+    - Android LobiSDKモジュール化
+      - Cocos2d-x用プラグインは順次更新いたします
+      
+    - **AndroidのSDKについて、ディレクトリ構成やメソッド名が大きく変更されています。**
+    - **詳しくは、[移行ガイド](https://github.com/kayac/Lobi/wiki/transfer-5.3.0)を御覧ください。**
+
 - v5.2.36 - 2014/07/01
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.2.36.zip)
       
