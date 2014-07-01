@@ -8,10 +8,10 @@ Lobi
 
 - iOS
 	- チャット / LobiRec /ランキング
-		- CocoaTouch / Unity / Cocos2d / Cocos2d-x  
+		- CocoaTouch / Unity (4.5は対応予定) / Cocos2d / Cocos2d-x  
 - Android
 	- チャット / LobiRec / ランキング
-		- AndroidOS / Unity / Cocos2d-x  
+		- AndroidOS / Unity (4.5は対応予定) / Cocos2d-x  
 
 [https://github.com/kayac/Lobi/releases](https://github.com/kayac/Lobi/releases)
 
