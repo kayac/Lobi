@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.1 - 2014/07/02
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.1.zip)
+    - iOS Unityのつなぎ込み部分のバグ修正
+
 - v5.3.0 - 2014/07/01
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.0.zip)
     - Android LobiSDKモジュール化
