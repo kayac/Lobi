@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.2 - 2014/07/03
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.2.zip)
+    - version.depricatedを削除
+
 - v5.3.1 - 2014/07/02
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.1.zip)
     - iOS Unityのつなぎ込み部分のバグ修正
