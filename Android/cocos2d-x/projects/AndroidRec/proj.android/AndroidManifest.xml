@@ -6,8 +6,11 @@
 
     <!-- 以下のパーミッションを許可してください -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
     <!-- 実況を有効にする場合のみ必要です -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
@@ -15,7 +18,6 @@
     <uses-feature android:glEsVersion="0x00020000" />
 
     <application android:label="@string/app_name"
-        android:name="com.raftriders.androidRec.MyApplication"
         android:icon="@drawable/icon">
 
         <activity android:name=".AndroidRec"
@@ -30,54 +32,147 @@
         </activity>
 
         <!-- for LobiRecSDK START -->
-        <!-- 現在はRankingSDK同梱されているためRankingSDK用の設定も必要です -->
+        <meta-data
+            android:name="com.kayac.lobi.sdk.clientId"
+            android:value="f92bd261db0bf4a1cf277fcee37d26d07d1e06ec" >
+        </meta-data>
+        <meta-data
+            android:name="com.kayac.lobi.sdk.accountBaseName"
+            android:value="LobiSDK User" >
+        </meta-data>
+
+        <service android:name="com.kayac.lobi.sdk.service.AppInstallChecker" >
+        </service>
+
+        <receiver
+            android:name="com.kayac.lobi.sdk.receiver.AppInstallReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
         <activity
-            android:name="com.kayac.lobi.ranking.sdk.activity.RankingActivity"
+            android:name="com.kayac.lobi.sdk.activity.ad.AdRecommendActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            >
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.invitation.InvitationWebViewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.invitation.InvitationActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="invited"
+                    android:scheme="nakamap" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.RootActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/lobisdk_lobi_activity_theme"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="nakamapapp-f92bd261db0bf4a1cf277fcee37d26d07d1e06ec" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.profile.ProfileActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.profile.ProfileEditActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.profile.ProfilePublicGroupsActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.profile.ProfilePublicGroupsVisibilityActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.friend.SearchFriendActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.stamp.StampActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.group.CreateNewGroupActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.setting.WebViewSetting"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.group.ContactListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.group.ContactDeleteListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.group.ContactRecommendedActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.menu.MenuActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <service android:name="com.kayac.lobi.sdk.rec.service.MovieUploadService" />
 
-        <!-- リプレイ動画一覧画面 -->
         <activity
-            android:name="com.kayac.lobi.rec.ui.RecPlayActivity"
+            android:name="com.kayac.lobi.sdk.rec.activity.RecPlayActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            />
-        <!-- プレイ動画シェア画面 -->
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
-            android:name="com.kayac.lobi.rec.ui.RecPostVideoActivity"
+            android:name="com.kayac.lobi.sdk.rec.activity.RecPostVideoActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            />
-        <!-- プレイ動画シェア時用のSNSログイン画面 -->
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
-            android:name="com.kayac.lobi.rec.ui.RecSNSLoginActivity"
+            android:name="com.kayac.lobi.sdk.rec.activity.RecSNSLoginActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            />
-        <!-- 動画再生画面 -->
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
-            android:name="com.kayac.lobi.rec.ui.RecVideoPlayerActivity"
+            android:name="com.kayac.lobi.sdk.rec.activity.RecVideoPlayerActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            />
-        <!-- プレイ動画投稿サービス -->
-        <service android:name="com.kayac.lobi.rec.service.MovieUploadService" />
-        <!-- 広告の効果測定の為に使用します -->
-        <receiver
-            android:name="com.kayac.lobi.ranking.sdk.receiver.PackageAddedReceiver"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!-- for LobiRecSDK END -->
         
     </application>

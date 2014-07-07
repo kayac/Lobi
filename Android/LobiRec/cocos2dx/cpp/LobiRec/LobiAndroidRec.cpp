@@ -1,9 +1,9 @@
-#include "KLMVideoCapture.h"
+#include "LobiAndroidRec.h"
 #include <jni.h>
 #include <cocos2d.h>
 #include <platform/android/jni/JniHelper.h>
 
-#define CLASS_NAME "com/kayac/lobi/rec/cocos2dx/LobiRecCocos2dx"
+#define CLASS_NAME "com/kayac/lobi/libnakamap/rec/cocos2dx/LobiRecCocos2dx"
 
 #define CALL_STATIC_VOID_METHOD(methodName,signature,...)     \
     JniMethodInfo t; \
@@ -15,40 +15,46 @@
 
 using namespace cocos2d;
 
-void KLMVideoCapture::startCapturing() {
+void LobiAndroidRec::startCapturing() {
     CALL_STATIC_VOID_METHOD("startRecording", "()V", NULL);
 }
-void KLMVideoCapture::stopCapturing() {
+void LobiAndroidRec::stopCapturing() {
     CALL_STATIC_VOID_METHOD("stopRecording", "()V", NULL);
 }
-void KLMVideoCapture::setLiveWipeStatus(int status) {
+void LobiAndroidRec::resumeCapturing() {
+    CALL_STATIC_VOID_METHOD("resumeRecording", "()V", NULL);
+}
+void LobiAndroidRec::pauseCapturing() {
+    CALL_STATIC_VOID_METHOD("pauseRecording", "()V", NULL);
+}
+void LobiAndroidRec::setLiveWipeStatus(int status) {
     CALL_STATIC_VOID_METHOD("setLiveWipeStatus", "(I)V", status);
 }
-void KLMVideoCapture::setWipeSquareSize(int wipeSize) {
+void LobiAndroidRec::setWipeSquareSize(int wipeSize) {
     CALL_STATIC_VOID_METHOD("setWipeSquareSize", "(I)V", wipeSize);
 }
-void KLMVideoCapture::setWipePosition(int x, int y) {
+void LobiAndroidRec::setWipePosition(int x, int y) {
     CALL_STATIC_VOID_METHOD("setWipePosition", "(II)V", x, y);
 }
-void KLMVideoCapture::setMicEnable(bool enabled) {
+void LobiAndroidRec::setMicEnable(bool enabled) {
     CALL_STATIC_VOID_METHOD("setMicEnable", "(Z)V", enabled);
 }
-void KLMVideoCapture::setMicVolume(double volume) {
+void LobiAndroidRec::setMicVolume(double volume) {
     CALL_STATIC_VOID_METHOD("setMicVolume", "(D)V", volume);
 }
-void KLMVideoCapture::setGameSoundVolume(double volume) {
+void LobiAndroidRec::setGameSoundVolume(double volume) {
     CALL_STATIC_VOID_METHOD("setGameSoundVolume", "(D)V", volume);
 }
-void KLMVideoCapture::setHideFaceOnPreview(bool hidden) {
+void LobiAndroidRec::setHideFaceOnPreview(bool hidden) {
     CALL_STATIC_VOID_METHOD("setHideFaceOnPreview", "(Z)V", hidden);
 }
-void KLMVideoCapture::setPreventSpoiler(bool enabled) {
+void LobiAndroidRec::setPreventSpoiler(bool enabled) {
     CALL_STATIC_VOID_METHOD("setPreventSpoiler", "(Z)V", enabled);
 }
-void KLMVideoCapture::setCapturePerFrame(int frames) {
+void LobiAndroidRec::setCapturePerFrame(int frames) {
     CALL_STATIC_VOID_METHOD("setCapturePerFrame", "(I)V", frames);
 }
-bool KLMVideoCapture::hasMovie() {
+bool LobiAndroidRec::hasMovie() {
     bool ret = false;
     JniMethodInfo t;
     if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "hasMovie", "()Z")) {
@@ -57,7 +63,7 @@ bool KLMVideoCapture::hasMovie() {
     }
     return ret;
 }
-bool KLMVideoCapture::isSupported() {
+bool LobiAndroidRec::isSupported() {
     bool ret = false;
     JniMethodInfo t;
     if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "isSupported", "()Z")) {
@@ -66,7 +72,7 @@ bool KLMVideoCapture::isSupported() {
     }
     return ret;
 }
-bool KLMVideoCapture::isCapturing() {
+bool LobiAndroidRec::isCapturing() {
     bool ret = false;
     JniMethodInfo t;
     if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "isCapturing", "()Z")) {
@@ -75,7 +81,7 @@ bool KLMVideoCapture::isCapturing() {
     }
     return ret;
 }
-void KLMVideoCapture::presentLobiPostWithTitle(
+void LobiAndroidRec::presentLobiPostWithTitle(
     const char* title,
     const char* postDescription,
     const long postScore,
@@ -114,7 +120,7 @@ void KLMVideoCapture::presentLobiPostWithTitle(
         CCLOG("failed to find method named openPostVideoActivity");
     }
 }
-void KLMVideoCapture::presentLobiPlay() {
+void LobiAndroidRec::presentLobiPlay() {
     JniMethodInfo t;
     if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "openLobiPlayActivity", "()Z")) {
         t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);

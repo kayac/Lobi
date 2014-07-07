@@ -11,7 +11,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/HelloWorldScene.cpp
 
 # LobiRecSDKで使用するために追加
-LOCAL_SRC_FILES += ../../Classes/KLMVideoCapture.cpp ../../Classes/KLRInterface.cpp
+LOCAL_SRC_FILES += ../../Classes/LobiRec/LobiAndroidRec.cpp ../../Classes/LobiInterface.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 

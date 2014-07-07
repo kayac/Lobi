@@ -1,5 +1,5 @@
 #include "HelloWorldScene.h"
-#include "KLRInterface.h"
+#include "LobiInterface.h"
 #include "SimpleAudioEngine.h"
 
 using namespace CocosDenshion;
@@ -160,16 +160,16 @@ void HelloWorld::ccTouchesEnded(CCSet *pTouches, CCEvent *pEvent)
 
 void HelloWorld::recStartCB(CCObject* pSender)
 {
-    KLRInterface::startCapturing(1);
+    LobiInterface::recStart();
 }
 
 void HelloWorld::recStopCB(CCObject* pSender)
 {
-    KLRInterface::stopCapturing();
+    LobiInterface::recStop();
 }
 
 void HelloWorld::presentShareCB(CCObject* pSender)
 {
-    KLRInterface::openPostViewController();
+    LobiInterface::presentShare();
 }
 
