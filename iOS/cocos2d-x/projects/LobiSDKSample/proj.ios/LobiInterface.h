@@ -13,6 +13,7 @@ namespace LobiInterface
 {
     void presentProfile();
     void presentChat();
+    void presentLobiPlay();
     
     void presentRanking();
     void sendRanking();
