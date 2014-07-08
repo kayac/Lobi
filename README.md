@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.3 - 2014/07/08
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.3.zip)
+    - モジュール化したAndroid Rec SDKが、Cocos2d-xの録画に対応しました
+
 - v5.3.2 - 2014/07/03
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.2.zip)
     - version.depricatedを削除
@@ -42,7 +46,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
     - iOS Unityのつなぎ込み部分のバグ修正
 
 - v5.3.0 - 2014/07/01
-    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.0.zip)
+[ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.0.zip)
     - Android LobiSDKモジュール化
       - Cocos2d-x用プラグインは順次更新いたします
       

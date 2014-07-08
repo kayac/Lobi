@@ -1,11 +1,13 @@
-#ifndef __KLM_VIDEO_CAPTURE__
-#define __KLM_VIDEO_CAPTURE__
+#ifndef __LOBI_ANDROID_REC__
+#define __LOBI_ANDROID_REC__
 
 
-class KLMVideoCapture {
+class LobiAndroidRec {
 public:
     static void startCapturing();
     static void stopCapturing();
+    static void resumeCapturing();
+    static void pauseCapturing();
     static void setLiveWipeStatus(int status);
     static void setWipeSquareSize(int wipeSize);
     static void setWipePosition(int x, int y);
@@ -27,4 +29,4 @@ public:
 };
 
 
-#endif // __KLM_VIDEO_CAPTURE__
+#endif // __LOBI_ANDROID_REC__
