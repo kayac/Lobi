@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.4 - 2014/07/11
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.4.zip)
+    - Unity / cocos2d / cocos2d-xの導入方法を簡易化(iOS)
+
 - v5.3.3 - 2014/07/08
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.3.zip)
     - モジュール化したAndroid Rec SDKが、Cocos2d-xの録画に対応しました
