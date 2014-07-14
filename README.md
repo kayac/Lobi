@@ -37,8 +37,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.4.zip)
     - Unity / cocos2d / cocos2d-xの導入方法を簡易化(iOS)
 
-    - **iOS LobiRecSDKについて導入方法が簡易化されています。**
-    - **v5.3.3以前のLobiRecSDKをご利用の場合は**
+    - **iOS LobiRecSDKについて導入方法が簡易化されています。[ドキュメントを確認ください](https://github.com/kayac/Lobi/wiki/iOS-Implement-LobiRecSDK)**
 
 - v5.3.3 - 2014/07/08
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.3.zip)
