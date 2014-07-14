@@ -116,7 +116,7 @@
 /**
  Unityエンジンを使用する場合に利用します。このコールバックのパラメータから取得できるフレームバッファをgDefaultFBOに設定します。
  */
-@property (nonatomic, copy) void(^activeFramebufferCallback)(GLuint);
+@property (nonatomic, copy) void(^activeFramebufferCallback)(GLuint) __attribute__ ((deprecated));
 
 /**
  * 本クラスに設定されたコンテキストを返します。
@@ -168,6 +168,11 @@
  *  ゲーム録画終了処理
  */
 + (void)stopCapturing;
+
+/**
+ *  ゲーム録画終了処理。完了ハンドラあり。
+ */
++ (void)stopCapturingWithHandler:(void(^)(void))completion;
 
 /**
  *  ゲーム録画ファイルが存在している場合trueを返します。
@@ -233,6 +238,10 @@
  * 録画のポーズの解除を行います。
  */
 + (void)resume;
+
++ (BOOL)prepareFrameForUnity;
++ (BOOL)appendFrameForUnity;
+
 
 @end
 
