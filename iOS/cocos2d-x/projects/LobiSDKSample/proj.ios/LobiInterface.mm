@@ -20,6 +20,11 @@ void LobiInterface::presentProfile()
     [LobiCore presentProfile];
 }
 
+void LobiInterface::presentLobiPlay()
+{
+    [LobiRec presentLobiPlay];
+}
+
 void LobiInterface::presentChat()
 {
     [LobiChat presentGroupList];
