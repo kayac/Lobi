@@ -8,7 +8,7 @@ Lobi
 
 - iOS
 	- チャット / LobiRec /ランキング
-		- CocoaTouch / Unity (4.5は対応予定) / Cocos2d / Cocos2d-x  
+		- CocoaTouch / Unity / Cocos2d / Cocos2d-x  
 - Android
 	- チャット / LobiRec / ランキング
 		- AndroidOS / Unity (4.5は対応予定) / Cocos2d-x  
