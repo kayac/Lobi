@@ -4,11 +4,11 @@
     android:versionCode="1"
     android:versionName="5.2.0" >
 
+    <!-- Used for accessing nakamap APIs -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Used for taking pictures and saving them to the gallery -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!--  -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Used for chat notification streaming -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application>
