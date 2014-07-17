@@ -79,4 +79,13 @@
  */
 + (void)setBackGroundCustomColor:(UIColor *)color;
 
+/**
+ *  ユーザーのExternalIDを指定して1on1チャットグループを作成します。
+ *
+ *  @param userExternalID 1on1チャットグループを作成するユーザーのExternalID
+ */
+
++ (void)create1on1GroupWithUserExternalID:(NSString *)userExternalID
+                                  handler:(void(^)(UIViewController *viewController))handler;
+
 @end

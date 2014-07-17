@@ -265,7 +265,6 @@
   <string name="lobi_you_havent">公開グループに参加していません</string>
   <string name="lobi_you_havent_join_into_private_group">グループがありません</string>
   <string name="lobi_you_may">※オフにしても、Lobiからの重要なお知らせが届く場合がございます。</string>
-  <string name="lobisdk_download_lobi">アプリ版Lobiをインストールして、連携してもよろしいですか?</string>
   <string name="lobisdk_error_already_sso_bound">このアカウントは認証済みです</string>
   <string name="lobisdk_error_group_with_specified_exid_does_not_exist">グループが存在しません！</string>
   <string name="lobisdk_proper_scheme_is_not_defined">AndroidManifest.xmlのcom.kayac.nakamap.sdk.activity.RootActivityのintent-filterを以下のように設定して下さい。\n\n  &lt;intent-filter&gt;\n      &lt;action android:name=\&quot;android.intent.action.VIEW\&quot; /&gt;\n      &lt;category android:name=\&quot;android.intent.category.DEFAULT\&quot; /&gt;\n      &lt;category android:name=\&quot;android.intent.category.BROWSABLE\&quot; /&gt;\n      &lt;data android:scheme=\&quot;nakamapapp-%1$s\&quot; /&gt;\n  &lt;/intent-filter&gt;</string>
@@ -274,4 +273,6 @@
   <string name="lobisdk_video_list_none">動画を投稿していません</string>
   <string name="lobisdk_chat_faq">チャットのよくある質問</string>
   <string name="lobisdk_rec_faq">LobiPlayのよくある質問</string>
+  <string name="lobisdk_download_lobi">アプリ版Lobiをインストールして、連携してもよろしいですか?</string>
+
 </resources>
