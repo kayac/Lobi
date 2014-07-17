@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.6 - 2014/07/17
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.6.zip)
+    - Android Ranking SDKで、proguardがかかっていた定数を修正
+
 - v5.3.5 - 2014/07/17
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.5.zip)
     - 1on1 chatの実装 (android ネイティブ)
