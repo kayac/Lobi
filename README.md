@@ -33,6 +33,13 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.5 - 2014/07/17
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.5.zip)
+    - 1on1 chatの実装 (android ネイティブ)
+    - AndroidManifest.xmlのpermissionの見直し (android)
+    - LobiRecのActionBarの挙動を修正 (android)
+    - UnityでのAndroidビルドの際の不具合を修正
+
 - v5.3.4 - 2014/07/11
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.4.zip)
     - Unity / cocos2d / cocos2d-xの導入方法を簡易化(iOS)
