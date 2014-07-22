@@ -33,6 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.7 - 2014/07/22
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.7.zip)
+    - Android Rec SDK を Unity 4.5 に対応
+    - 一部 Tegra GPU での録画画面の比率を修正
+    
 - v5.3.6 - 2014/07/17
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.6.zip)
     - Android Ranking SDKで、proguardがかかっていた定数を修正
