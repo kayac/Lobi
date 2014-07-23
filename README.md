@@ -36,7 +36,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 - v5.3.7 - 2014/07/23
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.7.zip)
     - Android Rec SDK を Unity 4.5 に対応
-      - ** 本バージョンから一時的に Unity 4.2 は非対応となります。** 今後対応いたします。
+      - **本バージョンから一時的に Android Rec SDK は Unity 4.2 に非対応となります。** 今後対応いたします。
     - 一部 Tegra GPU での録画画面の比率を修正
     
 - v5.3.6 - 2014/07/17
