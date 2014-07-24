@@ -36,8 +36,6 @@
 #import "../../Support/OpenGL_Internal.h"
 #import "../../ccMacros.h"
 
-#import <LobiRec/LobiRec.h>
-
 @implementation CCES2Renderer
 
 @synthesize context=_context;
@@ -94,8 +92,6 @@
 			glBindFramebuffer(GL_FRAMEBUFFER, _msaaFramebuffer);
 			
 		}
-
-        [LobiRec createFramebuffer:_defaultFramebuffer];
 
 		CHECK_GL_ERROR_DEBUG();
     }

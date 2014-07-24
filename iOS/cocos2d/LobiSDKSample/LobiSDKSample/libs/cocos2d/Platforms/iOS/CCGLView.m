@@ -79,8 +79,6 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 #import "../../CCConfiguration.h"
 #import "../../Support/OpenGL_Internal.h"
 
-#import <LobiRec/LobiRec.h>
-
 //CLASS IMPLEMENTATIONS:
 
 @interface CCGLView (Private)
@@ -200,8 +198,6 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 
 	_discardFramebufferSupported = [[CCConfiguration sharedConfiguration] supportsDiscardFramebuffer];
 
-    [LobiRec setCurrentContext:_context withGLView:self];
-
 	CHECK_GL_ERROR_DEBUG();
 
 	return YES;
@@ -274,13 +270,9 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 			glDiscardFramebufferEXT(GL_FRAMEBUFFER, 1, attachments);
 		}
 	}
-
-    [LobiRec prepareFrame];
     
 	if(![_context presentRenderbuffer:GL_RENDERBUFFER])
 		CCLOG(@"cocos2d: Failed to swap renderbuffer in %s\n", __FUNCTION__);
-
-    [LobiRec appendFrame:[_renderer defaultFrameBuffer]];
 
 	// We can safely re-bind the framebuffer here, since this will be the
 	// 1st instruction of the new main loop

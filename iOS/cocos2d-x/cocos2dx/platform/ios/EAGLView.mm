@@ -72,8 +72,6 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 #import "OpenGL_Internal.h"
 #import "CCEGLView.h"
 
-#import <LobiRec/LobiRec.h>
-
 //CLASS IMPLEMENTATIONS:
 
 #define IOS_MAX_TOUCHES_COUNT     10
@@ -243,8 +241,6 @@ static EAGLView *view = 0;
 
     //discardFramebufferSupported_ = [[CCConfiguration sharedConfiguration] supportsDiscardFramebuffer];
     
-    [LobiRec setCurrentContext:context_ withGLView:self];
-    
     CHECK_GL_ERROR();
     
     return YES;
@@ -321,14 +317,10 @@ static EAGLView *view = 0;
     
 #endif // __IPHONE_4_0
     
-    [LobiRec prepareFrame];
-
      if(![context_ presentRenderbuffer:GL_RENDERBUFFER])
         {
 //         CCLOG(@"cocos2d: Failed to swap renderbuffer in %s\n", __FUNCTION__);
         }
-
-    [LobiRec appendFrame:[renderer_ defaultFrameBuffer]];
 
 #if COCOS2D_DEBUG
     CHECK_GL_ERROR();
