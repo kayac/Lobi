@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.8 - 2014/07/24
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.8.zip)
+    - 1on1 chatの実装 (Unity)
+    
 - v5.3.7 - 2014/07/23
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.7.zip)
     - Android Rec SDK を Unity 4.5 に対応
