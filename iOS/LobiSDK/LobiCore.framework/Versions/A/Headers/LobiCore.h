@@ -103,6 +103,13 @@
  */
 + (void)setNavigationBarCustomColor:(UIColor *)color;
 
+/**
+ *  Lobiで表示されているViewControllerを全て閉じる
+ *
+ *  @param animated   アニメーションするかどうか
+ */
++ (void)dismissViewControllerAnimated:(BOOL)animated;
+
 @property (nonatomic, readonly) NSString *clientId;
 @property (nonatomic, copy)     NSString *accountBaseName;
 @property (nonatomic, readonly) NSString *adPlatform;

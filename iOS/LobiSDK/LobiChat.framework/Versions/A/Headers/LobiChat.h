@@ -3,6 +3,15 @@
 #import <Foundation/Foundation.h>
 #import "LobiChatConst.h"
 
+@protocol LobiChatAppLinkDelegate <NSObject>
+/**
+ *  #（ハッシュ）付きのチャットからメッセージを取得時呼び出されます。
+ *
+ *  @param value ハッシュタグ以降のメッセージ
+ */
+- (void)onAppLink:(NSString*)value;
+@end
+
 /**
  LobiSDKのチャット機能を制御するクラスです。
  */
@@ -63,7 +72,7 @@
 
 
 /**
- *  リンク機能（ハッシュタグ）が有効になっているアプリでにて
+ *  リンク機能（ハッシュタグ）が有効になっているアプリで
  *  ハッシュタグ(#)以降に表示されるメッセージをゲーム側に渡します。
  *
  *  @param URL application:openURL:sourceApplication:annotation:から渡されるURL
@@ -88,4 +97,18 @@
 + (void)create1on1GroupWithUserExternalID:(NSString *)userExternalID
                                   handler:(void(^)(UIViewController *viewController))handler;
 
+/**
+ *  #（ハッシュ）付きのチャットからメッセージを取得する delegate を設定します。
+ *  リンク機能（ハッシュタグ）が有効になっているアプリでのみ有効です 
+ *
+ *  @param delegate LobiChatAppLinkDelegate を実装したインスタンスを設定します。
+ */
++ (void)setAppLinkDelegate:(id<LobiChatAppLinkDelegate>)delegate;
+
+/**
+ *  #（ハッシュ）付きのチャットからメッセージを取得する delegate を取得します
+ *
+ *  @return ハッシュタグ以降のメッセージ 設定されている delegate
+ */
++ (id<LobiChatAppLinkDelegate>)appLinkDelegate;
 @end
