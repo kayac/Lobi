@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.9 - 2014/07/30
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.9.zip)
+    - App Link機能対応 (Unity・Android・iOS)
+    
 - v5.3.8 - 2014/07/24
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.8.zip)
     - 1on1 chatの実装 (Unity)
