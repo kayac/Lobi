@@ -37,6 +37,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.10.zip)
     - Android RecSDK メモリ・CPU使用量の削減
     - Android RecSDK Unity 4.2の再対応
+    - iOS RecSDK Cocos2d 及び Cocos2d-x で効果音量の変更が行われない問題に対応
+    - iOS RecSDK メモリ使用量の削減
+    - iOS RecSDK Unity で音が遅れる場合がある問題に対応
+    - iOS RecSDK 横画面表示時のネタバレ防止機能を最適化
     
 - v5.3.9 - 2014/07/30
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.9.zip)
