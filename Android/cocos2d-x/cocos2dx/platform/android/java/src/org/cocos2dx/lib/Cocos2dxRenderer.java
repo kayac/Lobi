@@ -156,11 +156,12 @@ public class Cocos2dxRenderer implements GLSurfaceView.Renderer {
 	}
 
 	public void handleOnPause() {
-	    LobiRecCocos2dx.stopRecording();
+        LobiRecCocos2dx.onPauseActivity();
 		Cocos2dxRenderer.nativeOnPause();
 	}
 
 	public void handleOnResume() {
+        LobiRecCocos2dx.onResumeActivity();
 		Cocos2dxRenderer.nativeOnResume();
 	}
 

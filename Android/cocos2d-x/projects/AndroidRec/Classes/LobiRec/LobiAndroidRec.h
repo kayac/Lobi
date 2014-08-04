@@ -17,6 +17,7 @@ public:
     static void setHideFaceOnPreview(bool hidden);
     static void setPreventSpoiler(bool enabled);
     static void setCapturePerFrame(int frames);
+    static void setStickyRecording(bool enabled);
     static bool hasMovie();
     static bool isSupported();
     static bool isCapturing();

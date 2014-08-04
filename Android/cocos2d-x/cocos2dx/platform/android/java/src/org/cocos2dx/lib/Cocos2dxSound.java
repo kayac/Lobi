@@ -271,7 +271,7 @@ public class Cocos2dxSound {
 
 	public float getEffectsVolume() {
         if(LobiAudio.isSupport() && mLobiSound != null){
-            return getEffectsVolume();
+            return mLobiSound.getEffectsVolume();
         }
 		return (this.mLeftVolume + this.mRightVolume) / 2;
 	}

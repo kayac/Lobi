@@ -33,6 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.10 - 2014/08/04
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.10.zip)
+    - Android RecSDK メモリ・CPU使用量の削減
+    - Android RecSDK Unity 4.2の再対応
+    
 - v5.3.9 - 2014/07/30
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.9.zip)
     - App Link機能対応 (Unity・Android・iOS)
@@ -44,7 +49,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 - v5.3.7 - 2014/07/23
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.7.zip)
     - Android Rec SDK を Unity 4.5 に対応
-      - **本バージョンから一時的に Android Rec SDK は Unity 4.2 に非対応となります。** 今後対応いたします。
+      - 本バージョンからv5.3.9までは Android Rec SDK は Unity 4.2 に非対応
     - 一部 Tegra GPU での録画画面の比率を修正
     
 - v5.3.6 - 2014/07/17

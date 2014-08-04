@@ -54,6 +54,9 @@ void LobiAndroidRec::setPreventSpoiler(bool enabled) {
 void LobiAndroidRec::setCapturePerFrame(int frames) {
     CALL_STATIC_VOID_METHOD("setCapturePerFrame", "(I)V", frames);
 }
+void LobiAndroidRec::setStickyRecording(bool enabled) {
+    CALL_STATIC_VOID_METHOD("setStickyRecording", "(Z)V", enabled);
+}
 bool LobiAndroidRec::hasMovie() {
     bool ret = false;
     JniMethodInfo t;
