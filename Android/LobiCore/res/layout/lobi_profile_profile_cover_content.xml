@@ -113,6 +113,7 @@
 
     <LinearLayout
         android:id="@+id/lobi_profile_profile_cover_content_edit_section"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
@@ -124,7 +125,6 @@
             android:paddingRight="@dimen/lobi_padding_high" />
 
         <LinearLayout
-            android:id="@+id/lobi_profile_profile_cover_content_edit_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/lobi_setting_row_white_selector"

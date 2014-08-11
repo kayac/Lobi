@@ -99,7 +99,6 @@
   <string name="lobi_group_member_members">맴버</string>
   <string name="lobi_group_settings">Group settings</string>
   <string name="lobi_group_wallpaper_title">Group Wallpaper</string>
-  <string name="lobi_help">도움말</string>
   <string name="lobi_hint_group_name">그룹 이름</string>
   <string name="lobi_history">이력</string>
   <string name="lobi_home">Home</string>
@@ -270,5 +269,9 @@
   <string name="lobisdk_error_group_with_specified_exid_does_not_exist">그룹이 존재하지 않습니다!</string>
   <string name="lobisdk_proper_scheme_is_not_defined">AndroidManifest.xml의com.kayac.nakamap.sdk.activity.RootActivity의intent-filter를 아래와 같이 설정해 주세요.\n\n  &lt;intent-filter&gt;\n      &lt;action android:name=\&quot;android.intent.action.VIEW\&quot; /&gt;\n      &lt;category android:name=\&quot;android.intent.category.DEFAULT\&quot; /&gt;\n      &lt;category android:name=\&quot;android.intent.category.BROWSABLE\&quot; /&gt;\n      &lt;data android:scheme=\&quot;nakamapapp-%1$s\&quot; /&gt;\n  &lt;/intent-filter&gt;</string>
   <string name="lobisdk_ranking">랭킹</string>
+  <string name="lobisdk_rec">Play Video</string>
+  <string name="lobisdk_video_list_none">No Video</string>
+  <string name="lobisdk_chat_faq">FAQ for LobiChat</string>
+  <string name="lobisdk_rec_faq">FAQ for LobiPlay</string>
   <string name="lobisdk_download_lobi">앱 버전 Lobi \n\n이 채팅을 보다 쾌적하게 사용하지 않겠습니까?</string>
 </resources>
