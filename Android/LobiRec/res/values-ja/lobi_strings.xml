@@ -18,5 +18,6 @@
     <string name="lobirec_accuse_cancel">通報キャンセル</string>
     <string name="lobirec_insert_name">名前を入力してください</string>
     <string name="lobirec_cant_open_image">画像が開けません</string>
+    <string name="lobirec_cant_open_video">再生できる動画がありません</string>
 
 </resources>
