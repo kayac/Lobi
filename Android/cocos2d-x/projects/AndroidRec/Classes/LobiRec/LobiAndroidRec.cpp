@@ -1,5 +1,4 @@
 #include "LobiAndroidRec.h"
-#include <jni.h>
 #include <cocos2d.h>
 #include <platform/android/jni/JniHelper.h>
 
@@ -87,7 +86,7 @@ bool LobiAndroidRec::isCapturing() {
 void LobiAndroidRec::presentLobiPostWithTitle(
     const char* title,
     const char* postDescription,
-    const long postScore,
+    const jlong postScore,
     const char* postCategory
 ) {
     JniMethodInfo t;

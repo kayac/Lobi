@@ -12,6 +12,7 @@
         android:layout_weight="1"
         android:layout_marginLeft="@dimen/lobi_padding_high"
         android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
         />
 
     <TextView
