@@ -1,6 +1,7 @@
 #ifndef __LOBI_ANDROID_REC__
 #define __LOBI_ANDROID_REC__
 
+#include <jni.h>
 
 class LobiAndroidRec {
 public:
@@ -24,7 +25,7 @@ public:
     static void presentLobiPostWithTitle(
         const char* title,
         const char* postDescription,
-        const long postScore,
+        const jlong postScore,
         const char* postCategory);
     static void presentLobiPlay();
 };

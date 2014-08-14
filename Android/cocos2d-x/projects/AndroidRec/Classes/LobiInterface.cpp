@@ -1,7 +1,7 @@
 #include "LobiInterface.h"
 #include "CCDirector.h"
 
-#import <LobiRec/LobiAndroidRec.h>
+#include "LobiRec/LobiAndroidRec.h"
 
 void LobiInterface::presentProfile()
 {
