@@ -33,6 +33,15 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.11 - 2014/08/14
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.11.zip)
+    - Android ChatSDK App Link の修正
+    - Android RecSDK Cocos2d-x スコア送信の修正
+    - Android RecSDK 動画アップローダの改善
+    - Android RecSDK Unity の改善
+        - 解像度の変更に対応
+        - 音割れの修正
+    
 - v5.3.10 - 2014/08/04
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.10.zip)
     - Android RecSDK メモリ・CPU使用量の削減
