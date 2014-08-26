@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.12 - 2014/08/26
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.12.zip)
+    - Android RecSDK 対応端末の更新
+    
 - v5.3.11 - 2014/08/14
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.11.zip)
     - Android ChatSDK App Link の修正
