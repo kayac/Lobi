@@ -58,11 +58,7 @@ public class Cocos2dxMusic {
 	// ===========================================================
 
 	public Cocos2dxMusic(final Context pContext) {
-	    if(LobiAudio.isSupport()){
-	        mLobiMusic = new LobiMusic(pContext);
-            this.mContext = pContext;
-	        return;
-	    }
+        mLobiMusic = new LobiMusic(pContext);
         this.mContext = pContext;
         this.initData();
 	}
@@ -80,7 +76,12 @@ public class Cocos2dxMusic {
 	// ===========================================================
 
 	public void preloadBackgroundMusic(final String pPath) {
-        if(LobiAudio.isSupport() && mLobiMusic != null){
+        if(LobiAudio.isSupport()){
+            // release old resource and create a new one
+            if (this.mBackgroundMediaPlayer != null) {
+                this.mBackgroundMediaPlayer.release();
+                this.mBackgroundMediaPlayer = null;
+            }
             mLobiMusic.preloadBackgroundMusic(pPath);
             return;
         }
@@ -100,7 +101,12 @@ public class Cocos2dxMusic {
 	}
 
 	public void playBackgroundMusic(final String pPath, final boolean isLoop) {
-        if(LobiAudio.isSupport() && mLobiMusic != null){
+        if(LobiAudio.isSupport()){
+            // LobiRec のサポート前に呼ばれていた BGM を止める
+            if (this.mBackgroundMediaPlayer != null) {
+                this.mBackgroundMediaPlayer.release();
+                this.mBackgroundMediaPlayer = null;
+            }
             mLobiMusic.playBackgroundMusic(pPath, isLoop);
             return;
         }
@@ -144,7 +150,12 @@ public class Cocos2dxMusic {
 	}
 
 	public void stopBackgroundMusic() {
-        if(LobiAudio.isSupport() && mLobiMusic != null){
+        if(LobiAudio.isSupport()){
+            // LobiRec のサポート前に呼ばれていた BGM を止める
+            if (this.mBackgroundMediaPlayer != null) {
+                this.mBackgroundMediaPlayer.release();
+                this.mBackgroundMediaPlayer = null;
+            }
             mLobiMusic.stopBackgroundMusic();
             return;
         }
@@ -158,7 +169,8 @@ public class Cocos2dxMusic {
 	}
 
 	public void pauseBackgroundMusic() {
-        if(LobiAudio.isSupport() && mLobiMusic != null){
+        if(LobiAudio.isSupport()
+           && this.mBackgroundMediaPlayer == null){    // cocos2d-x のプレイヤーを使っていないとき
             mLobiMusic.pauseBackgroundMusic();
             return;
         }
@@ -169,18 +181,20 @@ public class Cocos2dxMusic {
 	}
 
 	public void resumeBackgroundMusic() {
-        if(LobiAudio.isSupport() && mLobiMusic != null){
+        if(LobiAudio.isSupport()
+           && this.mBackgroundMediaPlayer == null){    // cocos2d-x のプレイヤーを使っていないとき
             mLobiMusic.resumeBackgroundMusic();
             return;
         }
-		if (this.mBackgroundMediaPlayer != null && this.mPaused) {
-			this.mBackgroundMediaPlayer.start();
-			this.mPaused = false;
-		}
-	}
+        if (this.mBackgroundMediaPlayer != null && this.mPaused) {
+            this.mBackgroundMediaPlayer.start();
+            this.mPaused = false;
+        }
+    }
 
 	public void rewindBackgroundMusic() {
-        if(LobiAudio.isSupport() && mLobiMusic != null){
+        if(LobiAudio.isSupport()
+           && this.mBackgroundMediaPlayer == null){    // cocos2d-x のプレイヤーを使っていないとき
             mLobiMusic.rewindBackgroundMusic();
             return;
         }
@@ -200,7 +214,8 @@ public class Cocos2dxMusic {
 	}
 
 	public boolean isBackgroundMusicPlaying() {
-        if(LobiAudio.isSupport() && mLobiMusic != null){
+        if(LobiAudio.isSupport()
+           && this.mBackgroundMediaPlayer == null){        // cocos2d-x のプレイヤーを使っていないとき
             return mLobiMusic.isBackgroundMusicPlaying();
         }
 		boolean ret = false;
@@ -215,7 +230,12 @@ public class Cocos2dxMusic {
 	}
 
 	public void end() {
-        if(LobiAudio.isSupport() && mLobiMusic != null){
+        if(LobiAudio.isSupport()){
+            // LobiRec のサポート前に呼ばれていた BGM を止める
+            if (this.mBackgroundMediaPlayer != null) {
+                this.mBackgroundMediaPlayer.release();
+                this.mBackgroundMediaPlayer = null;
+            }
             mLobiMusic.end();
             return;
         }
@@ -227,7 +247,8 @@ public class Cocos2dxMusic {
 	}
 
 	public float getBackgroundVolume() {
-        if(LobiAudio.isSupport() && mLobiMusic != null){
+        if(LobiAudio.isSupport()
+           && this.mBackgroundMediaPlayer == null){        // cocos2d-x のプレイヤーを使っていないとき
             return mLobiMusic.getBackgroundVolume();
         }
 		if (this.mBackgroundMediaPlayer != null) {
@@ -238,10 +259,7 @@ public class Cocos2dxMusic {
 	}
 
 	public void setBackgroundVolume(float pVolume) {
-        if(LobiAudio.isSupport() && mLobiMusic != null){
-            mLobiMusic.setBackgroundVolume(pVolume);
-            return;
-        }
+        mLobiMusic.setBackgroundVolume(pVolume);    // サポートに関係せずに設定する
 		if (pVolume < 0.0f) {
 			pVolume = 0.0f;
 		}

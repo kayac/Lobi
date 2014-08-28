@@ -13,9 +13,22 @@
         style="@style/lobi_action_bar"
         lobi:lobi_content_type="lobi_backable"
         lobi:lobi_text="ログイン" />
-    <WebView 
-        android:id="@+id/lobi_rec_sns_login_content"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="match_parent" >
+
+        <WebView
+            android:id="@+id/lobi_rec_sns_login_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/lobi_rec_sns_login_loading"
+            style="@android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
 </LinearLayout>

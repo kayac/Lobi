@@ -4,6 +4,7 @@
     android:versionCode="7"
     android:versionName="5.2.6" >
 
+    <!-- 実況を有効にする場合のみ必要です -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application>
@@ -19,6 +20,10 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="com.kayac.lobi.sdk.rec.activity.RecSNSLoginActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.kayac.lobi.sdk.rec.activity.RecVideoLoadingActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity

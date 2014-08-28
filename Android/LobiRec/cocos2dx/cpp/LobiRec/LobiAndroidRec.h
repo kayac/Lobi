@@ -5,6 +5,8 @@
 
 class LobiAndroidRec {
 public:
+    static void setRecorderSwitch(bool turnedOn);
+    static bool getRecorderSwitch();
     static void startCapturing();
     static void stopCapturing();
     static void resumeCapturing();
