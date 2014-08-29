@@ -160,6 +160,7 @@ void HelloWorld::ccTouchesEnded(CCSet *pTouches, CCEvent *pEvent)
 
 void HelloWorld::recStartCB(CCObject* pSender)
 {
+    SimpleAudioEngine::sharedEngine()->playBackgroundMusic("track.mp3", true);
     LobiInterface::recStart();
 }
 
