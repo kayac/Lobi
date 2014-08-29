@@ -82,11 +82,7 @@ public class Cocos2dxSound {
 	// ===========================================================
 
 	public Cocos2dxSound(final Context pContext) {
-        if(LobiAudio.isSupport()){
-            mLobiSound = new LobiSound(pContext);
-            this.mContext = pContext;
-            return;
-        }
+        mLobiSound = new LobiSound(pContext);
 		this.mContext = pContext;
 
 		this.initData();
@@ -115,27 +111,29 @@ public class Cocos2dxSound {
 	// ===========================================================
 
 	public int preloadEffect(final String pPath) {
-        if(LobiAudio.isSupport() && mLobiSound != null){
+        if(LobiAudio.isSupport()){
             return mLobiSound.preloadEffect(pPath);
         }
-		Integer soundID = this.mPathSoundIDMap.get(pPath);
-
-		if (soundID == null) {
-			soundID = this.createSoundIDFromAsset(pPath);
-			// save value just in case if file is really loaded
-			if (soundID != Cocos2dxSound.INVALID_SOUND_ID) {
-				this.mPathSoundIDMap.put(pPath, soundID);
-			}
-		}
-
-		return soundID;
+        return _preloadEffect(pPath);
 	}
+	
+    private int _preloadEffect(final String pPath) {
+        Integer soundID = this.mPathSoundIDMap.get(pPath);
+
+        if (soundID == null) {
+            soundID = this._createSoundIDFromAsset(pPath);
+            // save value just in case if file is really loaded
+            if (soundID != Cocos2dxSound.INVALID_SOUND_ID) {
+                this.mPathSoundIDMap.put(pPath, soundID);
+            }
+        }
+
+        return soundID;
+    }
+	
 
 	public void unloadEffect(final String pPath) {
-        if(LobiAudio.isSupport() && mLobiSound != null){
-            mLobiSound.unloadEffect(pPath);
-            return;
-        }
+        mLobiSound.unloadEffect(pPath);    // サポートに関係せずに実行する
 		// stop effects
 		final ArrayList<Integer> streamIDs = this.mPathStreamIDsMap.get(pPath);
 		if (streamIDs != null) {
@@ -154,7 +152,7 @@ public class Cocos2dxSound {
 	}
 
 	public int playEffect(final String pPath, final boolean pLoop) {
-        if(LobiAudio.isSupport() && mLobiSound != null){
+        if(LobiAudio.isSupport()){
             return mLobiSound.playEffect(pPath, pLoop);
         }
 		Integer soundID = this.mPathSoundIDMap.get(pPath);
@@ -165,7 +163,7 @@ public class Cocos2dxSound {
 			streamID = this.doPlayEffect(pPath, soundID.intValue(), pLoop);
 		} else {
 			// the effect is not prepared
-			soundID = this.preloadEffect(pPath);
+			soundID = this._preloadEffect(pPath);
 			if (soundID == Cocos2dxSound.INVALID_SOUND_ID) {
 				// can not preload effect
 				return Cocos2dxSound.INVALID_SOUND_ID;
@@ -191,10 +189,7 @@ public class Cocos2dxSound {
 	}
 
 	public void stopEffect(final int pStreamID) {
-        if(LobiAudio.isSupport() && mLobiSound != null){
-            mLobiSound.stopEffect(pStreamID);
-            return;
-        }
+        mLobiSound.stopEffect(pStreamID);    // サポートに関係せずに実行する
 		this.mSoundPool.stop(pStreamID);
 
 		// remove record
@@ -207,34 +202,22 @@ public class Cocos2dxSound {
 	}
 
 	public void pauseEffect(final int pStreamID) {
-        if(LobiAudio.isSupport() && mLobiSound != null){
-            mLobiSound.pauseEffect(pStreamID);
-            return;
-        }
+        mLobiSound.pauseEffect(pStreamID);    // サポートに関係せずに実行する
 		this.mSoundPool.pause(pStreamID);
 	}
 
 	public void resumeEffect(final int pStreamID) {
-        if(LobiAudio.isSupport() && mLobiSound != null){
-            mLobiSound.resumeEffect(pStreamID);
-            return;
-        }
+        mLobiSound.resumeEffect(pStreamID);    // サポートに関係せずに実行する
 		this.mSoundPool.resume(pStreamID);
 	}
 
 	public void pauseAllEffects() {
-        if(LobiAudio.isSupport() && mLobiSound != null){
-            mLobiSound.pauseAllEffects();
-            return;
-        }
+        mLobiSound.pauseAllEffects();    // サポートに関係せずに実行する
 		this.mSoundPool.autoPause();
 	}
 
 	public void resumeAllEffects() {
-        if(LobiAudio.isSupport() && mLobiSound != null){
-            mLobiSound.resumeAllEffects();
-            return;
-        }
+        mLobiSound.resumeAllEffects();    // サポートに関係せずに実行する
 		// can not only invoke SoundPool.autoResume() here, because
 		// it only resumes all effects paused by pauseAllEffects()
 		if (!this.mPathStreamIDsMap.isEmpty()) {
@@ -250,10 +233,7 @@ public class Cocos2dxSound {
 
 	@SuppressWarnings("unchecked")
 	public void stopAllEffects() {
-        if(LobiAudio.isSupport() && mLobiSound != null){
-            mLobiSound.stopAllEffects();
-            return;
-        }
+        mLobiSound.stopAllEffects();    // サポートに関係せずに実行する
 		// stop effects
 		if (!this.mPathStreamIDsMap.isEmpty()) {
 			final Iterator<?> iter = this.mPathStreamIDsMap.entrySet().iterator();
@@ -270,17 +250,14 @@ public class Cocos2dxSound {
 	}
 
 	public float getEffectsVolume() {
-        if(LobiAudio.isSupport() && mLobiSound != null){
+        if(LobiAudio.isSupport()){
             return mLobiSound.getEffectsVolume();
         }
 		return (this.mLeftVolume + this.mRightVolume) / 2;
 	}
 
 	public void setEffectsVolume(float pVolume) {
-        if(LobiAudio.isSupport() && mLobiSound != null){
-            mLobiSound.setEffectsVolume(pVolume);
-            return;
-        }
+        mLobiSound.setEffectsVolume(pVolume);    // サポートに関係せずに実行する
 		// pVolume should be in [0, 1.0]
 		if (pVolume < 0) {
 			pVolume = 0;
@@ -304,10 +281,7 @@ public class Cocos2dxSound {
 	}
 
 	public void end() {
-        if(LobiAudio.isSupport() && mLobiSound != null){
-            mLobiSound.end();
-            return;
-        }
+        mLobiSound.end();    // サポートに関係せずに実行する
 		this.mSoundPool.release();
 		this.mPathStreamIDsMap.clear();
 		this.mPathSoundIDMap.clear();
@@ -320,29 +294,33 @@ public class Cocos2dxSound {
 	}
 
 	public int createSoundIDFromAsset(final String pPath) {
-        if(LobiAudio.isSupport() && mLobiSound != null){
+        if(LobiAudio.isSupport()){
             return mLobiSound.preloadEffect(pPath);
         }
-		int soundID = Cocos2dxSound.INVALID_SOUND_ID;
-
-		try {
-			if (pPath.startsWith("/")) {
-				soundID = this.mSoundPool.load(pPath, 0);
-			} else {
-				soundID = this.mSoundPool.load(this.mContext.getAssets().openFd(pPath), 0);
-			}
-		} catch (final Exception e) {
-			soundID = Cocos2dxSound.INVALID_SOUND_ID;
-			Log.e(Cocos2dxSound.TAG, "error: " + e.getMessage(), e);
-		}
-
-		// mSoundPool.load returns 0 if something goes wrong, for example a file does not exist
-		if (soundID == 0) {
-			soundID = Cocos2dxSound.INVALID_SOUND_ID;
-		}
-
-		return soundID;
+		return _createSoundIDFromAsset(pPath);
 	}
+	
+    private int _createSoundIDFromAsset(final String pPath) {
+        int soundID = Cocos2dxSound.INVALID_SOUND_ID;
+
+        try {
+            if (pPath.startsWith("/")) {
+                soundID = this.mSoundPool.load(pPath, 0);
+            } else {
+                soundID = this.mSoundPool.load(this.mContext.getAssets().openFd(pPath), 0);
+            }
+        } catch (final Exception e) {
+            soundID = Cocos2dxSound.INVALID_SOUND_ID;
+            Log.e(Cocos2dxSound.TAG, "error: " + e.getMessage(), e);
+        }
+
+        // mSoundPool.load returns 0 if something goes wrong, for example a file does not exist
+        if (soundID == 0) {
+            soundID = Cocos2dxSound.INVALID_SOUND_ID;
+        }
+
+        return soundID;
+    }
 	
 	private int doPlayEffect(final String pPath, final int soundId, final boolean pLoop) {
 		// play sound
