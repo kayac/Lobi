@@ -64,14 +64,12 @@ void LobiInterface::recResume()
 
 void LobiInterface::presentShare()
 {
-    if (!LobiAndroidRec::isCapturing() && LobiAndroidRec::hasMovie()) {
-        LobiAndroidRec::presentLobiPostWithTitle(
-            "プレイ動画をシェアします！",
-            "神懸ったこの華麗なプレイ。やばい。",
-            100,  // score
-            ""    // category
-            );
-    }
+    LobiAndroidRec::presentLobiPostWithTitle(
+        "プレイ動画をシェアします！",
+        "神懸ったこの華麗なプレイ。やばい。",
+        100,  // score
+        ""    // category
+        );
 }
 
 

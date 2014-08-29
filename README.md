@@ -33,6 +33,12 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.3.13 - 2014/08/29
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.13.zip)
+    - Android RecSDK ユーザビリティの改善
+    - Android RecSDK 録音タイミングの改善
+    - iOS ChatSDK API呼び出し時のエラーレスポンスをRankingSDKの形式に合わせる
+    
 - v5.3.12 - 2014/08/26
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.12.zip)
     - Android RecSDK 対応端末の更新
@@ -44,7 +50,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
     - Android RecSDK 動画アップローダの改善
     - Android RecSDK Unity の改善
         - 解像度の変更に対応
-        - 音割れの修正
+        - 音割れの修正    
     
 - v5.3.10 - 2014/08/04
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.10.zip)

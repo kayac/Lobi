@@ -14,6 +14,18 @@
 
 using namespace cocos2d;
 
+void LobiAndroidRec::setRecorderSwitch(bool turnedOn) {
+    CALL_STATIC_VOID_METHOD("setRecorderSwitch", "(Z)V", turnedOn);
+}
+bool LobiAndroidRec::getRecorderSwitch() {
+    bool ret = false;
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "getRecorderSwitch", "()Z")) {
+        ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
+        t.env->DeleteLocalRef(t.classID);
+    }
+    return ret;
+}
 void LobiAndroidRec::startCapturing() {
     CALL_STATIC_VOID_METHOD("startRecording", "()V", NULL);
 }
