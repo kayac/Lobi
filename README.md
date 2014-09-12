@@ -33,6 +33,12 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4 - 2014/09/12
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.zip)  
+    - iOS RecSDK 録画性能の改善  
+    - iOS RecSDK 録画中インジケータの追加  
+    - iOS RecSDK あとのせ動画編集機能の一時削除  
+
 - v5.3.13 - 2014/08/29
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.3.13.zip)
     - Android RecSDK ユーザビリティの改善
