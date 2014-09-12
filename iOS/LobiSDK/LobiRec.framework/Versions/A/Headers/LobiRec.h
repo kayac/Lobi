@@ -20,7 +20,7 @@
  
  - ゲーム録画エンジンから送出される通知と通知名称
  - KLVDryingUpInStorageNotification
- ゲーム録画ファイルの保存領域が100MB以下になった際に録画処理が停止され、userInfoにnilを格納して通知する通知名称です。
+ ゲーム録画ファイルの保存領域が200MB以下になった際に録画処理が停止され、userInfoにnilを格納して通知する通知名称です。
  
  - KLVMovieCreatedNotification
  ゲーム録画情報をサーバにPOSTした際に、userInfoに"url"をキーとしたhttp://play.lobi.coのプレビューURLを格納して通知する通知名称です。
@@ -127,7 +127,16 @@
  * 録画中にアプリサスペンド時、アプリが復帰した場合に録画を自動的に再開します。
  */
 @property (nonatomic, assign) BOOL stickyRecording;
+
+
+/**
+ * 録画中にインジケータを表示します。
+ */
+@property (nonatomic, assign) BOOL recordingIndicator;
+
 @property (nonatomic, assign) BOOL canAfterRecording;
+
+@property (nonatomic, readonly) BOOL recorderSwitch;
 
 /**
  *  OpenGLコンテキストとviewをゲーム録画エンジンに設定します。
@@ -186,6 +195,14 @@
  * LobiPlayサイトを表示します。
  */
 + (void)presentLobiPlay;
++ (void)presentLobiPlay:(void(^)(void))prepareHandler
+           afterHandler:(void(^)(void))afterHandler;
++ (void)presentLobiPlay:(NSString*)userExId
+               category:(NSString*)category
+               letsPlay:(BOOL)letsPlay
+             metaFields:(NSString*)metaFields
+         prepareHandler:(void(^)(void))prepareHandler
+           afterHandler:(void(^)(void))afterHandler;
 
 /**
  *  動画のポスト画面を表示します。
@@ -203,6 +220,15 @@
                     postCategory:(NSString *)postCategory
                   prepareHandler:(void(^)(void))prepareHandler
                     afterHandler:(void(^)(void))afterHandler;
+
++ (void)presentLobiPostWithTitle:(NSString*)title
+                  postDescrition:(NSString*)postDescrition
+                       postScore:(int64_t)postScore
+                    postCategory:(NSString*)postCategory
+                    postMetaData:(NSString*)postMetaData
+                  prepareHandler:(void(^)(void))prepareHandler
+                    afterHandler:(void(^)(void))afterHandler;
+
 
 /**
  * ゲーム録画中に画面のスクリーンショットを取得することができます。
@@ -240,9 +266,13 @@
  */
 + (void)resume;
 
+
+
 + (BOOL)prepareFrameForUnity;
 + (BOOL)appendFrameForUnity;
 
++ (void)setRecorderSwitch:(BOOL)recorderSwitch;
++ (BOOL)removeUnretainedVideo;
 
 @end
 
