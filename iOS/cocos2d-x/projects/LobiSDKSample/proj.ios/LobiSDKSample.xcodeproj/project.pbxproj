@@ -237,15 +237,14 @@
 		4975C87C192F40510088A3C6 /* recindicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 4975C879192F40510088A3C6 /* recindicator.png */; };
 		4975C87D192F40510088A3C6 /* stopindicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 4975C87A192F40510088A3C6 /* stopindicator.png */; };
 		497ACD7218B70E7100998DE6 /* track.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 497ACD7118B70E7100998DE6 /* track.mp3 */; };
+		4983020C19D94D6400E6B6E5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4983020B19D94D6400E6B6E5 /* MessageUI.framework */; };
 		49A2CD6A189A457200BC1215 /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A2CD69189A457200BC1215 /* libwebsockets.a */; };
 		49F8225F18F2A54500D72262 /* LobiRec.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49F8225B18F2A54500D72262 /* LobiRec.bundle */; };
 		49F8226018F2A54500D72262 /* LobiRanking.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49F8225C18F2A54500D72262 /* LobiRanking.bundle */; };
 		49F8226118F2A54500D72262 /* LobiCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49F8225D18F2A54500D72262 /* LobiCore.bundle */; };
-		49F8226218F2A54500D72262 /* LobiChat.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49F8225E18F2A54500D72262 /* LobiChat.bundle */; };
 		49F8226718F2A56000D72262 /* LobiRec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F8226318F2A56000D72262 /* LobiRec.framework */; };
 		49F8226818F2A56000D72262 /* LobiRanking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F8226418F2A56000D72262 /* LobiRanking.framework */; };
 		49F8226918F2A56000D72262 /* LobiCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F8226518F2A56000D72262 /* LobiCore.framework */; };
-		49F8226A18F2A56000D72262 /* LobiChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F8226618F2A56000D72262 /* LobiChat.framework */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -747,6 +746,7 @@
 		4975C879192F40510088A3C6 /* recindicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recindicator.png; sourceTree = "<group>"; };
 		4975C87A192F40510088A3C6 /* stopindicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopindicator.png; sourceTree = "<group>"; };
 		497ACD7118B70E7100998DE6 /* track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track.mp3; sourceTree = "<group>"; };
+		4983020B19D94D6400E6B6E5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		49A2CD69189A457200BC1215 /* libwebsockets.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebsockets.a; sourceTree = "<group>"; };
 		49F8225318F2A52000D72262 /* LobiRec.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiRec.bundle; path = ../../../../LobiSDK/LobiRec.bundle; sourceTree = "<group>"; };
 		49F8225418F2A52000D72262 /* LobiRanking.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiRanking.bundle; path = ../../../../LobiSDK/LobiRanking.bundle; sourceTree = "<group>"; };
@@ -755,11 +755,9 @@
 		49F8225B18F2A54500D72262 /* LobiRec.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiRec.bundle; path = ../../../../LobiSDK/LobiRec.bundle; sourceTree = "<group>"; };
 		49F8225C18F2A54500D72262 /* LobiRanking.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiRanking.bundle; path = ../../../../LobiSDK/LobiRanking.bundle; sourceTree = "<group>"; };
 		49F8225D18F2A54500D72262 /* LobiCore.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiCore.bundle; path = ../../../../LobiSDK/LobiCore.bundle; sourceTree = "<group>"; };
-		49F8225E18F2A54500D72262 /* LobiChat.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiChat.bundle; path = ../../../../LobiSDK/LobiChat.bundle; sourceTree = "<group>"; };
 		49F8226318F2A56000D72262 /* LobiRec.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LobiRec.framework; path = ../../../../LobiSDK/LobiRec.framework; sourceTree = "<group>"; };
 		49F8226418F2A56000D72262 /* LobiRanking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LobiRanking.framework; path = ../../../../LobiSDK/LobiRanking.framework; sourceTree = "<group>"; };
 		49F8226518F2A56000D72262 /* LobiCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LobiCore.framework; path = ../../../../LobiSDK/LobiCore.framework; sourceTree = "<group>"; };
-		49F8226618F2A56000D72262 /* LobiChat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LobiChat.framework; path = ../../../../LobiSDK/LobiChat.framework; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -782,10 +780,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4983020C19D94D6400E6B6E5 /* MessageUI.framework in Frameworks */,
 				49F8226718F2A56000D72262 /* LobiRec.framework in Frameworks */,
 				49F8226818F2A56000D72262 /* LobiRanking.framework in Frameworks */,
 				49F8226918F2A56000D72262 /* LobiCore.framework in Frameworks */,
-				49F8226A18F2A56000D72262 /* LobiChat.framework in Frameworks */,
 				49446B2518975CB00099BD8B /* libsqlite3.0.dylib in Frameworks */,
 				49446B2318975CA90099BD8B /* MediaPlayer.framework in Frameworks */,
 				49446B2118975CA00099BD8B /* Security.framework in Frameworks */,
@@ -1419,7 +1417,6 @@
 				49F8225B18F2A54500D72262 /* LobiRec.bundle */,
 				49F8225C18F2A54500D72262 /* LobiRanking.bundle */,
 				49F8225D18F2A54500D72262 /* LobiCore.bundle */,
-				49F8225E18F2A54500D72262 /* LobiChat.bundle */,
 				49446AFB18974A1D0099BD8B /* LobiInterface.mm */,
 				49446AFC18974A1D0099BD8B /* LobiInterface.h */,
 				15A3D87E1682F7B3002FB0C5 /* cocos2dx.xcodeproj */,
@@ -1440,10 +1437,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4983020B19D94D6400E6B6E5 /* MessageUI.framework */,
 				49F8226318F2A56000D72262 /* LobiRec.framework */,
 				49F8226418F2A56000D72262 /* LobiRanking.framework */,
 				49F8226518F2A56000D72262 /* LobiCore.framework */,
-				49F8226618F2A56000D72262 /* LobiChat.framework */,
 				49F8225318F2A52000D72262 /* LobiRec.bundle */,
 				49F8225418F2A52000D72262 /* LobiRanking.bundle */,
 				49F8225518F2A52000D72262 /* LobiCore.bundle */,
@@ -1877,7 +1874,6 @@
 				4975C87B192F40510088A3C6 /* pauseindicator.png in Resources */,
 				4975C87D192F40510088A3C6 /* stopindicator.png in Resources */,
 				49F8226118F2A54500D72262 /* LobiCore.bundle in Resources */,
-				49F8226218F2A54500D72262 /* LobiChat.bundle in Resources */,
 				7855E0E1153FEF240059DD9A /* Default.png in Resources */,
 				D4EF949A15BD2D8B00D803EB /* Icon-57.png in Resources */,
 				4975C87C192F40510088A3C6 /* recindicator.png in Resources */,
@@ -2134,10 +2130,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../../../../LobiSDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../../LobiSDK";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2190,10 +2183,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../../../../LobiSDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../../LobiSDK";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

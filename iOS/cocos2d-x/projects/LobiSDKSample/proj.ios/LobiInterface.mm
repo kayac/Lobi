@@ -11,18 +11,12 @@
 #include "CCDirector.h"
 
 #import <LobiCore/LobiCore.h>
-#import <LobiChat/LobiChat.h>
 #import <LobiRanking/LobiRanking.h>
 #import <LobiRec/LobiRec.h>
 
 void LobiInterface::presentProfile()
 {
     [LobiCore presentProfile];
-}
-
-void LobiInterface::presentChat()
-{
-    [LobiChat presentGroupList];
 }
 
 void LobiInterface::presentRanking()

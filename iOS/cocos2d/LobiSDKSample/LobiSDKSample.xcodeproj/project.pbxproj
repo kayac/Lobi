@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		493176E118EBE7C800E83DD3 /* LobiRec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493176DD18EBE7C800E83DD3 /* LobiRec.framework */; };
-		493176E218EBE7C800E83DD3 /* LobiChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493176DE18EBE7C800E83DD3 /* LobiChat.framework */; };
 		493176E318EBE7C800E83DD3 /* LobiRanking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493176DF18EBE7C800E83DD3 /* LobiRanking.framework */; };
 		493176E418EBE7C800E83DD3 /* LobiCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493176E018EBE7C800E83DD3 /* LobiCore.framework */; };
 		493176E918EBE7DE00E83DD3 /* LobiRanking.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 493176E518EBE7DE00E83DD3 /* LobiRanking.bundle */; };
 		493176EA18EBE7DE00E83DD3 /* LobiRec.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 493176E618EBE7DE00E83DD3 /* LobiRec.bundle */; };
-		493176EB18EBE7DE00E83DD3 /* LobiChat.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 493176E718EBE7DE00E83DD3 /* LobiChat.bundle */; };
 		493176EC18EBE7DE00E83DD3 /* LobiCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 493176E818EBE7DE00E83DD3 /* LobiCore.bundle */; };
 		493C52AA18E2D5FA00C12896 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C52A918E2D5FA00C12896 /* OpenGLES.framework */; };
 		493C52AC18E2D5FA00C12896 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C52AB18E2D5FA00C12896 /* OpenAL.framework */; };
@@ -152,16 +150,17 @@
 		4975C881192F47500088A3C6 /* pauseindicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 4975C87E192F47500088A3C6 /* pauseindicator.png */; };
 		4975C882192F47500088A3C6 /* recindicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 4975C87F192F47500088A3C6 /* recindicator.png */; };
 		4975C883192F47500088A3C6 /* stopindicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 4975C880192F47500088A3C6 /* stopindicator.png */; };
+		4983020F19D94F4D00E6B6E5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4983020E19D94F4D00E6B6E5 /* MessageUI.framework */; };
+		4983021119D94F5300E6B6E5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4983021019D94F5300E6B6E5 /* MediaPlayer.framework */; };
+		4983021319D94F5F00E6B6E5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4983021219D94F5F00E6B6E5 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		493176DD18EBE7C800E83DD3 /* LobiRec.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LobiRec.framework; path = ../../LobiSDK/LobiRec.framework; sourceTree = "<group>"; };
-		493176DE18EBE7C800E83DD3 /* LobiChat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LobiChat.framework; path = ../../LobiSDK/LobiChat.framework; sourceTree = "<group>"; };
 		493176DF18EBE7C800E83DD3 /* LobiRanking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LobiRanking.framework; path = ../../LobiSDK/LobiRanking.framework; sourceTree = "<group>"; };
 		493176E018EBE7C800E83DD3 /* LobiCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LobiCore.framework; path = ../../LobiSDK/LobiCore.framework; sourceTree = "<group>"; };
 		493176E518EBE7DE00E83DD3 /* LobiRanking.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiRanking.bundle; path = ../../LobiSDK/LobiRanking.bundle; sourceTree = "<group>"; };
 		493176E618EBE7DE00E83DD3 /* LobiRec.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiRec.bundle; path = ../../LobiSDK/LobiRec.bundle; sourceTree = "<group>"; };
-		493176E718EBE7DE00E83DD3 /* LobiChat.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiChat.bundle; path = ../../LobiSDK/LobiChat.bundle; sourceTree = "<group>"; };
 		493176E818EBE7DE00E83DD3 /* LobiCore.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiCore.bundle; path = ../../LobiSDK/LobiCore.bundle; sourceTree = "<group>"; };
 		493C52A418E2D5FA00C12896 /* LobiSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LobiSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		493C52A718E2D5FA00C12896 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -446,6 +445,9 @@
 		4975C87E192F47500088A3C6 /* pauseindicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pauseindicator.png; path = Resources/pauseindicator.png; sourceTree = "<group>"; };
 		4975C87F192F47500088A3C6 /* recindicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recindicator.png; path = Resources/recindicator.png; sourceTree = "<group>"; };
 		4975C880192F47500088A3C6 /* stopindicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stopindicator.png; path = Resources/stopindicator.png; sourceTree = "<group>"; };
+		4983020E19D94F4D00E6B6E5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4983021019D94F5300E6B6E5 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4983021219D94F5F00E6B6E5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,8 +455,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4983021319D94F5F00E6B6E5 /* StoreKit.framework in Frameworks */,
+				4983021119D94F5300E6B6E5 /* MediaPlayer.framework in Frameworks */,
+				4983020F19D94F4D00E6B6E5 /* MessageUI.framework in Frameworks */,
 				493176E118EBE7C800E83DD3 /* LobiRec.framework in Frameworks */,
-				493176E218EBE7C800E83DD3 /* LobiChat.framework in Frameworks */,
 				493176E318EBE7C800E83DD3 /* LobiRanking.framework in Frameworks */,
 				493176E418EBE7C800E83DD3 /* LobiCore.framework in Frameworks */,
 				493C547318E302FB00C12896 /* libsqlite3.0.dylib in Frameworks */,
@@ -477,7 +481,6 @@
 			children = (
 				493176E518EBE7DE00E83DD3 /* LobiRanking.bundle */,
 				493176E618EBE7DE00E83DD3 /* LobiRec.bundle */,
-				493176E718EBE7DE00E83DD3 /* LobiChat.bundle */,
 				493176E818EBE7DE00E83DD3 /* LobiCore.bundle */,
 				493C52B918E2D5FA00C12896 /* LobiSDKSample */,
 				493C52A618E2D5FA00C12896 /* Frameworks */,
@@ -496,8 +499,10 @@
 		493C52A618E2D5FA00C12896 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4983021219D94F5F00E6B6E5 /* StoreKit.framework */,
+				4983021019D94F5300E6B6E5 /* MediaPlayer.framework */,
+				4983020E19D94F4D00E6B6E5 /* MessageUI.framework */,
 				493176DD18EBE7C800E83DD3 /* LobiRec.framework */,
-				493176DE18EBE7C800E83DD3 /* LobiChat.framework */,
 				493176DF18EBE7C800E83DD3 /* LobiRanking.framework */,
 				493176E018EBE7C800E83DD3 /* LobiCore.framework */,
 				493C547218E302FB00C12896 /* libsqlite3.0.dylib */,
@@ -966,7 +971,6 @@
 			files = (
 				493176E918EBE7DE00E83DD3 /* LobiRanking.bundle in Resources */,
 				493176EA18EBE7DE00E83DD3 /* LobiRec.bundle in Resources */,
-				493176EB18EBE7DE00E83DD3 /* LobiChat.bundle in Resources */,
 				493176EC18EBE7DE00E83DD3 /* LobiCore.bundle in Resources */,
 				493C52CC18E2D5FA00C12896 /* Icon.png in Resources */,
 				493C542718E2D60100C12896 /* ChangeLog in Resources */,
@@ -1160,10 +1164,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../../LobiSDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../LobiSDK";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LobiSDKSample/Prefix.pch;
@@ -1190,10 +1191,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../../LobiSDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../LobiSDK";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LobiSDKSample/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"LobiSDKSample/libs/kazmath/include\"";
