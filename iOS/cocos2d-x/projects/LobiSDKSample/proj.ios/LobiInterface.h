@@ -12,6 +12,7 @@
 namespace LobiInterface
 {
     void presentProfile();
+    void presentLobiPlay();
     
     void presentRanking();
     void sendRanking();
