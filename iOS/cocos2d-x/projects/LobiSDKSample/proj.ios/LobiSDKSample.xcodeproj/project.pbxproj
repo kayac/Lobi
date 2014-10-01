@@ -751,7 +751,6 @@
 		49F8225318F2A52000D72262 /* LobiRec.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiRec.bundle; path = ../../../../LobiSDK/LobiRec.bundle; sourceTree = "<group>"; };
 		49F8225418F2A52000D72262 /* LobiRanking.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiRanking.bundle; path = ../../../../LobiSDK/LobiRanking.bundle; sourceTree = "<group>"; };
 		49F8225518F2A52000D72262 /* LobiCore.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiCore.bundle; path = ../../../../LobiSDK/LobiCore.bundle; sourceTree = "<group>"; };
-		49F8225618F2A52000D72262 /* LobiChat.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiChat.bundle; path = ../../../../LobiSDK/LobiChat.bundle; sourceTree = "<group>"; };
 		49F8225B18F2A54500D72262 /* LobiRec.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiRec.bundle; path = ../../../../LobiSDK/LobiRec.bundle; sourceTree = "<group>"; };
 		49F8225C18F2A54500D72262 /* LobiRanking.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiRanking.bundle; path = ../../../../LobiSDK/LobiRanking.bundle; sourceTree = "<group>"; };
 		49F8225D18F2A54500D72262 /* LobiCore.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LobiCore.bundle; path = ../../../../LobiSDK/LobiCore.bundle; sourceTree = "<group>"; };
@@ -1444,7 +1443,6 @@
 				49F8225318F2A52000D72262 /* LobiRec.bundle */,
 				49F8225418F2A52000D72262 /* LobiRanking.bundle */,
 				49F8225518F2A52000D72262 /* LobiCore.bundle */,
-				49F8225618F2A52000D72262 /* LobiChat.bundle */,
 				49446B2418975CB00099BD8B /* libsqlite3.0.dylib */,
 				BF170DB212928DE900B8313A /* libxml2.dylib */,
 				BF170DB412928DE900B8313A /* libz.dylib */,
