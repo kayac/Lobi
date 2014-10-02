@@ -45,9 +45,8 @@ bool HelloWorld::init()
     {
 
         CCMenuItemFont *profile = CCMenuItemFont::create("プロフィール表示", this, menu_selector(HelloWorld::presentProfileCB));
-        CCMenuItemFont *chatGroup   = CCMenuItemFont::create("チャットグループ表示", this, menu_selector(HelloWorld::presentChatCB));
 
-        CCMenu* menu = CCMenu::create(profile, chatGroup, NULL);
+        CCMenu* menu = CCMenu::create(profile, NULL);
         menu->alignItemsHorizontallyWithPadding(20);
         menu->setPosition(ccp(size.width/2, size.height/2));
         addChild(menu, 1);
@@ -191,11 +190,6 @@ void HelloWorld::ccTouchesEnded(CCSet *pTouches, CCEvent *pEvent)
 void HelloWorld::presentProfileCB(CCObject* pSender)
 {
     LobiInterface::presentProfile();
-}
-
-void HelloWorld::presentChatCB(CCObject* pSender)
-{
-    LobiInterface::presentChat();
 }
 
 void HelloWorld::presentRankingCB(CCObject* pSender)

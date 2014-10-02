@@ -33,6 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.1 - 2014/10/2
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.1.zip)  
+    - iOS8対応  
+    - ChatSDKを削除
+
 - v5.4 - 2014/09/12
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.zip)  
     - iOS RecSDK 録画性能の改善  

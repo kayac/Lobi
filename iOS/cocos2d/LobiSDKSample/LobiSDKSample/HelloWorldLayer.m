@@ -14,7 +14,6 @@
 #import "AppDelegate.h"
 #import <LobiCore/LobiCore.h>
 #import <LobiRec/LobiRec.h>
-#import <LobiChat/LobiChat.h>
 #import <LobiCore/LobiAPI.h>
 #import <LobiRanking/LobiRanking.h>
 #import "SimpleAudioEngine.h"
@@ -61,11 +60,7 @@
                 [LobiCore presentProfile];
             }];
             
-            CCMenuItem *chatGroup = [CCMenuItemFont itemWithString:@"チャットグループ表示" block:^(id sender) {
-                [LobiChat presentGroupList];
-            }];
-            
-            CCMenu *menu = [CCMenu menuWithItems:profile, chatGroup, nil];
+            CCMenu *menu = [CCMenu menuWithItems:profile, nil];
             [menu alignItemsHorizontallyWithPadding:20];
             [menu setPosition:ccp(size.width/2, size.height/2)];
             [self addChild:menu];

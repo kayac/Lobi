@@ -19,7 +19,6 @@ public:
     void onEnter();
 
     void presentProfileCB(CCObject* pSender);
-    void presentChatCB(CCObject* pSender);
 
     void presentRankingCB(CCObject* pSender);
     void sendRankingCB(CCObject* pSender);

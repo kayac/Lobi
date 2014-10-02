@@ -88,6 +88,12 @@
  */
 + (void)presentAdWall;
 
+
++ (void)prepareExternalId:(NSString*)externalId
+         initializeVector:(NSString*)iv
+          accountBaseName:(NSString*)accountBaseName
+               strictExId:(BOOL)strictExId;
+
 /**
  *  iPadで表示する際に表示の開始位置と吹き出しの出る方向を設定する
  *
@@ -114,6 +120,7 @@
 @property (nonatomic, copy)     NSString *accountBaseName;
 @property (nonatomic, readonly) NSString *adPlatform;
 @property (nonatomic, readonly) NSString *adPlatformId;
+@property (nonatomic, assign) BOOL useStrictExId;
 
 @end
 

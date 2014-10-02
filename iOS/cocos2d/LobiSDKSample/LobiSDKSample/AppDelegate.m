@@ -11,7 +11,6 @@
 #import "AppDelegate.h"
 #import "IntroLayer.h"
 #import <LobiCore/LobiCore.h>
-#import <LobiChat/LobiChat.h>
 
 @implementation MyNavigationController
 
