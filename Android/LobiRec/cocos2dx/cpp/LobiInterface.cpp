@@ -2,6 +2,7 @@
 #include "CCDirector.h"
 
 #include "LobiRec/LobiAndroidRec.h"
+#include "LobiCore/LobiAndroidCore.h"
 
 void LobiInterface::presentProfile()
 {
@@ -16,6 +17,29 @@ void LobiInterface::presentChat()
 void LobiInterface::presentLobiPlay()
 {
     LobiAndroidRec::presentLobiPlay();
+}
+
+void LobiInterface::presentLobiPlay(
+    const char* userExid,
+    const char* category,
+    const bool letsplay,
+    const char* metaJson
+)
+{
+    LobiAndroidRec::presentLobiPlay(userExid, category, letsplay, metaJson);
+}
+
+void LobiInterface::prepareExternalId(
+        char* encryptedExternalId,
+        char* iv,
+        char* accountBaseName)
+{
+    LobiAndroidCore::prepareExternalId(encryptedExternalId, iv, accountBaseName);
+}
+
+void LobiInterface::enableStrictExid()
+{
+    LobiAndroidCore::enableStrictExid();
 }
 
 void LobiInterface::presentRanking()
@@ -81,4 +105,19 @@ bool LobiInterface::isRecording()
 bool LobiInterface::isPause()
 {
     // unsupported
+}
+
+void LobiInterface::initOpenSLAudio()
+{
+    LobiAndroidRec::initOpenSLAudio(22050);
+}
+
+bool LobiInterface::removeUnretainedVideo()
+{
+    return LobiAndroidRec::removeUnretainedVideo();
+}
+
+int LobiInterface::uploadQueueCount()
+{
+    return LobiAndroidRec::uploadQueueCount();
 }
