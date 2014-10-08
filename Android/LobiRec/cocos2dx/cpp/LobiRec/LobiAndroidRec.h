@@ -29,7 +29,22 @@ public:
         const char* postDescription,
         const jlong postScore,
         const char* postCategory);
+    static void presentLobiPostWithTitle(
+        const char* title,
+        const char* postDescription,
+        const jlong postScore,
+        const char* postCategory,
+        const char* postMetadata);
     static void presentLobiPlay();
+    static void presentLobiPlay(
+        const char* userExid,
+        const char* category,
+        const bool letsplay,
+        const char* metaJson
+    );
+    static void initOpenSLAudio(int sampleRate);
+    static bool removeUnretainedVideo();
+    static int  uploadQueueCount();
 };
 
 

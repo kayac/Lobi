@@ -19,7 +19,7 @@
         android:id="@+id/lobi_action_bar"
         style="@style/lobi_action_bar"
         lobi:lobi_content_type="lobi_menu"
-        lobi:lobi_text="動画一覧" />
+        lobi:lobi_text="@string/lobirec_playlist" />
     <WebView 
         android:id="@+id/lobi_rec_play_content"
         android:layout_width="match_parent"
