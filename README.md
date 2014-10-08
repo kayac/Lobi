@@ -38,7 +38,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
     - 動画へのメタ情報付与・メタ情報検索機能 (Android・Cocos2d-x)
     - 動画投稿画面のデザイン更新 (Android)
     - 一部のゲームで発生していた、タブレット端末の不具合を解消 (Android)
-    - strict exidモードの追加
+    - strict exidモードの追加 (Android)
 
 - v5.4.2 - 2014/10/6
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.2.zip)  
