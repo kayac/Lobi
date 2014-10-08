@@ -36,9 +36,9 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 - v5.4.3 - 2014/10/8
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.3.zip)  
     - 動画へのメタ情報付与・メタ情報検索機能 (Android・Cocos2d-x)
-    - strict exidモード (Android・Cocos2d-x)
     - 動画投稿画面のデザイン更新 (Android)
     - 一部のゲームで発生していた、タブレット端末の不具合を解消 (Android)
+    - strict exidモードの追加
 
 - v5.4.2 - 2014/10/6
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.2.zip)  
