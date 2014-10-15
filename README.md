@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.4 - 2014/10/15
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.4.zip)  
+    - UnityAppControllerのopenURLが呼ばれない問題の修正 (iOS・Unity)
+    
 - v5.4.3 - 2014/10/8
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.3.zip)  
     - 動画へのメタ情報付与・メタ情報検索機能 (Android・Cocos2d-x)
