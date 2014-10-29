@@ -46,5 +46,6 @@
   <color name="lobi_rec_gray">#999999</color>
   <color name="lobi_rec_pearl_gray">#CCCCCC</color>
   <color name="lobi_rec_text_shadow_white">#FFFFFF</color>
-  <color name="lobi_gray_lighter">#F7F7F7</color>
+  <color name="lobi_darker">#05000000</color>
+  <color name="lobi_transparent">#00FFFFFF</color>
 </resources>

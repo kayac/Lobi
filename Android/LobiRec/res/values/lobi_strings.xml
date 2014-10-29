@@ -2,7 +2,8 @@
 <resources>
 
     <string name="lobirec_profile">profile</string>
-    <string name="lobirec_playlist">playlist</string>
+    <string name="lobirec_video_list">video list</string>
+    <string name="lobirec_show_video_list">show video list</string>
     <string name="lobirec_help">help</string>
     <string name="lobirec_no_title">no title</string>
     <string name="lobirec_too_long_title">too long title</string>
@@ -12,6 +13,7 @@
     <string name="lobirec_connection_error">Connection error</string>
     <string name="lobirec_accepted_to_post_video">share this movie!</string>
     <string name="lobirec_posted_successfully">posted successfully</string>
+    <string name="lobirec_check_posted_video">check posted video</string>
     <string name="lobirec_share">share</string>
     <string name="lobirec_close">close</string>
     <string name="lobirec_accuse_title">accuse title</string>
@@ -27,7 +29,6 @@
     <string name="lobirec_facebook">Facebook</string>
     <string name="lobirec_nicovideo">niconico</string>
     <string name="lobirec_post_video">post video</string>
-    <string name="lobirec_video_list">video list</string>
     <string name="lobirec_title">title</string>
     <string name="lobirec_comment">comment</string>
     <string name="lobirec_video_menu">video menu</string>

@@ -70,16 +70,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="@dimen/lobi_padding_low"
+                    android:layout_marginBottom="@dimen/lobi_margin_section"
                     android:layout_marginLeft="@dimen/lobi_padding_high"
                     android:layout_marginRight="@dimen/lobi_padding_high"
-                    android:layout_marginTop="@dimen/lobi_padding_low" />
+                    android:layout_marginTop="@dimen/lobi_margin_section" />
             </FrameLayout>
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@drawable/lobi_line_gray_horizontal_repeat" />
+                android:layout_height="1px"
+                android:background="@color/lobi_pearl_gray" />
         </LinearLayout>
 
         <!-- content -->

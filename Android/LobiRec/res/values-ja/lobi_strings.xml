@@ -2,7 +2,8 @@
 <resources>
 
     <string name="lobirec_profile">プロフィール</string>
-    <string name="lobirec_playlist">みんなの動画</string>
+    <string name="lobirec_video_list">みんなのプレイ動画</string>
+    <string name="lobirec_show_video_list">みんなのプレイ動画を見る</string>
     <string name="lobirec_help">ヘルプ</string>
     <string name="lobirec_no_title">タイトルが入力されていません</string>
     <string name="lobirec_too_long_title">タイトルが長過ぎます</string>
@@ -12,6 +13,7 @@
     <string name="lobirec_connection_error">接続に失敗しました</string>
     <string name="lobirec_accepted_to_post_video">プレイ動画の投稿を受け付けました。\n※一覧に反映されるまでしばらくお待ちください</string>
     <string name="lobirec_posted_successfully">投稿が成功しました。</string>
+    <string name="lobirec_check_posted_video">動画を確認する</string>
     <string name="lobirec_share">共有する</string>
     <string name="lobirec_close">閉じる</string>
     <string name="lobirec_accuse_title">通報タイトル</string>
@@ -27,9 +29,10 @@
     <string name="lobirec_facebook">Facebook</string>
     <string name="lobirec_nicovideo">niconico</string>
     <string name="lobirec_post_video">プレイ動画を投稿</string>
-    <string name="lobirec_video_list">みんなのプレイ動画</string>
     <string name="lobirec_title">タイトル</string>
     <string name="lobirec_comment">コメント</string>
     <string name="lobirec_video_menu">動画メニュー</string>
+    <string name="lobirec_count_rest">残り</string>
+    <string name="lobirec_count_strings">文字</string>
 
 </resources>
