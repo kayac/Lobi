@@ -275,5 +275,6 @@
   <string name="lobisdk_rec_faq">LobiPlayのよくある質問</string>
   <string name="lobisdk_download_lobi">アプリ版Lobiをインストールして、連携してもよろしいですか?</string>
   <string name="lobisdk_confirm_cancel_profile_edit">変更をキャンセルしてプロフィール画面に戻りますか？</string>
+  <string name="lobisdk_network_disconnected">接続に失敗しました</string>
 
 </resources>

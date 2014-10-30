@@ -9,8 +9,8 @@
         >
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@drawable/lobi_line_gray"
+            android:layout_height="1px"
+            android:background="@color/lobi_pearl_gray"
             />
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,9 +31,9 @@
                 />
             <FrameLayout 
                 android:id="@+id/lobi_custom_dialog_footer_cancel_button_split"
-                android:layout_width="1dp"
+                android:layout_width="1px"
                 android:layout_height="match_parent"
-                android:background="@drawable/lobi_line_gray_vertical"
+                android:background="@color/lobi_pearl_gray"
                 android:visibility="gone"
                 />
             <!-- negative -->
@@ -48,9 +48,9 @@
                 />
             <FrameLayout 
                 android:id="@+id/lobi_custom_dialog_footer_button_split"
-                android:layout_width="1dp"
+                android:layout_width="1px"
                 android:layout_height="match_parent"
-                android:background="@drawable/lobi_line_gray_vertical"
+                android:background="@color/lobi_pearl_gray"
                 android:visibility="gone"
                 />
             <!-- ok -->
