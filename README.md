@@ -33,6 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.5 - 2014/10/30
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.5.zip)
+    - 動画メタ情報機能のUnity対応
+    - 動画投稿後のポップアップに、「動画を確認」の項目を追加
+    
 - v5.4.4 - 2014/10/15
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.4.zip)  
     - UnityAppControllerのopenURLが呼ばれない問題の修正 (iOS・Unity)
