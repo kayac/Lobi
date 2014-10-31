@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.6 - 2014/10/31
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.6.zip)
+    - Sticky Recording機能のUnity対応
+    
 - v5.4.5 - 2014/10/30
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.5.zip)
     - 動画メタ情報機能のUnity対応
