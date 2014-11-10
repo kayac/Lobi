@@ -7,10 +7,10 @@ Lobi
 バージョン毎のSDK及びサンプルコードがパッケージされたものが取得できます。  
 
 - iOS
-	- チャット / LobiRec /ランキング
+	- LobiRec /ランキング
 		- CocoaTouch / Unity / Cocos2d / Cocos2d-x  
 - Android
-	- チャット / LobiRec / ランキング
+	- LobiRec / ランキング
 		- AndroidOS / Unity / Cocos2d-x  
 
 [https://github.com/kayac/Lobi/releases](https://github.com/kayac/Lobi/releases)
