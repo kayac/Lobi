@@ -13,6 +13,7 @@
     
     <!-- 実況を有効にする場合のみ必要です -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
 
     <uses-sdk android:minSdkVersion="8"/>
     <uses-feature android:glEsVersion="0x00020000" />
@@ -44,6 +45,12 @@
         <service android:name="com.kayac.lobi.sdk.service.AppInstallChecker" >
         </service>
 
+        <service android:name="com.kayac.nakamap.sdk.auth.NakamapAuthCallbackService" android:exported="true">
+            <intent-filter>
+                <action android:name="com.kayac.nakamap.NAKAMAP_APP_AUTH_CALLBACK_f92bd261db0bf4a1cf277fcee37d26d07d1e06ec" />
+            </intent-filter>
+        </service>
+        
         <receiver
             android:name="com.kayac.lobi.sdk.receiver.AppInstallReceiver"
             android:exported="true" >
