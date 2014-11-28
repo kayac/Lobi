@@ -66,7 +66,8 @@ public class Cocos2dxSound {
 	
 	private int mStreamIdSyn;
 	private Semaphore mSemaphore;
-
+	private int simultaneousStreams;
+        
 	public static final int MAX_SIMULTANEOUS_STREAMS_DEFAULT = 5;
 	public static final int MAX_SIMULTANEOUS_STREAMS_I9100 = 3;
 	private static final float SOUND_RATE = 1.0f;
