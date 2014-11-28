@@ -34,5 +34,6 @@
     <string name="lobirec_video_menu">動画メニュー</string>
     <string name="lobirec_count_rest">残り</string>
     <string name="lobirec_count_strings">文字</string>
-
+    <string name="lobirec_already_use_mic">マイクを使用できないため実況が行えません。他のマイクを使用しているアプリケーションを終了してください。</string>
+    <string name="lobirec_recording_failed">録画に失敗しました</string>
 </resources>

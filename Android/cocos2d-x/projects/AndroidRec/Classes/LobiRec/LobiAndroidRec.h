@@ -5,6 +5,11 @@
 
 class LobiAndroidRec {
 public:
+    static int NO_ERROR;
+    static int ERROR_BAD_ENCODER_CONNECTION;
+
+    static void setRecorderSwitch(bool turnedOn);
+    static bool getRecorderSwitch();
     static void startCapturing();
     static void stopCapturing();
     static void resumeCapturing();
@@ -21,13 +26,30 @@ public:
     static void setStickyRecording(bool enabled);
     static bool hasMovie();
     static bool isSupported();
+    static int checkError();
     static bool isCapturing();
     static void presentLobiPostWithTitle(
         const char* title,
         const char* postDescription,
         const jlong postScore,
         const char* postCategory);
+    static void presentLobiPostWithTitle(
+        const char* title,
+        const char* postDescription,
+        const jlong postScore,
+        const char* postCategory,
+        const char* postMetadata);
     static void presentLobiPlay();
+    static void presentLobiPlay(
+        const char* userExid,
+        const char* category,
+        const bool letsplay,
+        const char* metaJson
+    );
+    static void initOpenSLAudio(int sampleRate);
+    static void setSecretMode(bool secretMode);
+    static bool removeUnretainedVideo();
+    static int  uploadQueueCount();
 };
 
 

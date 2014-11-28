@@ -11,9 +11,22 @@
  
 namespace LobiInterface
 {
+    bool isSignedIn();
     void presentProfile();
     void presentChat();
     void presentLobiPlay();
+    void presentLobiPlay(
+        const char* userExid,
+        const char* category,
+        const bool letsplay,
+        const char* metaJson
+    );
+    
+    void prepareExternalId(
+        char* encryptedExternalId,
+        char* iv,
+        char* accountBaseName);
+    void enableStrictExid();
      
     void presentRanking();
     void sendRanking();
@@ -27,6 +40,11 @@ namespace LobiInterface
  
     void presentShare();
     void wipePostion(float x, float y);
+    
+    void initOpenSLAudio();
+
+    bool removeUnretainedVideo();
+    int  uploadQueueCount();
 }
  
 #endif

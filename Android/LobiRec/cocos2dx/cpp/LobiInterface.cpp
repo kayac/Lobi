@@ -4,6 +4,11 @@
 #include "LobiRec/LobiAndroidRec.h"
 #include "LobiCore/LobiAndroidCore.h"
 
+bool LobiInterface::isSignedIn()
+{
+    return LobiAndroidCore::isSignedIn();
+}
+
 void LobiInterface::presentProfile()
 {
     // unsupported
@@ -92,7 +97,8 @@ void LobiInterface::presentShare()
         "プレイ動画をシェアします！",
         "神懸ったこの華麗なプレイ。やばい。",
         100,  // score
-        ""    // category
+        "",   // category
+        ""    // metaData
         );
 }
 
