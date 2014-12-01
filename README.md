@@ -33,9 +33,12 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- v5.4.6 - 2014/10/31
+- v5.4.6 - 2014/12/1
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.6.zip)
     - Sticky Recording機能のUnity対応
+    - プロフィール画面にLobiアカウントを表示
+    - Cocos2d-x 2.2.5 対応 (Android)
+    - Android 5.0 Lollipop 対応 (Cocos2d-x, Unity)
     
 - v5.4.5 - 2014/10/30
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.5.zip)
