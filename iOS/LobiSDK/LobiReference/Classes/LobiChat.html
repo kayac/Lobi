@@ -45,6 +45,10 @@
 	
 	<option value="//api/name/appFromURL:">&nbsp;&nbsp;&nbsp;&nbsp;+ appFromURL:</option>
 	
+	<option value="//api/name/appLinkDelegate">&nbsp;&nbsp;&nbsp;&nbsp;+ appLinkDelegate</option>
+	
+	<option value="//api/name/create1on1GroupWithUserExternalID:handler:">&nbsp;&nbsp;&nbsp;&nbsp;+ create1on1GroupWithUserExternalID:handler:</option>
+	
 	<option value="//api/name/createGroupListViewController:">&nbsp;&nbsp;&nbsp;&nbsp;+ createGroupListViewController:</option>
 	
 	<option value="//api/name/createGroupWithGroupExid:groupName:handler:">&nbsp;&nbsp;&nbsp;&nbsp;+ createGroupWithGroupExid:groupName:handler:</option>
@@ -56,6 +60,8 @@
 	<option value="//api/name/presentGroupList">&nbsp;&nbsp;&nbsp;&nbsp;+ presentGroupList</option>
 	
 	<option value="//api/name/presentGroupListWithGroupListType:">&nbsp;&nbsp;&nbsp;&nbsp;+ presentGroupListWithGroupListType:</option>
+	
+	<option value="//api/name/setAppLinkDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ setAppLinkDelegate:</option>
 	
 	<option value="//api/name/setBackGroundCustomColor:">&nbsp;&nbsp;&nbsp;&nbsp;+ setBackGroundCustomColor:</option>
 	
@@ -91,6 +97,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appFromURL:">appFromURL:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appLinkDelegate">appLinkDelegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/create1on1GroupWithUserExternalID:handler:">create1on1GroupWithUserExternalID:handler:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createGroupListViewController:">createGroupListViewController:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createGroupWithGroupExid:groupName:handler:">createGroupWithGroupExid:groupName:handler:</a></span></li>
@@ -102,6 +112,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentGroupList">presentGroupList</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentGroupListWithGroupListType:">presentGroupListWithGroupListType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setAppLinkDelegate:">setAppLinkDelegate:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setBackGroundCustomColor:">setBackGroundCustomColor:</a></span></li>
 	
@@ -214,6 +226,24 @@
 	</span>
 	
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/create1on1GroupWithUserExternalID:handler:">+&nbsp;create1on1GroupWithUserExternalID:handler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setAppLinkDelegate:">+&nbsp;setAppLinkDelegate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/appLinkDelegate">+&nbsp;appLinkDelegate</a></code>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -277,7 +307,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>リンク機能（ハッシュタグ）が有効になっているアプリでにて
+		<p>リンク機能（ハッシュタグ）が有効になっているアプリで
 ハッシュタグ(#)以降に表示されるメッセージをゲーム側に渡します。</p>
 	</div>		
 	
@@ -303,6 +333,93 @@
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>ハッシュタグ以降のメッセージ</p>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">LobiChat.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/appLinkDelegate" title="appLinkDelegate"></a>
+	<h3 class="subsubtitle method-title">appLinkDelegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<h1>（ハッシュ）付きのチャットからメッセージを取得する delegate を取得します</h1>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (id&lt;LobiChatAppLinkDelegate&gt;)appLinkDelegate</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>ハッシュタグ以降のメッセージ 設定されている delegate</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">LobiChat.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/create1on1GroupWithUserExternalID:handler:" title="create1on1GroupWithUserExternalID:handler:"></a>
+	<h3 class="subsubtitle method-title">create1on1GroupWithUserExternalID:handler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>ユーザーのExternalIDを指定して1on1チャットグループを作成します。</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)create1on1GroupWithUserExternalID:(NSString *)<em>userExternalID</em> handler:(void ( ^ ) ( UIViewController *viewController ))<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>userExternalID</em></dt>
+			<dd><p>1on1チャットグループを作成するユーザーのExternalID</p></dd>
+		</dl>
+		
+	</div>
+	
+	
 	
 	
 	
@@ -601,6 +718,54 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/setAppLinkDelegate:" title="setAppLinkDelegate:"></a>
+	<h3 class="subsubtitle method-title">setAppLinkDelegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<h1>（ハッシュ）付きのチャットからメッセージを取得する delegate を設定します。</h1>
+
+<p>リンク機能（ハッシュタグ）が有効になっているアプリでのみ有効です</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setAppLinkDelegate:(id&lt;LobiChatAppLinkDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p><a href="../Protocols/LobiChatAppLinkDelegate.html">LobiChatAppLinkDelegate</a> を実装したインスタンスを設定します。</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">LobiChat.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/setBackGroundCustomColor:" title="setBackGroundCustomColor:"></a>
 	<h3 class="subsubtitle method-title">setBackGroundCustomColor:</h3>
 	
@@ -663,7 +828,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 KAYAC. All rights reserved. (Last updated: 2014-06-23)</span><br />
+						<p><span class="copyright">&copy; 2014 KAYAC. All rights reserved. (Last updated: 2014-12-01)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

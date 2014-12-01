@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>KLRRankingRange Constants Reference</title>
+		<title>LobiChatAppLinkDelegate Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">KLRRankingRange Constants Reference</h1>
+				<h1 class="hideInXcode">LobiChatAppLinkDelegate Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -27,6 +27,21 @@
 	<option value="top">Jump To&#133;</option>
 	
 	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/onAppLink:">&nbsp;&nbsp;&nbsp;&nbsp;- onAppLink:</option>
 	
 	
 	
@@ -40,12 +55,30 @@
 
 
 
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/onAppLink:">onAppLink:</a></span></li>
+	
+</ul></li>
+
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="KLRRankingRange Constants Reference" name="top"></a>
+				<a title="LobiChatAppLinkDelegate Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,15 +87,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">KLRRankingRange Constants Reference</h1>
+						<h1 class="title title-header">LobiChatAppLinkDelegate Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">LobiAPI+Ranking.h</td>
+	<td class="specification-value">LobiChat.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -71,77 +107,87 @@
 					
 					
 					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/onAppLink:">&ndash;&nbsp;onAppLink:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li>
+						</ul>
+						
+					</div>
 					
-                    
-                    
-                    <h3 class="subsubtitle method-title">KLRRankingRange</h3>
-                    
-                    <div class="section">
-                        <!-- display enum values -->
-                        
-                        <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSUInteger, KLRRankingRange ) {<br/>
-                            
-                            &nbsp;&nbsp; <a href="">KLRRankingRangeToday</a> = 0,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">KLRRankingRangeWeek</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">KLRRankingRangeAll</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">KLRRankingRangeLastWeek</a>,<br/>
-                            
-                            };</code>
-                    
-                    </div>
-                    
-                    <div class="section section-methods">
-                        <h4 class="method-subtitle">Constants</h4>
-                        <dl class="termdef">
-                            
-                            <dt><a name="" title="KLRRankingRangeToday"></a><code>KLRRankingRangeToday</code></dt>
-<dd>
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/onAppLink:" title="onAppLink:"></a>
+	<h3 class="subsubtitle method-title">onAppLink:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<h1>（ハッシュ）付きのチャットからメッセージを取得時呼び出されます。</h1>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)onAppLink:(NSString *)<em>value</em></code></div>
 
     
-	<p>
-		Declared In <code class="declared-in-ref">LobiAPI+Ranking.h</code>.
-	</p>
 	
-</dd>
-                            
-                            <dt><a name="" title="KLRRankingRangeWeek"></a><code>KLRRankingRangeWeek</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">LobiAPI+Ranking.h</code>.
-	</p>
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>ハッシュタグ以降のメッセージ</p></dd>
+		</dl>
+		
+	</div>
 	
-</dd>
-                            
-                            <dt><a name="" title="KLRRankingRangeAll"></a><code>KLRRankingRangeAll</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">LobiAPI+Ranking.h</code>.
-	</p>
 	
-</dd>
-                            
-                            <dt><a name="" title="KLRRankingRangeLastWeek"></a><code>KLRRankingRangeLastWeek</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">LobiAPI+Ranking.h</code>.
-	</p>
 	
-</dd>
-                            
-                        </dl>
-                    </div>
-                    
-                    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">LobiChat.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
                     
                     
 				</div>
