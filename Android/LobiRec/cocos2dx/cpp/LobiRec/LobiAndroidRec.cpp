@@ -14,6 +14,10 @@
 
 using namespace cocos2d;
 
+// /src/com/kayac/lobi/libnakamap/rec/LobiRec.java と同一の定義をすること。
+int LobiAndroidRec::NO_ERROR = 0;
+int LobiAndroidRec::ERROR_BAD_ENCODER_CONNECTION = 0x80000001;
+
 void LobiAndroidRec::setRecorderSwitch(bool turnedOn) {
     CALL_STATIC_VOID_METHOD("setRecorderSwitch", "(Z)V", turnedOn);
 }
@@ -86,6 +90,15 @@ bool LobiAndroidRec::isSupported() {
     }
     return ret;
 }
+int LobiAndroidRec::checkError() {
+    int ret = NO_ERROR;
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "checkError", "()I")) {
+        ret = t.env->CallStaticIntMethod(t.classID, t.methodID, NULL);
+        t.env->DeleteLocalRef(t.classID);
+    }
+    return ret;
+}
 bool LobiAndroidRec::isCapturing() {
     bool ret = false;
     JniMethodInfo t;
@@ -153,6 +166,7 @@ void LobiAndroidRec::presentLobiPostWithTitle(
         CCLOG("failed to find method named openPostVideoActivity");
     }
 }
+
 void LobiAndroidRec::presentLobiPlay() {
     JniMethodInfo t;
     if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "openLobiPlayActivity", "()Z")) {
@@ -203,6 +217,10 @@ void LobiAndroidRec::presentLobiPlay(
 
 void LobiAndroidRec::initOpenSLAudio(int sampleRate) {
     CALL_STATIC_VOID_METHOD("initOpenSLAudio", "(I)V", sampleRate);
+}
+
+void LobiAndroidRec::setSecretMode(bool secretMode) {
+    CALL_STATIC_VOID_METHOD("setSecretMode", "(Z)V", secretMode);
 }
 
 bool LobiAndroidRec::removeUnretainedVideo() {

@@ -7,10 +7,10 @@ Lobi
 バージョン毎のSDK及びサンプルコードがパッケージされたものが取得できます。  
 
 - iOS
-	- チャット / LobiRec /ランキング
+	- LobiRec /ランキング
 		- CocoaTouch / Unity / Cocos2d / Cocos2d-x  
 - Android
-	- チャット / LobiRec / ランキング
+	- LobiRec / ランキング
 		- AndroidOS / Unity / Cocos2d-x  
 
 [https://github.com/kayac/Lobi/releases](https://github.com/kayac/Lobi/releases)
@@ -33,6 +33,13 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.6 - 2014/12/1
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.6.zip)
+    - Sticky Recording機能のUnity対応
+    - プロフィール画面にLobiアカウントを表示
+    - Cocos2d-x 2.2.5 対応 (Android)
+    - Android 5.0 Lollipop 対応 (Cocos2d-x, Unity)
+    
 - v5.4.5 - 2014/10/30
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.5.zip)
     - 動画メタ情報機能のUnity対応

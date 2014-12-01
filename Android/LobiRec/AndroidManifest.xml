@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kayac.lobi.sdk.rec"
-    android:versionCode="9"
-    android:versionName="5.2.8" >
+    android:versionCode="10"
+    android:versionName="5.2.9" >
 
     <!-- 実況を有効にする場合のみ必要です -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
 
     <application>
         <service android:name="com.kayac.lobi.sdk.rec.service.MovieUploadService" />

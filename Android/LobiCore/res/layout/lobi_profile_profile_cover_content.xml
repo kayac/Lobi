@@ -113,10 +113,10 @@
 
     <LinearLayout
         android:id="@+id/lobi_profile_profile_cover_content_edit_section"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:visibility="gone" >
 
         <com.kayac.lobi.libnakamap.components.DividerView
             android:layout_width="match_parent"
@@ -157,6 +157,71 @@
         android:background="@drawable/lobi_bg_light_repeat"
         android:orientation="vertical" >
 
+        <LinearLayout
+            android:id="@+id/lobi_profile_profile_lobi_account_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <!-- 見出し: Lobiアカウント -->
+
+            <TextView
+                style="@style/lobi_textview_brown_small_singleline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="@dimen/lobi_padding_middle"
+                android:paddingLeft="@dimen/lobi_padding_high"
+                android:paddingTop="@dimen/lobi_padding_high"
+                android:text="@string/lobisdk_lobi_account" />
+
+            <LinearLayout
+                android:id="@+id/lobi_profile_profile_lobi_account_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lobi_white_true"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/lobi_section_divider"
+                    android:background="@color/lobi_pearl_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/lobi_padding_middle" >
+
+                    <FrameLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="@dimen/lobi_padding_middle"
+                        android:background="@drawable/lobi_icn_lobi_large" >
+
+                        <com.kayac.lobi.libnakamap.components.FramedImageLoader
+                            android:id="@+id/lobi_profile_profile_lobi_account_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/lobi_profile_profile_lobi_account_name"
+                        style="@style/lobi_textview_black_large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/lobisdk_have_not_been_bound_with_lobi" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/lobi_section_divider"
+                    android:background="@color/lobi_pearl_gray" />
+            </LinearLayout>
+        </LinearLayout>
+
         <!-- 見出し: 投稿したプレイ動画 -->
 
         <com.kayac.lobi.libnakamap.components.SectionView
@@ -184,8 +249,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/lobi_margin_middle"
             android:layout_marginRight="@dimen/lobi_margin_middle"
-            android:visibility="gone"
-            android:text="@string/lobisdk_video_list_none" />
+            android:text="@string/lobisdk_video_list_none"
+            android:visibility="gone" />
 
         <!-- 動画リストをもっと見る -->
 

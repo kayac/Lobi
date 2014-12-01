@@ -91,8 +91,10 @@
 
 + (void)prepareExternalId:(NSString*)externalId
          initializeVector:(NSString*)iv
-          accountBaseName:(NSString*)accountBaseName
-               strictExId:(BOOL)strictExId;
+          accountBaseName:(NSString*)accountBaseName;
+
++ (BOOL)hasExidUser;
++ (void)bindToLobiAccount;
 
 /**
  *  iPadで表示する際に表示の開始位置と吹き出しの出る方向を設定する
@@ -122,6 +124,7 @@
 @property (nonatomic, readonly) NSString *adPlatformId;
 @property (nonatomic, assign) BOOL useStrictExId;
 
+@property (nonatomic, copy)     void(^afterHandler)(void);
 @end
 
 #endif

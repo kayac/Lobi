@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kayac.lobi.sdk"
-    android:versionCode="4"
-    android:versionName="5.2.3" >
+    android:versionCode="5"
+    android:versionName="5.2.4" >
 
     <!-- Used for accessing nakamap APIs -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,7 +23,13 @@
 
         <service android:name="com.kayac.lobi.sdk.service.AppInstallChecker" >
         </service>
-
+        
+        <service android:name="com.kayac.nakamap.sdk.auth.NakamapAuthCallbackService" android:exported="true">
+            <intent-filter>
+                <action android:name="com.kayac.nakamap.NAKAMAP_APP_AUTH_CALLBACK_f92bd261db0bf4a1cf277fcee37d26d07d1e06ec" />
+            </intent-filter>
+        </service>
+        
         <receiver
             android:name="com.kayac.lobi.sdk.receiver.AppInstallReceiver"
             android:exported="true" >

@@ -34,5 +34,7 @@
     <string name="lobirec_video_menu">video menu</string>
     <string name="lobirec_count_rest"></string>
     <string name="lobirec_count_strings"></string>
+    <string name="lobirec_already_use_mic">can not use the microphone. please exit the application that is using a microphone.</string>
+    <string name="lobirec_recording_failed">Recording failed</string>
 
 </resources>

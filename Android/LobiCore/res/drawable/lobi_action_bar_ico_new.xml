@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <item android:drawable="@drawable/lobi_icn_actionbar_menu"/>
-    <item android:top="10dp" android:right="7dp">
-        <bitmap android:gravity="right|top" android:src="@drawable/lobi_icn_actionbar_new" />
-    </item>
-    
-</layer-list>

@@ -11,6 +11,7 @@
  
 namespace LobiInterface
 {
+    bool isSignedIn();
     void presentProfile();
     void presentChat();
     void presentLobiPlay();

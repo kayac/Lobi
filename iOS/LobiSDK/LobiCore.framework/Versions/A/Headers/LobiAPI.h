@@ -58,6 +58,10 @@
             completion:(LobiNetworkHandler)handler;
 
 
++ (void)updateEncryptedExternalId:(NSString *)encryptedExternalId
+                               iv:(NSString *)iv
+                       completion:(LobiNetworkHandler)handler;
+
 @end
 
 #endif
