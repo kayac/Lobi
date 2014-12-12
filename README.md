@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.7 - 2014/12/12
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.7.zip)
+    - Unity4.5.5以上、iPhone6/6plusにおける録画エンコード処理不正の問題を修正
+
 - v5.4.6 - 2014/12/1
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.6.zip)
     - Sticky Recording機能のUnity対応

@@ -48,6 +48,7 @@
 "KLC_ERROR_UNKOWN" = "Unknown Error";
 "KLC_ERROR_401" = "401 token is not valid...";
 "KLC_ERROR_404_NOT_FOUND" = "Couldn't connect to server, check your internet connection and try again";
+"KLC_ERROR_500_OOPS" = "Connection Error";
 "KLC_ERROR_504_TIMEOUT" = "Connection timeout, check your internet connection and try again";
 "KLC_ERROR_502_MAINTENANCE" = "We're under maintenance, please wait";
 
