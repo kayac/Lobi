@@ -46,8 +46,10 @@ public:
         const bool letsplay,
         const char* metaJson
     );
+    static void presentLobiPlay(const char* videoId);
     static void initOpenSLAudio(int sampleRate);
     static void setSecretMode(bool secretMode);
+    static void setLoggingEnable(bool enabled);
     static bool removeUnretainedVideo();
     static int  uploadQueueCount();
 };

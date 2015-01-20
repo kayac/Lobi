@@ -278,5 +278,6 @@
   <string name="lobisdk_download_lobi">앱 버전 Lobi \n\n이 채팅을 보다 쾌적하게 사용하지 않겠습니까?</string>
   <string name="lobisdk_confirm_cancel_profile_edit">confirm cancel profile edit.</string>
   <string name="lobisdk_network_disconnected">network disconnected.</string>
+  <string name="lobisdk_retry">Retry</string>
   
 </resources>

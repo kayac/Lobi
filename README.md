@@ -33,6 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.9 - 2015/1/20
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.9.zip)
+    - Android Rec 録画フレームレートを向上（CapturePerFrameの最小値を1に引き下げ）
+    - Unity4.5.3以上、AndroidにおけるMultiThreaded Renderingに対応
+    
 - v5.4.8 - 2014/12/17
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.8.zip)
     - iOS Unity で、バックグラウンドから復帰時に音声が遅れる問題を修正

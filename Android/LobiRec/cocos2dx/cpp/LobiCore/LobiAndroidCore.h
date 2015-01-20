@@ -16,6 +16,7 @@ public:
         const char* encryptedExternalId,
         const char* iv, 
         const void (*callback)(JNIEnv* env, jobject obj, jint code));
+    static void bindToLobiAccount();
 };
 
 

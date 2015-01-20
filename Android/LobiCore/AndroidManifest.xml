@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kayac.lobi.sdk"
-    android:versionCode="5"
-    android:versionName="5.2.4" >
+    android:versionCode="6"
+    android:versionName="5.2.5" >
 
     <!-- Used for accessing nakamap APIs -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -117,7 +117,7 @@
         <activity
             android:name="com.kayac.lobi.sdk.activity.setting.WebViewSetting"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
         <activity
             android:name="com.kayac.lobi.sdk.activity.group.ContactListActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
@@ -138,6 +138,11 @@
         </activity>
         <activity
             android:name="com.kayac.lobi.sdk.activity.menu.MenuActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.kayac.lobi.sdk.activity.AppDownloadActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
         </activity>
