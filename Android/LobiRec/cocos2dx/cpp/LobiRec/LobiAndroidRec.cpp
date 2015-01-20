@@ -175,6 +175,31 @@ void LobiAndroidRec::presentLobiPlay() {
     }
 }
 
+void LobiAndroidRec::presentLobiPlay(const char* videoId) {
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(
+            t, CLASS_NAME, "openLobiPlayActivity",
+            "("
+            "Ljava/lang/String;"
+            ")Z"
+            )) {
+
+        jstring jvideoId = t.env->NewStringUTF(videoId);
+
+        t.env->CallStaticBooleanMethod(
+            t.classID, t.methodID, 
+            jvideoId,
+            0,
+            0);
+        
+        t.env->DeleteLocalRef(jvideoId);
+        
+        t.env->DeleteLocalRef(t.classID);
+    } else {
+        CCLOG("failed to find method named openLobiPlayActivity");
+    }
+}
+
 void LobiAndroidRec::presentLobiPlay(
     const char* userExid,
     const char* category,
@@ -221,6 +246,10 @@ void LobiAndroidRec::initOpenSLAudio(int sampleRate) {
 
 void LobiAndroidRec::setSecretMode(bool secretMode) {
     CALL_STATIC_VOID_METHOD("setSecretMode", "(Z)V", secretMode);
+}
+
+void LobiAndroidRec::setLoggingEnable(bool enabled) {
+    CALL_STATIC_VOID_METHOD("setLoggingEnable", "(Z)V", enabled);
 }
 
 bool LobiAndroidRec::removeUnretainedVideo() {

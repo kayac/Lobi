@@ -125,3 +125,14 @@ void LobiAndroidCore::updateExid(
         CCLOG("failed to find method named updateExid");
     }
 }
+
+void LobiAndroidCore::bindToLobiAccount()
+{
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, "com/kayac/lobi/sdk/LobiCore", "bindToLobiAccount", "()V")) {
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, 0, 0);
+        t.env->DeleteLocalRef(t.classID);
+    } else {
+        CCLOG("failed to find method named bindToLobiAccount");
+    }
+}
