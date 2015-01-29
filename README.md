@@ -33,6 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.10 - 2015/1/29
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.10.zip)  
+    - iOS で Cocos2d 及び Cocos2d-x での BGM 停止から再生が正しく最初から再生されるように  
+    - iOS で Unity から録画停止を呼び出した際に録画完了の通知を受け取れるように  
+
 - v5.4.9 - 2015/1/20
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.9.zip)
     - Android Rec 録画フレームレートを向上（CapturePerFrameの最小値を1に引き下げ）

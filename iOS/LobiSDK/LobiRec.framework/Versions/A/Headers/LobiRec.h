@@ -24,7 +24,8 @@
  
  - KLVMovieCreatedNotification
  ゲーム録画情報をサーバにPOSTした際に、userInfoに"url"をキーとしたhttp://play.lobi.coのプレビューURLを格納して通知する通知名称です。
- 
+ また"videoId"をキーとし、アップロードした動画のIDが格納されています。
+
  - KLVMovieCreatedErrorNotification
  ゲーム録画情報をサーバにPOST中エラーが発生した際に、userInfoにnilを格納して通知する通知名称です。
  
@@ -195,8 +196,14 @@
  * LobiPlayサイトを表示します。
  */
 + (void)presentLobiPlay;
+
 + (void)presentLobiPlay:(void(^)(void))prepareHandler
            afterHandler:(void(^)(void))afterHandler;
+
++ (void)presentLobiPlay:(NSString*)videoId
+         prepareHandler:(void(^)(void))prepareHandler
+           afterHandler:(void(^)(void))afterHandler;
+
 + (void)presentLobiPlay:(NSString*)userExId
                category:(NSString*)category
                letsPlay:(BOOL)letsPlay
