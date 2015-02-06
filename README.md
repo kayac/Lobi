@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.11 - 2015/2/6
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.11.zip)  
+    - Android 4.1, 4.2 におけるランキング画面のローディング表示を修正
+
 - v5.4.10 - 2015/1/29
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.10.zip)  
     - iOS で Cocos2d 及び Cocos2d-x での BGM 停止から再生が正しく最初から再生されるように  
