@@ -273,3 +273,8 @@ int LobiAndroidRec::uploadQueueCount()
     return ret;
 }
 
+void LobiAndroidRec::removeAllUploadingVideos()
+{
+    CALL_STATIC_VOID_METHOD("removeAllUploadingVideos", "()V", NULL);
+}
+

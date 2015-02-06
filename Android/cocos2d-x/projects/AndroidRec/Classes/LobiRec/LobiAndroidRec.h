@@ -52,6 +52,7 @@ public:
     static void setLoggingEnable(bool enabled);
     static bool removeUnretainedVideo();
     static int  uploadQueueCount();
+    static void removeAllUploadingVideos();
 };
 
 
