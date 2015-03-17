@@ -33,12 +33,6 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- Unity5向けunitypackageのβ版 - 2015/3/4
-    [ダウンロード](https://github.com/kayac/Lobi/tree/master/Unity/Lobi_Unity5.unitypackage) 
-    - Unity5で動作するようにunitypackegeを修正
-      - 詳細な実装方法は下記ドキュメントをご参照下さい。
-      - [LobiSDK Unity5](https://github.com/kayac/Lobi/wiki/LobiSDK-Unity5)
-    
 - v5.4.11 - 2015/2/6
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.11.zip)  
     - Android 4.1, 4.2 におけるランキング画面のローディング表示を修正
