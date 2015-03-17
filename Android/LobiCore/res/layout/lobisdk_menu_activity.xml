@@ -190,6 +190,19 @@
                     android:layout_height="wrap_content" />
 
                 <com.kayac.lobi.libnakamap.components.ListRow
+                    android:id="@+id/lobi_setting_general_othre_act_on_sect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    lobi:lobi_centerContentLayoutId="@layout/lobi_list_row_content_one_line"
+                    lobi:lobi_contentBackground="@drawable/lobi_setting_row_selector"
+                    lobi:lobi_leftContentVisible="false"
+                    lobi:lobi_rightContentLayoutId="@layout/lobi_list_row_content_arrow" />
+
+                <com.kayac.lobi.libnakamap.components.DividerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.kayac.lobi.libnakamap.components.ListRow
                     android:id="@+id/lobi_setting_general_help_faq"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
