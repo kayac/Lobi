@@ -36,6 +36,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 - v5.4.12 - 2015/3/18
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.12.zip)  
     - Android Unity 4.5 以降、Device Filter に FAT を設定した時のパフォーマンスを改善
+    - iOS Lobiのアカウントが既に存在しているかを取得するAPIのIFを`isSignedIn`に変更
 
 - v5.4.11 - 2015/2/6
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.11.zip)  
