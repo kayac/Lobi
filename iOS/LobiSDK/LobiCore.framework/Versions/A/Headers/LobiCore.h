@@ -46,10 +46,17 @@
 
 /**
  *  Lobiのアカウントが既に存在しているかを返します。
+ *  @deprecated `+ (BOOL)isSignedIn` を使用してください。
+ *  @return Lobiのアカウントの有無
+ */
++ (BOOL)isReady  __attribute__ ((deprecated("use isSignedIn")));
+
+/**
+ *  Lobiのアカウントが既に存在しているかを返します。
  *
  *  @return Lobiのアカウントの有無
  */
-+ (BOOL)isReady;
++ (BOOL)isSignedIn;
 
 /**
  *  Lobiの機能を使い始めるにあたり、必要となる情報を設定します。
@@ -65,7 +72,7 @@
  *  @param adPlatform
  *  @param adPlatformId
  */
-+ (void)setupAdPlatform:(NSString*)adPlatform adPlatformId:(NSString*)adPlatformId;
++ (void)setupAdPlatform:(NSString*)adPlatform adPlatformId:(NSString*)adPlatformId __attribute__ ((deprecated));
 
 /**
  *  LobiSDKの基本画面を表示するViewのViewControllerを設定します。
@@ -120,11 +127,12 @@
 
 @property (nonatomic, readonly) NSString *clientId;
 @property (nonatomic, copy)     NSString *accountBaseName;
-@property (nonatomic, readonly) NSString *adPlatform;
-@property (nonatomic, readonly) NSString *adPlatformId;
-@property (nonatomic, assign) BOOL useStrictExId;
-
+@property (nonatomic, assign)   BOOL useStrictExId;
 @property (nonatomic, copy)     void(^afterHandler)(void);
+
+@property (nonatomic, readonly) NSString *adPlatform   __attribute__ ((deprecated));
+@property (nonatomic, readonly) NSString *adPlatformId __attribute__ ((deprecated));
+
 @end
 
 #endif
