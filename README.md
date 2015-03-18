@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.12 - 2015/3/18
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.12.zip)  
+    - Android Unity 4.5 以降、Device Filter に FAT を設定した時のパフォーマンスを改善
+
 - v5.4.11 - 2015/2/6
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.11.zip)  
     - Android 4.1, 4.2 におけるランキング画面のローディング表示を修正
