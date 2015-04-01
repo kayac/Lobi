@@ -35,7 +35,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 ----------------------------
 - v5.4.13 - 2015/4/2
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.13.zip)  
-    - iOS Unity 5 に対応
+    - iOS Unity 5 に対応。詳細は[LobiSDK Unity5](https://github.com/kayac/Lobi/wiki/LobiSDK-Unity5)をご参照下さい
     - iOS Unity でネットワークに繋がらない状態で動画一覧画面を表示するとUnityが固まる問題の修正
 
 - v5.4.12 - 2015/3/18
