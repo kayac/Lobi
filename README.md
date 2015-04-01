@@ -33,6 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.13 - 2015/4/2
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.13.zip)  
+    - iOS Unity 5 に対応
+    - iOS Unity でネットワークに繋がらない状態で動画一覧画面を表示するとUnityが固まる問題の修正
+
 - v5.4.12 - 2015/3/18
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.12.zip)  
     - Android Unity 4.5 以降、Device Filter に FAT を設定した時のパフォーマンスを改善
