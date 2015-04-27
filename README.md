@@ -33,6 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v5.4.14 - 2015/4/27
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.14.zip)  
+    - Cocos2d-x v3 対応
+    - Android 5.1 対応
+
 - v5.4.13 - 2015/4/2
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.13.zip)  
     - iOS Unity 5 に対応。詳細は[LobiSDK Unity5](https://github.com/kayac/Lobi/wiki/LobiSDK-Unity5)をご参照下さい
