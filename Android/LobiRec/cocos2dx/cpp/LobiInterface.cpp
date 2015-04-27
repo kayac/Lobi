@@ -1,5 +1,4 @@
 #include "LobiInterface.h"
-#include "CCDirector.h"
 
 #include "LobiRec/LobiAndroidRec.h"
 #include "LobiCore/LobiAndroidCore.h"
@@ -60,7 +59,6 @@ void LobiInterface::sendRanking()
 void LobiInterface::recStart()
 {
     if (!LobiAndroidRec::isSupported()) {
-        CCLOG("LobiRec: not supported");
         return;
     }
 
