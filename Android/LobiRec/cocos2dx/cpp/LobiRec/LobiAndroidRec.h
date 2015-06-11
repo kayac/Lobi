@@ -28,6 +28,7 @@ public:
     static bool isSupported();
     static int checkError();
     static bool isCapturing();
+    static bool isPaused();
     static void presentLobiPostWithTitle(
         const char* title,
         const char* postDescription,

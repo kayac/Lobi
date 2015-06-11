@@ -64,22 +64,29 @@
                         android:src="@drawable/lobi_icn_arrow_white"/>
                 </LinearLayout>
             </FrameLayout>
-    
-            <!-- プロフィール画像(セクションラベル) -->
-            <com.kayac.lobi.libnakamap.components.SectionView
-                android:layout_width="match_parent"
+   
+            <LinearLayout
+                android:id="@+id/lobi_profile_edit_change_icon_container"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                lobi:lobi_section_title="@string/lobi_profile_image" />
-    
-            <!-- プロフィール画像変更(ボタン) -->
-            <com.kayac.lobi.libnakamap.components.ListRow
-                android:id="@+id/lobi_profile_edit_change_icon_row"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                lobi:lobi_centerContentLayoutId="@layout/lobi_list_row_content_one_line"
-                lobi:lobi_contentBackground="@drawable/lobi_setting_row_selector"
-                lobi:lobi_leftContentLayoutId="@layout/lobi_list_row_content_image_loader_64dp"
-                lobi:lobi_rightContentLayoutId="@layout/lobi_list_row_content_arrow" />
+                android:orientation="vertical" >
+
+                <!-- プロフィール画像(セクションラベル) -->
+                <com.kayac.lobi.libnakamap.components.SectionView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    lobi:lobi_section_title="@string/lobi_profile_image" />
+
+                <!-- プロフィール画像変更(ボタン) -->
+                <com.kayac.lobi.libnakamap.components.ListRow
+                    android:id="@+id/lobi_profile_edit_change_icon_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    lobi:lobi_centerContentLayoutId="@layout/lobi_list_row_content_one_line"
+                    lobi:lobi_contentBackground="@drawable/lobi_setting_row_selector"
+                    lobi:lobi_leftContentLayoutId="@layout/lobi_list_row_content_image_loader_64dp"
+                    lobi:lobi_rightContentLayoutId="@layout/lobi_list_row_content_arrow" />
+            </LinearLayout>
             
             <!-- フォーカスを外しておくためのダミーテキストView -->
             <TextView
@@ -95,6 +102,7 @@
     
             <!-- ユーザー名(EditText) -->
             <LinearLayout
+                android:id="@+id/lobi_profile_edit_change_name_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/lobi_padding_high"

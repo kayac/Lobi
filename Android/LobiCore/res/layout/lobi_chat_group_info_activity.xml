@@ -161,73 +161,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
-                    <!-- Recive information -->
-
-                    <LinearLayout
-                        android:id="@+id/lobi_chat_group_info_recive_information_area"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility="gone" >
-
-                        <LinearLayout
-                            android:id="@+id/lobi_chat_group_info_recive_friend_information_area"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical" >
-
-                            <com.kayac.lobi.libnakamap.components.SectionView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                lobi:lobi_section_title="@string/lobi_receive_information" />
-
-                            <!-- Friends Information -->
-
-                            <com.kayac.lobi.libnakamap.components.ListRow
-                                android:id="@+id/lobi_chat_group_info_recive_friends_information"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                lobi:lobi_centerContentLayoutId="@layout/lobi_list_row_content_one_line"
-                                lobi:lobi_contentBackground="@drawable/lobi_setting_row_selector"
-                                lobi:lobi_leftContentVisible="false"
-                                lobi:lobi_rightContentLayoutId="@layout/lobi_list_row_content_checkbox" />
-                        </LinearLayout>
-                        <!-- News Information -->
-
-                        <LinearLayout
-                            android:id="@+id/lobi_chat_group_info_recive_news_information_area"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical" >
-
-                            <com.kayac.lobi.libnakamap.components.DividerView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
-
-                            <com.kayac.lobi.libnakamap.components.ListRow
-                                android:id="@+id/lobi_chat_group_info_recive_news_information"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                lobi:lobi_centerContentLayoutId="@layout/lobi_list_row_content_one_line"
-                                lobi:lobi_contentBackground="@drawable/lobi_setting_row_selector"
-                                lobi:lobi_leftContentVisible="false"
-                                lobi:lobi_rightContentLayoutId="@layout/lobi_list_row_content_checkbox" />
-                        </LinearLayout>
-                        <!-- Disclaimer Information -->
-
-                        <com.kayac.lobi.libnakamap.components.DividerView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-
-                        <TextView
-                            android:id="@+id/lobi_line_1"
-                            style="@style/lobi_textview_gray_small_shadow_white"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:padding="@dimen/lobi_padding_middle"
-                            android:text="@string/lobi_you_may" />
-                    </LinearLayout>
                     <!-- OTHER -->
 
                     <com.kayac.lobi.libnakamap.components.SectionView
@@ -282,14 +215,6 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/lobi_img_shadow" />
 
-                <!-- AD -->
-
-                <com.kayac.lobi.libnakamap.components.AdComponent
-                    android:id="@+id/lobi_ad"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    lobi:lobi_adPageId="android_sdk_group_info" />
             </LinearLayout>
         </ScrollView>
     </FrameLayout>

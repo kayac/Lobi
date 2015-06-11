@@ -114,16 +114,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|top"
                 android:visibility="gone" />
-
-            <!-- AD -->
-
-            <com.kayac.lobi.libnakamap.components.AdComponent
-                android:id="@+id/lobi_ad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|bottom"
-                lobi:lobi_adPageId="android_public_chat"
-                lobi:lobi_autoLoad="false" />
         </FrameLayout>
     </LinearLayout>
 

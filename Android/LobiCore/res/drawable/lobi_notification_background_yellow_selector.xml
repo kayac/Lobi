@@ -3,7 +3,7 @@
     <item 
         android:state_enabled="true"
         android:state_pressed="true"
-        android:drawable="@color/lobi_yellow_selector_on"
+        android:drawable="@color/lobi_white_background"
         />
     <item 
         android:drawable="@color/lobi_yellow_selector"

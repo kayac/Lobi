@@ -64,15 +64,6 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/lobi_margin_middle"
                     android:text="@string/lobi_add_friend" />
-
-                <Button
-                    android:id="@+id/lobi_chat_list_system_message_copy_button"
-                    style="@style/lobi_white_button_l_small_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/lobi_margin_middle"
-                    android:text="@string/lobi_copy_invitation_url" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

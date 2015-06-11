@@ -11,7 +11,7 @@
         android:id="@+id/lobi_action_bar"
         style="@style/lobi_action_bar"
         lobi:lobi_content_type="lobi_backable"
-        lobi:lobi_text="ログイン" />
+        lobi:lobi_text="@string/lobisdk_login" />
 
     <RelativeLayout
         android:layout_width="match_parent"

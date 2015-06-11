@@ -12,10 +12,6 @@
     </attr>
     <attr name="lobi_text" format="string" />
   </declare-styleable>
-  <declare-styleable name="lobi_AdComponent">
-    <attr name="lobi_adPageId" format="string" />
-    <attr name="lobi_autoLoad" format="boolean" />
-  </declare-styleable>
   <declare-styleable name="lobi_ChatOptionButton">
     <attr name="lobi_default_drawable" format="reference" />
     <attr name="lobi_default_text" format="string" />
@@ -59,6 +55,9 @@
     <attr name="lobi_useMaxExtendedSize" format="boolean" />
     <attr name="lobi_useMemoryCache" format="boolean" />
   </declare-styleable>
+  <declare-styleable name="lobi_ImageLoaderCircleView">
+    <attr name="lobi_borderWidth" format="dimension|reference" />
+    </declare-styleable>
   <declare-styleable name="lobi_ListRow">
     <attr name="lobi_centerContentLayoutId" format="reference" />
     <attr name="lobi_centerContentVisible" format="boolean" />
@@ -77,10 +76,6 @@
   <declare-styleable name="lobi_ProfileCover">
     <attr name="lobi_coverImageMaxHeight" format="dimension|reference" />
     <attr name="lobi_coverImageMinHeight" format="dimension|reference" />
-    <attr name="lobi_iconFrameColor" format="color|reference" />
-    <attr name="lobi_iconFrameWidth" format="dimension|reference" />
-    <attr name="lobi_iconLeftMargin" format="dimension|reference" />
-    <attr name="lobi_iconSize" format="dimension|reference" />
     <attr name="lobi_iconTopRunOver" format="dimension|reference" />
   </declare-styleable>
   <declare-styleable name="lobi_SearchBox">

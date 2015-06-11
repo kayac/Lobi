@@ -9,30 +9,17 @@
         android:layout_height="match_parent"
         android:layout_gravity="center" />
 
-    <ImageView
-        android:id="@+id/lobi_action_bar_new_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|right"
-        android:layout_marginRight="@dimen/lobi_margin_low"
-        android:layout_marginTop="@dimen/lobi_margin_low"
-        android:src="@drawable/lobi_icn_new"
-        android:visibility="gone" />
-
     <TextView
         android:id="@+id/lobi_action_bar_new_text"
-        style="@style/lobi_textview_black_default"
-        android:layout_width="wrap_content"
+        android:layout_width="20dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|center_vertical"
-        android:visibility="gone" />
-
-    <ImageView
-        android:id="@+id/lobi_action_bar_new_top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:src="@drawable/lobi_balloon_top_news"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4.5dp"
+        android:layout_marginLeft="5.5dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/lobi_black"
+        android:textSize="@dimen/lobi_text_small"
         android:visibility="gone" />
 
     <FrameLayout

@@ -17,10 +17,6 @@
     <item>@drawable/lobi_icn_megamenu_shout_off</item>
     <item>@null</item>
   </array>
-  <array name="lobi_group_list_fixed_tab_icons">
-    <item>@drawable/lobi_icn_tab_lock_selector</item>
-    <item>@drawable/lobi_icn_tab_open_selector</item>
-  </array>
   <array name="lobi_like_ranking_fixed_tab_titles">
     <item>@string/lobi_like_many</item>
     <item>@string/lobi_dislike_many</item>
@@ -47,5 +43,10 @@
   <string-array name="lobi_group_list_fixed_tab_titles">
     <item>@string/lobi_private_groups</item>
     <item>@string/lobi_public_groups</item>
+    <item>@string/lobi_friend_list</item>
+  </string-array>
+  <string-array name="lobi_group_list_fixed_tab_titles_public_disable">
+    <item>@string/lobi_private_groups</item>
+    <item>@string/lobi_friend_list</item>
   </string-array>
 </resources>

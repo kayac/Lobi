@@ -6,7 +6,4 @@
     lobi:lobi_centerContentLayoutId="@layout/lobi_list_row_content_two_line"
     lobi:lobi_rightContentVisible="false"
     lobi:lobi_contentBackground="@drawable/lobi_setting_row_selector"
-    android:background="@drawable/lobi_bg_light_repeat" 
-    android:paddingBottom="@dimen/lobi_padding_low"
-    android:paddingTop="@dimen/lobi_padding_low"
     />

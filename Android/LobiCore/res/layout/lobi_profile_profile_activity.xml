@@ -6,10 +6,11 @@
 
     <!-- The main content view -->
 
-    <view class="com.kayac.lobi.libnakamap.components.MenuDrawer$ContentFrame"
+    <view
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        class="com.kayac.lobi.libnakamap.components.MenuDrawer$ContentFrame"
         android:background="@drawable/lobi_bg_light_repeat"
         android:orientation="vertical" >
 
@@ -28,36 +29,7 @@
                 android:id="@+id/lobi_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-            <!-- 友だちになる -->
-
-            <FrameLayout
-                android:id="@+id/lobi_profile_profile_activity_add_friend_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/lobi_profile_add_friend_list_row_background_selector"
-                android:paddingBottom="@dimen/lobi_padding_high"
-                android:paddingLeft="@dimen/lobi_padding_high"
-                android:paddingTop="@dimen/lobi_padding_high"
-                android:visibility="gone" >
-
-                <com.kayac.lobi.libnakamap.components.ListRow
-                    android:id="@+id/lobi_profile_profile_activity_add_friend"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="visible"
-                    lobi:lobi_centerContentLayoutId="@layout/lobi_list_row_content_one_line"
-                    lobi:lobi_leftContentLayoutId="@layout/lobi_list_row_content_image_view"
-                    lobi:lobi_rightContentLayoutId="@layout/lobi_list_row_content_white_arrow" />
-            </FrameLayout>
         </FrameLayout>
-        <!-- AD -->
-
-        <com.kayac.lobi.libnakamap.components.AdComponent
-            android:id="@+id/lobi_ad"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            lobi:lobi_adPageId="android_profile"
-            lobi:lobi_autoLoad="false" />
     </view>
 
     <!-- The navigation drawer -->

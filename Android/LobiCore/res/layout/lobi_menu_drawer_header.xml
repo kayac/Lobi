@@ -3,54 +3,67 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content" >
 
+        <com.kayac.lobi.libnakamap.components.ImageLoaderView
+            android:id="@+id/lobi_menu_drawer_user_cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lobi_menu_drawer_header_height"
+            android:scaleType="centerCrop" >
+        </com.kayac.lobi.libnakamap.components.ImageLoaderView>
+    
+    
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/lobi_menu_drawer_list_row_background_selector"
+        android:layout_height="@dimen/lobi_menu_drawer_header_height"
+        android:background="@color/lobi_menu_drawer_user_cover_overlay"
         android:gravity="center_vertical"
         android:paddingBottom="@dimen/lobi_margin_section"
-        android:paddingLeft="@dimen/lobi_padding_middle"
+        android:paddingLeft="@dimen/lobi_padding_high"
         android:paddingRight="@dimen/lobi_padding_high"
         android:paddingTop="@dimen/lobi_margin_section" >
 
-        <com.kayac.lobi.libnakamap.components.ImageLoaderView
+        <com.kayac.lobi.libnakamap.components.ImageLoaderCircleView
             android:id="@+id/lobi_menu_drawer_user_icon"
-            android:layout_width="@dimen/lobi_icon_menu"
-            android:layout_height="@dimen/lobi_icon_menu"
-            android:layout_marginRight="@dimen/lobi_margin_middle"
-            android:scaleType="fitXY" >
-        </com.kayac.lobi.libnakamap.components.ImageLoaderView>
-
-        <TextView
-            android:id="@+id/lobi_menu_drawer_user_name"
-            style="@style/lobi_textview_black_large"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/lobi_icon_large"
+            android:layout_height="@dimen/lobi_icon_large"
             android:layout_marginRight="@dimen/lobi_margin_high"
-            android:layout_weight="1"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:text="" />
+            lobi:lobi_borderWidth="1dp"
+            android:scaleType="fitXY" >
+        </com.kayac.lobi.libnakamap.components.ImageLoaderCircleView>
 
-        <FrameLayout
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lobi_menu_drawer_user_name"
+                style="@style/lobi_textview_white_large"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/lobi_menu_drawer_lobi_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingTop="@dimen/lobi_padding_middle"
+                android:textColor="@color/lobi_pearl_gray"
+                android:textSize="@dimen/lobi_text_more_small" />
+
+        </LinearLayout>
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-             >
+            android:src="@drawable/lobi_icn_arrow_white" />
 
-            <FrameLayout
-                android:id="@+id/lobi_popup_menu_setting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/lobi_button_s_white_selector"
-                android:padding="@dimen/lobi_padding_low" >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:src="@drawable/lobi_icn_menu_setting" />
-            </FrameLayout>
-        </FrameLayout>
     </LinearLayout>
 
 </FrameLayout>
