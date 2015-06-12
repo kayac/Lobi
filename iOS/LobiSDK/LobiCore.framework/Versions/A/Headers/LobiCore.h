@@ -89,13 +89,6 @@
  */
 + (void)presentProfile;
 
-
-/**
- *  Ad画面を表示します。
- */
-+ (void)presentAdWall;
-
-
 + (void)prepareExternalId:(NSString*)externalId
          initializeVector:(NSString*)iv
           accountBaseName:(NSString*)accountBaseName;
