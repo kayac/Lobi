@@ -30,8 +30,9 @@
   <dimen name="lobi_chat_picture_image_height">195dp</dimen>
   <dimen name="lobi_chat_picture_image_width">195dp</dimen>
   <dimen name="lobi_chat_refer_icon_size">60dp</dimen>
-  <dimen name="lobi_chat_sides_margin">49dp</dimen>
   <dimen name="lobi_chat_system_message_width">220dp</dimen>
+  <dimen name="lobi_chat_game_page_banner_height">57dp</dimen>
+  <dimen name="lobi_chat_profile_icon_size">84dp</dimen>
   <dimen name="lobi_checkbox_height">22.5dp</dimen>
   <dimen name="lobi_checkbox_width">22.5dp</dimen>
   <dimen name="lobi_common_margin_16dp">16dp</dimen>
@@ -48,6 +49,7 @@
   <dimen name="lobi_group_list_row_icon_height">64dp</dimen>
   <dimen name="lobi_group_list_row_icon_width">64dp</dimen>
   <dimen name="lobi_group_user_account_list_row_height">52dp</dimen>
+  <dimen name="lobi_item_visibility_layout_width">52dp</dimen>
   <dimen name="lobi_hint_addfriend_margin_edge">50dp</dimen>
   <dimen name="lobi_hint_addfriend_margin_secton">210dp</dimen>
   <dimen name="lobi_hint_addfriend_margin_service">164dp</dimen>
@@ -71,21 +73,20 @@
   <dimen name="lobi_margin_low">4dp</dimen>
   <dimen name="lobi_margin_middle">8dp</dimen>
   <dimen name="lobi_margin_section">16dp</dimen>
-  <dimen name="lobi_notification_icon">24dp</dimen>
+  <dimen name="lobi_notification_icon">14dp</dimen>
   <dimen name="lobi_notification_icon_container">60dp</dimen>
   <dimen name="lobi_padding_chat_regular">10dp</dimen>
   <dimen name="lobi_padding_high">12dp</dimen>
   <dimen name="lobi_padding_low">4dp</dimen>
   <dimen name="lobi_padding_middle">8dp</dimen>
   <dimen name="lobi_padding_section">24dp</dimen>
-  <dimen name="lobi_profile_add_friend_height">32dp</dimen>
-  <dimen name="lobi_profile_cover_icon_frame_width">2.5dp</dimen>
-  <dimen name="lobi_profile_cover_icon_left_margin">12dp</dimen>
-  <dimen name="lobi_profile_cover_icon_size">64dp</dimen>
-  <dimen name="lobi_profile_cover_icon_top_run_over">44dp</dimen>
+  <dimen name="lobi_profile_cover_icon_size">82dp</dimen>
+  <dimen name="lobi_profile_cover_icon_top_run_over">200dp</dimen>
   <dimen name="lobi_profile_cover_max">320dp</dimen>
-  <dimen name="lobi_profile_cover_min">156dp</dimen>
+  <dimen name="lobi_profile_cover_min">200dp</dimen>
   <dimen name="lobi_profile_icon_cover">128px</dimen>
+  <dimen name="lobi_profile_lobi_account_section_height">48dp</dimen>
+  <dimen name="lobi_profile_lobi_account_section_divider">2dp</dimen>
   <dimen name="lobi_section_divider">.5dp</dimen>
   <dimen name="lobi_section_divider_with_padding">8.5dp</dimen>
   <dimen name="lobi_section_underline">3dp</dimen>
@@ -108,7 +109,9 @@
   <dimen name="lobi_text_small">12dp</dimen>
   <dimen name="lobi_text_very_large">18dp</dimen>
   <dimen name="lobi_text_very_small">10dp</dimen>
+  <dimen name="lobi_text_more_small">11dp</dimen>
   <dimen name="lobi_toggle_on_off_width">113px</dimen>
+  <dimen name="lobi_menu_drawer_header_height">120dp</dimen>
   
   <dimen name="lobi_rec_padding_default">10dp</dimen>
   <dimen name="lobi_rec_padding_small">7dp</dimen>

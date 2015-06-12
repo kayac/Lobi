@@ -33,6 +33,15 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v6.2.0 - 2015/6/12
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.2.0.zip) 
+    - フォロー機能の追加 
+    - UIの改善
+    - Android 通知機能の追加
+    - Android x86バイナリの追加。 **ゲームもx86バイナリをビルドするようにしてください** 
+    - iOS カスタムデザインのiPhone6/6plus対応
+    - iOS Unity5.1対応
+
 - v5.4.14 - 2015/4/27
     [ダウンロード](https://github.com/kayac/Lobi/archive/v5.4.14.zip)  
     - Cocos2d-x v3 対応

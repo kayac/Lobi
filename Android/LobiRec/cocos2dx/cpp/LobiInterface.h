@@ -36,7 +36,8 @@ namespace LobiInterface
     bool isRecording();
     void recPause();
     void recResume();
-    bool isPause();
+    bool isPause(); // deprecated
+    bool isPaused();
  
     void presentShare();
     void wipePostion(float x, float y);

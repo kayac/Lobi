@@ -112,22 +112,6 @@
             android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
-            android:name="com.kayac.lobi.sdk.activity.profile.ProfilePublicGroupsActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Light.NoTitleBar" >
-        </activity>
-        <activity
-            android:name="com.kayac.lobi.sdk.activity.profile.ProfilePublicGroupsVisibilityActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Light.NoTitleBar" >
-        </activity>
-        <activity
-            android:name="com.kayac.lobi.sdk.activity.friend.SearchFriendActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Light.NoTitleBar"
-            android:windowSoftInputMode="adjustResize" >
-        </activity>
-        <activity
             android:name="com.kayac.lobi.sdk.activity.stamp.StampActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
@@ -138,7 +122,7 @@
         <activity
             android:name="com.kayac.lobi.sdk.activity.setting.WebViewSetting"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
         <activity
             android:name="com.kayac.lobi.sdk.activity.group.ContactListActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
@@ -146,7 +130,7 @@
             android:windowSoftInputMode="adjustResize|stateHidden" >
         </activity>
         <activity
-            android:name="com.kayac.lobi.sdk.activity.group.ContactDeleteListActivity"
+            android:name="com.kayac.lobi.sdk.activity.group.UserFollowerListActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustResize|stateHidden" >

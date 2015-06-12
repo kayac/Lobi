@@ -8,7 +8,6 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingBottom="@dimen/lobi_padding_high"
-        
         android:paddingTop="@dimen/lobi_padding_high" >
 
         <ImageView
@@ -19,11 +18,11 @@
         <TextView
             android:id="@+id/lobi_fixed_tab_element_title"
             style="@style/lobi_textview_black_default_singleline"
-            android:paddingLeft="@dimen/lobi_padding_low"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        
-         <ImageView
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/lobi_padding_low" />
+
+        <ImageView
             android:id="@+id/lobi_fixed_tab_element_notice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,7 +32,6 @@
             android:paddingRight="@dimen/lobi_margin_middle"
             android:src="@drawable/lobi_icn_notice"
             android:visibility="gone" />
-         
     </LinearLayout>
 
     <FrameLayout
@@ -43,5 +41,10 @@
         android:background="@color/lobi_orange"
         android:visibility="invisible" >
     </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lobi_horizontal_line_transparent" />
 
 </merge>

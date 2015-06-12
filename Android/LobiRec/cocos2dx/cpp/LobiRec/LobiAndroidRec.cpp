@@ -108,6 +108,15 @@ bool LobiAndroidRec::isCapturing() {
     }
     return ret;
 }
+bool LobiAndroidRec::isPaused() {
+    bool ret = false;
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "isPaused", "()Z")) {
+        ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
+        t.env->DeleteLocalRef(t.classID);
+    }
+    return ret;
+}
 void LobiAndroidRec::presentLobiPostWithTitle(
     const char* title,
     const char* postDescription,

@@ -21,17 +21,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <!-- AD -->
-
-            <com.kayac.lobi.libnakamap.components.AdComponent
-                android:id="@+id/lobi_ad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:visibility="gone"
-                lobi:lobi_adPageId="android_sdk_create_groups"
-                lobi:lobi_autoLoad="false" />
-
             <com.kayac.lobi.libnakamap.components.UIEditText
                 android:id="@+id/lobi_group_create_new_group_name"
                 style="@style/lobi_textview_black_default"

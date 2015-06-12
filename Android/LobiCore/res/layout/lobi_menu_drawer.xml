@@ -5,7 +5,7 @@
     android:layout_width="@dimen/lobi_main_menu_popup_width"
     android:layout_height="match_parent"
     android:layout_gravity="start"
-    android:background="@color/lobi_menu_drawer_background"
+    android:background="@color/lobi_white_background"
     android:choiceMode="singleChoice"
-    android:divider="@color/lobi_pearl_gray"
-    android:dividerHeight="1px" />
+    android:divider="@color/lobi_white_background"
+    android:dividerHeight="2dp" />

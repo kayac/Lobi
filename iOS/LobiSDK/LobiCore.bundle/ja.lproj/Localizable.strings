@@ -2,14 +2,19 @@
 "KLC_MENU_SECTION_TITLE_GAME_MENU" = "GAME MENU";
 "KLC_CANCEL" = "キャンセル";
 
-"KLC_MENU_REC" = "プレイ動画";
+"KLC_MENU_REC" = "みんなの動画";
 "KLC_MENU_RANKING" = "ランキング";
 "KLC_MENU_CHAT" = "チャット";
 "KLC_MENU_FRIENDS" = "友だちリスト";
 "KLC_MENU_INVITE" = "友だちを招待する";
 "KLC_MENU_BIND" = "Lobiと連携";
-"KLC_MENU_CONNECTAPP" = "Lobiとつなげる";
+"KLC_MENU_CONNECTAPP" = "Lobiにログインする";
 "KLC_MENU_AD_ROW_TITLE_APPS" = "人気のゲーム";
+"KLC_MENU_SECTION_TITLE_CONTENT" = "コンテンツメニュー";
+"KLC_MENU_SECTION_TITLE_USER" = "ユーザーメニュー";
+"KLC_MENU_FOLLOW_LIST" = "フォローリスト";
+"KLC_MENU_FOLLOWER_LIST" = "フォロワーリスト";
+"KLC_MENU_NOT_LOGIN" = "Lobi未ログイン";
 "KLC_PROFILE_TITLE_NORMAL" = "プロフィール";
 "KLC_PROFILE_MENU_TITLE_ACCUSE" = "通報する";
 "KLC_PROFILE_MENU_TITLE_KICK" = "グループから\n追い出す";
@@ -18,9 +23,11 @@
 "KLC_PROFILE_BUTTON_ADD" = "友だちに追加";
 "KLC_PROFILE_BUTTON_CHAT" = "チャットする";
 "KLC_PROFILE_CONTACTS" = "友だち %@人";
+"KLC_PROFILE_%@_VIDEOS" = "%@ videos";
 "KLC_PROFILE_DESCRIPTION_EDIT_TEXT" = "プロフィールを入力できます";
 "KLC_PROFILE_DEFAULT_USER_HEADER" = "Lobiアカウント";
 "KLC_PROFILE_NOT_CONNECT_LOBI" = "Lobiとつながっていません";
+"KLC_PROFILE_EDIT" = "プロフィール編集";
 "KLC_FRIEND_LIST" = "友だちリスト";
 "KLC_FRIEND_ADD" = "友だち追加";
 "KLC_LOBI_FRIEND_ADD" = "Lobiの友だちを追加";
@@ -54,7 +61,7 @@
 "KLC_ERROR_502_MAINTENANCE" = "現在メンテナンス中です、しばらくお待ちください";
 
 "KLC_ACKNOWLEDGEMENT_FILE" = "acknowledgement_ja";
-"KLC_BIND_NAKAMAP_APP" = "Lobiとつなげる";
+"KLC_BIND_NAKAMAP_APP" = "Lobiにログインする";
 "KLC_BLOCK_USER_LIST" = "ブロックユーザーリスト";
 "KLC_CANCEL" = "キャンセル";
 "KLC_FONT_SIZE_LARGE" = "大";
@@ -66,7 +73,7 @@
 "KLC_SETTINGS_ACCOUNT" = "アカウント";
 "KLC_SETTINGS_ACT_ON_SCT" = "特定商取引に基づく表示";
 "KLC_SETTINGS_CELL_CHAT_ALPHA" = "ふきだし不透明度";
-"KLC_SETTINGS_CELL_TUTORIAL" = "Lobiってなに？";
+"KLC_SETTINGS_CELL_TUTORIAL" = "Lobiとは";
 "KLC_SETTINGS_FAQ_CHAT" = "チャットのよくある質問";
 "KLC_SETTINGS_FAQ_REC" = "LobiPlayのよくある質問";
 "KLC_SETTINGS_FEEDBACK" = "ご意見・ご要望・ご質問";
@@ -78,13 +85,13 @@
 "KLC_SETTINGS_SPECIAL_THANKS" = "謝辞";
 "KLC_SETTINGS_TERMS_OF_USE" = "ご利用規約";
 "KLC_SETTINGS_VERSION" = "バージョン";
-"KLC_SETTINGS_WHATS_NEW" = "Lobiからのお知らせ";
+"KLC_SETTINGS_WHATS_NEW" = "お知らせブログ";
 "KLC_TWITTER_FOLLOW_US" = "TwitterでLobiチームをフォロー";
 
 "KLC_USER_SETTINGS_TITLE" = "プロフィール編集";
 "KLC_USER_SETTINGS_SECTION_COVER" = "カバー画像変更";
 "KLC_USER_SETTINGS_SECTION_ICON" = "プロフィール画像";
-"KLC_USER_SETTINGS_SECTION_NAME" = "ユーザー名";
+"KLC_USER_SETTINGS_SECTION_NAME" = "投稿者名";
 "KLC_USER_SETTINGS_SECTION_DESCRIPTION" = "紹介文";
 "KLC_USER_SETTINGS_CELL_COVER" = "カバー画像";
 "KLC_USER_SETTINGS_CELL_ICON" = "プロフィール画像";
@@ -101,7 +108,7 @@
 "KLC_PHOTO_FROM_LIBRARY" = "ライブラリから選択";
 "KLC_PHOTO_FROM_CAMERA" = "写真を撮る";
 "KLC_SAVE" = "保存";
-"KLC_NOTICE_TITLE" = "お知らせ";
+"KLC_NOTICE_TITLE" = "通知";
 
 "KLC_DATE_NOW" = "今";
 "KLC_DATE_MONTHS_%d" = "%dヶ月前";
@@ -111,3 +118,38 @@
 "KLC_DATE_DAYS_%d" = "%d日前";
 "KLC_DATE_HOURS_%d" = "%d時間前";
 "KLC_DATE_SECS_%d" = "%d秒前";
+
+"KLC_LOGIN_DONE" = "Lobiでプロフィールを開く";
+"KLC_LOBI_ACCOUNT" = "Lobiでプロフィールを開く";
+"KLC_NOT_LOGIN" = "動画に関する通知が受け取れるよ！";
+"KLC_LOBI_NAME_%@" = "Lobi：%@";
+
+"KLC_FOLLOW" = "フォロー";
+"KLC_FOLLOWING" = "フォロー中";
+"KLC_FOLLOW_LIST" = "フォロー";
+"KLC_FOLLOWER_LIST" = "フォロワー";
+"KLC_LETS_LOGIN_LOBI" = "Lobiにログインしよう!";
+"KLC_LOGIN" = "ログイン";
+
+"KLC_DEFAULT_LOGIN_ENTRANCE_TITLE" = "Lobiへようこそ！";
+"KLC_DEFAULT_LOGIN_ENTRANCE_MESSAGE" = "Lobiでは、友だちの投稿動画をフォローしたり、動画にコメントしたりすることができます。";
+"KLC_DEFAULT_LOGIN_ENTRANCE_CANCEL" = "後で";
+"KLC_DEFAULT_LOGIN_ENTRANCE_OK" = "開く";
+
+"KLC_POPUP_LOGIN_SUBTEXT" = "動画に関する通知が受け取れるよ！";
+"KLC_POPUP_APP_LAUNCH_MAINTEXT" = "アクティビティをチェック！";
+"KLC_POPUP_APP_LAUNCH_SUBTEXT" = "フォローしたユーザーの最新情報など";
+"KLC_LAUNCH_LOBI_APP" = "起動する";
+"KLC_GAME_NAME_LABEL" = "投稿者名：%@";
+"KLC_FOLLOW_LIST_SECTION_INGAME" = "このゲームをプレイしているLobiユーザー（%d）";
+"KLC_POPUP_LOGIN_SUBTEXT" = "動画に関する通知が受け取れるよ！";
+
+"KLC_DEFAULT_PROMOTE_NOTICE_OPEN" = "ログインして気になるユーザーをフォローしよう！";
+"KLC_DEFAULT_PROMOTE_NOTICE_UPLOAD" = "フォロワーを増やしてあなたの動画にファンを付けましょう！";
+
+"KLC_LIST_ZERO_COM_ERROR" = "リストの読み込みに\n失敗しました";
+"KLC_PROFILE_FOLLOW_LIST_ZERO" = "まだフォローしていません";
+"KLC_PROFILE_FOLLOWER_LIST_ZERO" = "まだフォローされていません";
+"KLC_PROFILE_PUBLIC_USER_LIST_ZERO" = "表示できるユーザー情報がありません";
+
+"KLC_NOTICE_ZERO" = "あなたへの通知はまだありません。";

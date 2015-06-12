@@ -108,7 +108,12 @@ bool LobiInterface::isRecording()
 
 bool LobiInterface::isPause()
 {
-    // unsupported
+    return isPaused();
+}
+
+bool LobiInterface::isPaused()
+{
+    return LobiAndroidRec::isPaused();
 }
 
 void LobiInterface::initOpenSLAudio()

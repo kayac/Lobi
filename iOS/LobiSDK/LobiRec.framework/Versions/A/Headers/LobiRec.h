@@ -10,6 +10,8 @@
 #import <OpenGLES/ES1/glext.h>
 #import <OpenGLES/ES2/glext.h>
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+
 #import "LobiRecConst.h"
 
 /**
@@ -259,9 +261,16 @@
 
 /**
  * 録画ポーズ状態を取得します
+ * @deprecated `+ (BOOL)isPaused` を使用してください。
  * @return ポーズ中の場合YESを返します。
  */
-+ (BOOL)isPause;
++ (BOOL)isPause     __attribute__ ((deprecated("use isPaused")));
+
+/**
+ * 録画ポーズ状態を取得します
+ * @return ポーズ中の場合YESを返します。
+ */
++ (BOOL)isPaused;
 
 /**
  * 録画のポーズを行います。startCapturingを行うことでポーズが解除されます。
@@ -280,6 +289,21 @@
 
 + (void)setRecorderSwitch:(BOOL)recorderSwitch;
 + (BOOL)removeUnretainedVideo;
+
+/**
+ * 独自のオーディオをデータを録音するためのフォーマットを設定します。
+ */
++ (void)setupInputAudioStreamBasicDescription:(AudioStreamBasicDescription*)audioStreamBasicDescription;
+
+/**
+ * 独自のオーディオのデータを書き込みます
+ */
++ (void)writeInputAudioData:(NSData*)data;
+
+/**
+ * 独自のオーディオのバイト列を書き込みます
+ */
++ (void)writeInputAudioBytes:(void*)bytes length:(UInt32)length;
 
 @end
 

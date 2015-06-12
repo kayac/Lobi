@@ -9,7 +9,7 @@
 "KLV_BUTTON_TITLE_DONE" = "決定";
 "KLV_BUTTON_TITLE_POST" = "投稿";
 "KLV_NAVIGATION_TITLE_PROFILE" = "プロフィール";
-"KLV_NAVIGATION_TITLE_ACCEPT_TERMS" = "利用規約";
+"KLV_NAVIGATION_TITLE_ACCEPT_TERMS" = "ご利用規約";
 "KLV_BUTTON_TITLE_ACCEPT_TERMS" = "同意する";
 "KLV_ACCUSE_ALERT" = "通報理由を入力してください";
 "KLV_BUTTON_TITLE_OK" = "OK";
@@ -50,9 +50,9 @@
 "KLV_BUTTON_TITLE_UNDO_LIVE" = "実況を取り消す";
 "KLV_POSTED_MOVIES" = "投稿したプレイ動画";
 "KLV_LOAD_MORE" = "もっとみる";
-"KLV_TITLE_LOBI_PLAY" = "Lobi Play";
+"KLV_TITLE_LOBI_PLAY" = "みんなの動画";
 "KLV_TITLE_LOBI_PLAY_BUTTON" = "みんなの動画";
-"KLV_TITLE_LOBI_PLAY_BUTTON_LABEL" = "みんなのプレイ動画を見る";
+"KLV_TITLE_LOBI_PLAY_BUTTON_LABEL" = "みんなの動画を見る";
 "KLV_TITLE_LOBI_PLAY_MENU_LABEL" = "動画メニュー";
 "KLV_SETTINGS_FAQ_REC" = "LobiPlayのよくある質問";
 "KLV_NO_MOVIE_ALERT" = "再生できる動画がありません";
@@ -61,3 +61,8 @@
 "KLV_BUTTON_TITLE_RETRY" = "リトライ";
 "KLV_BUTTON_TITLE_CLOSE" = "閉じる";
 "KLV_BUTTON_TITLE_CONFIRM" = "確認する";
+"KLV_ALERT_MESSAGE_RENAME_TITLE" = "投稿者名";
+"KLV_ALERT_MESSAGE_RENAME" = "動画を投稿するときの\n投稿者名を決めてください。\n※20文字以内、後からでも変更可能です";
+"KLV_VIDEO_USER_NAME%@" = "by %@";
+"KLV_VIDEO_VIEWS" = "Views";
+
