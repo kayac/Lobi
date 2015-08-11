@@ -112,6 +112,7 @@
   <dimen name="lobi_text_more_small">11dp</dimen>
   <dimen name="lobi_toggle_on_off_width">113px</dimen>
   <dimen name="lobi_menu_drawer_header_height">120dp</dimen>
+  <dimen name="lobi_lobi_banner_max_width">304dp</dimen>
   
   <dimen name="lobi_rec_padding_default">10dp</dimen>
   <dimen name="lobi_rec_padding_small">7dp</dimen>

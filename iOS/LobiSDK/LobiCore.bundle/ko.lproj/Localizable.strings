@@ -1,7 +1,6 @@
 "KLC_ACCUSE_ALERT" = "신고하는 이유가 무엇입니까?";
 "KLC_ACKNOWLEDGEMENT_FILE" = "감사의 말_en";
 "KLC_ADD_FRIEND_SUCCESS" = "연락처에 추가되었습니다!";
-"KLC_AD_SCHEME_RECOMMEND" = "게임 랭킹";
 "KLC_ALERT_NO" = "아니요";
 "KLC_ALERT_YES" = "예";
 "KLC_BIND_NAKAMAP_APP" = "Lobi에 로그인";
@@ -54,7 +53,6 @@
 "KLC_LOGIN" = "로그인";
 "KLC_LOGIN_DONE" = "로그인되었습니다";
 "KLC_MAIL_DEAR_TEAM_%@_%@_%@_%@" = "Lobi 팀 여러분, \n\n\n---\nLoviCoreSDK: 버전 %@, 플랫폼: %@, os: %@, u: %@";
-"KLC_MENU_AD_ROW_TITLE_APPS" = "인기 게임";
 "KLC_MENU_BIND" = "Lobi에 연결";
 "KLC_MENU_CHAT" = "채팅";
 "KLC_MENU_CONNECTAPP" = "Lobi에 로그인";

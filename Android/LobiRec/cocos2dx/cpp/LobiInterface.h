@@ -21,6 +21,9 @@ namespace LobiInterface
         const bool letsplay,
         const char* metaJson
     );
+    void presentLobiPlayWithEventFields(
+        const char* eventFields
+    );
     
     void prepareExternalId(
         char* encryptedExternalId,

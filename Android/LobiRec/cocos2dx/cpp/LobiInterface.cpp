@@ -32,6 +32,12 @@ void LobiInterface::presentLobiPlay(
 {
     LobiAndroidRec::presentLobiPlay(userExid, category, letsplay, metaJson);
 }
+void LobiInterface::presentLobiPlayWithEventFields(
+    const char* eventFields
+)
+{
+    LobiAndroidRec::presentLobiPlayWithEventFields(eventFields);
+}
 
 void LobiInterface::prepareExternalId(
         char* encryptedExternalId,

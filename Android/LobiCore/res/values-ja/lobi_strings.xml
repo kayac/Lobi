@@ -58,7 +58,7 @@
     <string name="lobi_connect_with_app">Lobiとつなげる</string>
     <string name="lobi_contact_service_tutorial">招待してみよう！\nすでに友だちの人とはチャットがすぐにできます。</string>
     <string name="lobi_contact_tutorial">Lobiをやってる知り合いを\n友だちにできるよ</string>
-    <string name="lobi_contacts__int_">友だち(%1$d)</string>
+    <string name="lobi_contacts__int_">フレンド(%1$d)</string>
     <string name="lobi_contacts_list">友だちリスト</string>
     <string name="lobi_content_menu">コンテンツメニュー</string>
     <string name="lobi_copied_to">クリップボードにコピーしました</string>
@@ -92,8 +92,10 @@
     <string name="lobi_edit_profile">プロフィール編集</string>
     <string name="lobi_feedback">ご意見・ご要望・ご質問</string>
     <string name="lobi_follow_list_no_item">まだフォローしていません</string>
+    <string name="lobi_follow_list_no_item_with_banner">このゲームをプレイしているユーザーを\nフォローしていません。\n人気の動画をチェックしてみよう！</string>
     <string name="lobi_follow_list_no_shown_item">表示できるユーザー情報がありません</string>
     <string name="lobi_follower_list_no_item">まだフォローされていません</string>
+    <string name="lobi_follower_list_no_item_with_banner">このゲームをプレイしているフォロワーはいません。\n人気の動画をチェックしてみよう！</string>
     <string name="lobi_follower_list_no_shown_item">表示できるユーザー情報がありません</string>
     <string name="lobi_friend_list">フレンドリスト</string>
     <string name="lobi_friends">友達の更新情報</string>
@@ -124,8 +126,8 @@
     <string name="lobi_key_grp_description">みんなで編集できるメモ欄です</string>
     <string name="lobi_klm_account_main">Lobiアカウント</string>
     <string name="lobi_klm_has_no_friend_description">友だちがいません\n他のユーザーのプロフィールから\n友だちにすることもできます</string>
-    <string name="lobi_klm_invite_friend_error_message">友だちに追加したいユーザーと同じアプリのアプリアカウントが必要です</string>
-    <string name="lobi_klm_invite_friend_error_title">友だちを追加できませんでした</string>
+    <string name="lobi_klm_invite_friend_error_message">フレンドに追加したいユーザーと同じアプリのアプリアカウントが必要です</string>
+    <string name="lobi_klm_invite_friend_error_title">フレンドを追加できませんでした</string>
     <string name="lobi_klm_invite_group_error_message">このグループと同じアプリのアプリアカウントが必要です</string>
     <string name="lobi_klm_invite_group_error_title">グループに参加できませんでした</string>
     <string name="lobi_klm_switch_account_alert_message_format">現在のアカウントは\"%1$s(%2$s)\"です</string>

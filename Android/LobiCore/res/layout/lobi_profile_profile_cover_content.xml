@@ -190,9 +190,15 @@
         android:orientation="vertical" >
 
         <LinearLayout
+            android:id="@+id/lobi_profile_banner_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/lobi_padding_high"
+            android:paddingRight="@dimen/lobi_padding_high"
+            android:paddingTop="@dimen/lobi_padding_high" >
+
         </LinearLayout>
 
         <!-- 見出し: 投稿したプレイ動画 -->
@@ -267,6 +273,17 @@
             lobi:lobi_contentBackground="@drawable/lobi_setting_row_selector"
             lobi:lobi_leftContentVisible="false"
             lobi:lobi_rightContentLayoutId="@layout/lobi_list_row_content_arrow" />
+        
+        <com.kayac.lobi.sdk.view.LobiBannerView
+            android:id="@+id/lobi_profile_profile_cover_content_lobi_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/lobi_padding_high"
+            android:layout_marginRight="@dimen/lobi_padding_high"
+            android:paddingTop="@dimen/lobi_padding_high"
+            android:visibility="gone" />
+        
     </LinearLayout>
 
 </LinearLayout>

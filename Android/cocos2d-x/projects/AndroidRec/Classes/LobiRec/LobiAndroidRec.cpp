@@ -108,6 +108,15 @@ bool LobiAndroidRec::isCapturing() {
     }
     return ret;
 }
+bool LobiAndroidRec::isPaused() {
+    bool ret = false;
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "isPaused", "()Z")) {
+        ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
+        t.env->DeleteLocalRef(t.classID);
+    }
+    return ret;
+}
 void LobiAndroidRec::presentLobiPostWithTitle(
     const char* title,
     const char* postDescription,
@@ -237,6 +246,31 @@ void LobiAndroidRec::presentLobiPlay(
         t.env->DeleteLocalRef(t.classID);
     } else {
         CCLOG("failed to find method named openLobiPlayActivity");
+    }
+}
+
+void LobiAndroidRec::presentLobiPlayWithEventFields(
+    const char* eventFields
+) {
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(
+            t, CLASS_NAME, "openLobiPlayActivityWithEventFields",
+            "("
+            "Ljava/lang/String;"
+            ")Z"
+            )) {
+
+        jstring jeventFields = t.env->NewStringUTF(eventFields);
+
+        t.env->CallStaticBooleanMethod(
+            t.classID, t.methodID, 
+            jeventFields);
+        
+        t.env->DeleteLocalRef(jeventFields);
+        
+        t.env->DeleteLocalRef(t.classID);
+    } else {
+        CCLOG("failed to find method named openLobiPlayActivityWithEventFields");
     }
 }
 

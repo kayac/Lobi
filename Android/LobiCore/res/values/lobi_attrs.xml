@@ -57,7 +57,7 @@
   </declare-styleable>
   <declare-styleable name="lobi_ImageLoaderCircleView">
     <attr name="lobi_borderWidth" format="dimension|reference" />
-    </declare-styleable>
+  </declare-styleable>
   <declare-styleable name="lobi_ListRow">
     <attr name="lobi_centerContentLayoutId" format="reference" />
     <attr name="lobi_centerContentVisible" format="boolean" />
@@ -95,5 +95,12 @@
   <declare-styleable name="lobi_ToggleOnOffButton">
     <attr name="lobi_blockedState" format="boolean" />
     <attr name="lobi_isOff" format="boolean" />
+  </declare-styleable>
+  <declare-styleable name="lobi_RoundCornerOverlayView">
+    <attr name="lobi_color" format="color|reference" />
+    <attr name="lobi_radius" format="dimension|reference" />
+  </declare-styleable>
+  <declare-styleable name="lobi_LobiBannerView">
+    <attr name="lobi_showTextOnly" format="boolean" />
   </declare-styleable>
 </resources>

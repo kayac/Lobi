@@ -9,7 +9,6 @@
 "KLC_MENU_INVITE" = "Invite";
 "KLC_MENU_BIND" = "Connect to Lobi";
 "KLC_MENU_CONNECTAPP" = "Login to Lobi";
-"KLC_MENU_AD_ROW_TITLE_APPS" = "HOT GAMES";
 "KLC_MENU_SECTION_TITLE_CONTENT" = "Discover";
 "KLC_MENU_SECTION_TITLE_USER" = "Menu";
 "KLC_MENU_FOLLOW_LIST" = "Following";
@@ -35,7 +34,6 @@
 "KLC_SORT_NEW" = "New";
 "KLC_FRIEND_SEARCH" = "Search";
 "KLC_SEARCH_APP_FRIENDS" = "Search friends";
-"KLC_AD_SCHEME_RECOMMEND" = "Game Ranking";
 
 "KLC_PROFILE_ALERT_TITLE_ADD_FRIEND" = "Add a contact?";
 "KLC_ADD_FRIEND_SUCCESS" = "Added to Contacts!";
@@ -153,3 +151,5 @@
 
 "KLC_NOTICE_ZERO" = "Find chats, followers and all your other notifications here.";
 
+"KLC_PROFILE_MY_FOLLOW_LIST_ZERO" = "You haven't followed anyone in this game.\nSee popular videos!!";
+"KLC_PROFILE_MY_FOLLOWER_LIST_ZERO" = "You haven't been followed in this game.\nSee popular videos!!b";
