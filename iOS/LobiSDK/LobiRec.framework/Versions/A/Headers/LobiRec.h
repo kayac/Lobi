@@ -213,6 +213,12 @@
          prepareHandler:(void(^)(void))prepareHandler
            afterHandler:(void(^)(void))afterHandler;
 
++ (void)presentLobiPlayWithEventFields:(NSString*)eventFields;
+
++ (void)presentLobiPlayWithEventFields:(NSString*)eventFields
+                        prepareHandler:(void(^)(void))prepareHandler
+                          afterHandler:(void(^)(void))afterHandler;
+
 /**
  *  動画のポスト画面を表示します。
  *

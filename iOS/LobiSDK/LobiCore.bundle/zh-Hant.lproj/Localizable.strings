@@ -1,7 +1,6 @@
 "KLC_ACCUSE_ALERT" = "您為什麼檢舉？";
 "KLC_ACKNOWLEDGEMENT_FILE" = "特別致謝";
 "KLC_ADD_FRIEND_SUCCESS" = "已新增至聯絡人！";
-"KLC_AD_SCHEME_RECOMMEND" = "遊戲排名";
 "KLC_ALERT_NO" = "不要";
 "KLC_ALERT_YES" = "要";
 "KLC_BIND_NAKAMAP_APP" = "登入到 Lobi";
@@ -54,7 +53,6 @@
 "KLC_LOGIN" = "登入";
 "KLC_LOGIN_DONE" = "已登入";
 "KLC_MAIL_DEAR_TEAM_%@_%@_%@_%@" = "親愛的 Lobi 團隊，\n\n\n---\nLobiCoreSDK：版本 %@，平台： %@， os： %@， u： %@";
-"KLC_MENU_AD_ROW_TITLE_APPS" = "人氣遊戲";
 "KLC_MENU_BIND" = "連線到 Lobi";
 "KLC_MENU_CHAT" = "聊天";
 "KLC_MENU_CONNECTAPP" = "登入到 Lobi";
