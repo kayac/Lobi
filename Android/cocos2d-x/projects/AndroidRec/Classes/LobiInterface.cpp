@@ -1,5 +1,4 @@
 #include "LobiInterface.h"
-#include "CCDirector.h"
 
 #include "LobiRec/LobiAndroidRec.h"
 #include "LobiCore/LobiAndroidCore.h"
@@ -33,6 +32,12 @@ void LobiInterface::presentLobiPlay(
 {
     LobiAndroidRec::presentLobiPlay(userExid, category, letsplay, metaJson);
 }
+void LobiInterface::presentLobiPlayWithEventFields(
+    const char* eventFields
+)
+{
+    LobiAndroidRec::presentLobiPlayWithEventFields(eventFields);
+}
 
 void LobiInterface::prepareExternalId(
         char* encryptedExternalId,
@@ -60,7 +65,6 @@ void LobiInterface::sendRanking()
 void LobiInterface::recStart()
 {
     if (!LobiAndroidRec::isSupported()) {
-        CCLOG("LobiRec: not supported");
         return;
     }
 
@@ -110,7 +114,12 @@ bool LobiInterface::isRecording()
 
 bool LobiInterface::isPause()
 {
-    // unsupported
+    return isPaused();
+}
+
+bool LobiInterface::isPaused()
+{
+    return LobiAndroidRec::isPaused();
 }
 
 void LobiInterface::initOpenSLAudio()

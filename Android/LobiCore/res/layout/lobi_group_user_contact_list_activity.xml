@@ -63,6 +63,31 @@
                     android:gravity="center"
                     android:text="@string/lobi_follow_list_no_item" />
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lobi_contacts_list_empty_banner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/lobi_margin_extra_large"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/lobi_no_contact_banner_textview"
+                    style="@style/lobi_textview_black_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/lobi_padding_middle" />
+
+                <com.kayac.lobi.sdk.view.LobiBannerView
+                    android:id="@+id/lobi_no_contact_banner_bannerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    lobi:lobi_showTextOnly="true" />
+
+            </LinearLayout>
         </FrameLayout>
     </view>
     <!-- The navigation drawer -->

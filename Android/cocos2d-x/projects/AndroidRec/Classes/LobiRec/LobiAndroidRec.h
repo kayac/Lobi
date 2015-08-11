@@ -28,6 +28,7 @@ public:
     static bool isSupported();
     static int checkError();
     static bool isCapturing();
+    static bool isPaused();
     static void presentLobiPostWithTitle(
         const char* title,
         const char* postDescription,
@@ -47,6 +48,7 @@ public:
         const char* metaJson
     );
     static void presentLobiPlay(const char* videoId);
+    static void presentLobiPlayWithEventFields(const char* eventFields);
     static void initOpenSLAudio(int sampleRate);
     static void setSecretMode(bool secretMode);
     static void setLoggingEnable(bool enabled);

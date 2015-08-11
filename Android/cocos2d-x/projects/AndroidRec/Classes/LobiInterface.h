@@ -21,6 +21,9 @@ namespace LobiInterface
         const bool letsplay,
         const char* metaJson
     );
+    void presentLobiPlayWithEventFields(
+        const char* eventFields
+    );
     
     void prepareExternalId(
         char* encryptedExternalId,
@@ -36,7 +39,8 @@ namespace LobiInterface
     bool isRecording();
     void recPause();
     void recResume();
-    bool isPause();
+    bool isPause(); // deprecated
+    bool isPaused();
  
     void presentShare();
     void wipePostion(float x, float y);
