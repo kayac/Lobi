@@ -33,7 +33,7 @@
     <string name="lobirec_video_list">影片清單</string>
     <string name="lobirec_video_menu">影片選單</string>
     <string name="lobirec_youtube">Youtube</string>
-    <string name="lobisdk_time__int__colon__int">%1$d:%2$d</string>
+    <string name="lobisdk_time__int__colon__int">%1$02d:%2$02d</string>
     <string name="lobisdk_video_user_name">由 %1$s</string>
     <string name="lobisdk_views">%1$d views</string>
 </resources>

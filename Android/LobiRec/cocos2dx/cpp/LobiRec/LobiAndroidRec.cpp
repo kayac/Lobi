@@ -249,6 +249,31 @@ void LobiAndroidRec::presentLobiPlay(
     }
 }
 
+void LobiAndroidRec::presentLobiPlayWithEventFields(
+    const char* eventFields
+) {
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(
+            t, CLASS_NAME, "openLobiPlayActivityWithEventFields",
+            "("
+            "Ljava/lang/String;"
+            ")Z"
+            )) {
+
+        jstring jeventFields = t.env->NewStringUTF(eventFields);
+
+        t.env->CallStaticBooleanMethod(
+            t.classID, t.methodID, 
+            jeventFields);
+        
+        t.env->DeleteLocalRef(jeventFields);
+        
+        t.env->DeleteLocalRef(t.classID);
+    } else {
+        CCLOG("failed to find method named openLobiPlayActivityWithEventFields");
+    }
+}
+
 void LobiAndroidRec::initOpenSLAudio(int sampleRate) {
     CALL_STATIC_VOID_METHOD("initOpenSLAudio", "(I)V", sampleRate);
 }

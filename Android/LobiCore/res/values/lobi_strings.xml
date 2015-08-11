@@ -92,8 +92,10 @@
     <string name="lobi_edit_profile">Edit profile</string>
     <string name="lobi_feedback">Feedback</string>
     <string name="lobi_follow_list_no_item">No follow\'s in your list yet</string>
+    <string name="lobi_follow_list_no_item_with_banner">You haven\'t followed anyone in this game.\nSee popular videos!!</string>
     <string name="lobi_follow_list_no_shown_item">No information to show</string>
     <string name="lobi_follower_list_no_item">No follower in your list yet</string>
+    <string name="lobi_follower_list_no_item_with_banner">You haven\'t been followed in this game.\nSee popular videos!!</string>
     <string name="lobi_follower_list_no_shown_item">No information to show</string>
     <string name="lobi_friend_list">Friends list</string>
     <string name="lobi_friends">Friends activity</string>

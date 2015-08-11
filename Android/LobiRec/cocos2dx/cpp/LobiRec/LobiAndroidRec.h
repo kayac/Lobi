@@ -48,6 +48,7 @@ public:
         const char* metaJson
     );
     static void presentLobiPlay(const char* videoId);
+    static void presentLobiPlayWithEventFields(const char* eventFields);
     static void initOpenSLAudio(int sampleRate);
     static void setSecretMode(bool secretMode);
     static void setLoggingEnable(bool enabled);

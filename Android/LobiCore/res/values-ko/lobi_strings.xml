@@ -92,8 +92,10 @@
     <string name="lobi_edit_profile">프로필 편집</string>
     <string name="lobi_feedback">의견</string>
     <string name="lobi_follow_list_no_item">아직 목록에 팔로잉이 없습니다</string>
+    <string name="lobi_follow_list_no_item_with_banner">You haven\'t followed anyone in this game.\nSee popular videos!!</string>
     <string name="lobi_follow_list_no_shown_item">표시할 정보가 없습니다</string>
     <string name="lobi_follower_list_no_item">목록에 아직 팔로워가 없습니다</string>
+    <string name="lobi_follower_list_no_item_with_banner">You haven\'t been followed in this game.\nSee popular videos!!</string>
     <string name="lobi_follower_list_no_shown_item">표시할 정보가 없습니다</string>
     <string name="lobi_friend_list">Friends list</string>
     <string name="lobi_friends">친구 활동</string>
