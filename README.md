@@ -33,6 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v6.4.1 - 2015/8/11
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.1.zip) 
+    - 特集動画機能の追加。詳細は[LobiRec 動画一覧画面について](https://github.com/kayac/Lobi/wiki/Lobi-Rec-Videos-Page)をご参照下さい。
+    - 端末に保存されている動画を削除するAPIを追加 
+    
 - v6.2.0 - 2015/6/12
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.2.0.zip) 
     - フォロー機能の追加 
