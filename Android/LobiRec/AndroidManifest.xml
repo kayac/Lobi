@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kayac.lobi.sdk.rec"
-    android:versionCode="22"
-    android:versionName="5.2.23" >
+    android:versionCode="23"
+    android:versionName="5.2.24" >
 
     <!-- 実況を有効にする場合のみ必要です -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
