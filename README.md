@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v6.4.2 - 2015/8/13
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.2.zip) 
+    - Android Unity 5.1対応
+    
 - v6.4.1 - 2015/8/11
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.1.zip) 
     - 特集動画機能の追加。詳細は[LobiRec 動画一覧画面について](https://github.com/kayac/Lobi/wiki/Lobi-Rec-Videos-Page)をご参照下さい。
