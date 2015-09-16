@@ -153,3 +153,6 @@
 
 "KLC_PROFILE_MY_FOLLOW_LIST_ZERO" = "You haven't followed anyone in this game.\nSee popular videos!!";
 "KLC_PROFILE_MY_FOLLOWER_LIST_ZERO" = "You haven't been followed in this game.\nSee popular videos!!b";
+
+"KLC_NAVIGATION_TITLE_ACCEPT_TERMS" = "Accept Terms";
+"KLC_BUTTON_TITLE_ACCEPT_TERMS" = "Accept";

@@ -14,6 +14,18 @@
 
 + (instancetype)sharedInstance;
 + (NSString*)SDKVersion;
-+ (void)presentRanking;
 
+/**
+ *  ランキング一覧を表示します。
+ */
++ (void)presentRanking __attribute__ ((deprecated));
+
+/**
+ *  ランキング一覧を表示します。
+ *
+ *  @param prepareHandler 表示完了後に行う処理を指定します。バックグラウンドからの復帰時にも呼び出されます
+ *  @param afterHandler   dissmiss完了後に行う処理を指定します
+ */
++ (void)presentRanking:(void(^)(void))prepareHandler
+          afterHandler:(void(^)(void))afterHandler;
 @end
