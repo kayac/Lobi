@@ -87,7 +87,17 @@
 /**
  *  自身のLobiアカウントのプロフィール画面を表示します。
  */
-+ (void)presentProfile;
++ (void)presentProfile __attribute__ ((deprecated));
+
+
+/**
+ *  自身のLobiアカウントのプロフィール画面を表示します。
+ *
+ *  @param prepareHandler 表示完了後に行う処理を指定します。バックグラウンドからの復帰時にも呼び出されます
+ *  @param afterHandler   dissmiss完了後に行う処理を指定します
+ */
++ (void)presentProfile:(void(^)(void))prepareHandler
+          afterHandler:(void(^)(void))afterHandler;
 
 + (void)prepareExternalId:(NSString*)externalId
          initializeVector:(NSString*)iv
@@ -121,7 +131,7 @@
 @property (nonatomic, readonly) NSString *clientId;
 @property (nonatomic, copy)     NSString *accountBaseName;
 @property (nonatomic, assign)   BOOL useStrictExId;
-@property (nonatomic, copy)     void(^afterHandler)(void);
+@property (nonatomic, copy)     void(^afterHandler)(void) __attribute__ ((deprecated));
 
 @property (nonatomic, readonly) NSString *adPlatform   __attribute__ ((deprecated));
 @property (nonatomic, readonly) NSString *adPlatformId __attribute__ ((deprecated));

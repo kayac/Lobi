@@ -152,3 +152,6 @@
 "KLC_PROFILE_PUBLIC_USER_LIST_ZERO" = "表示できるユーザー情報がありません";
 
 "KLC_NOTICE_ZERO" = "あなたへの通知はまだありません。";
+
+"KLC_NAVIGATION_TITLE_ACCEPT_TERMS" = "ご利用規約";
+"KLC_BUTTON_TITLE_ACCEPT_TERMS" = "同意する";

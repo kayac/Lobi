@@ -197,15 +197,38 @@
 /**
  * LobiPlayサイトを表示します。
  */
-+ (void)presentLobiPlay;
++ (void)presentLobiPlay __attribute__ ((deprecated));
 
+/**
+ * LobiPlayサイトを表示します。
+ *
+ *  @param prepareHandler 表示完了後に行う処理を指定します。バックグラウンドからの復帰時にも呼び出されます
+ *  @param afterHandler   dissmiss完了後に行う処理を指定します
+ */
 + (void)presentLobiPlay:(void(^)(void))prepareHandler
            afterHandler:(void(^)(void))afterHandler;
 
+/**
+ * 動画IDを指定してLobiPlayサイトを表示します。
+ *
+ *  @param videoId        表示する動画のID
+ *  @param prepareHandler 表示完了後に行う処理を指定します。バックグラウンドからの復帰時にも呼び出されます
+ *  @param afterHandler   dissmiss完了後に行う処理を指定します
+ */
 + (void)presentLobiPlay:(NSString*)videoId
          prepareHandler:(void(^)(void))prepareHandler
            afterHandler:(void(^)(void))afterHandler;
 
+/**
+ * ユーザやカテゴリ、メタ情報を指定してLobiPlayサイトを表示します。
+ *
+ *  @param userExId       ユーザのExID
+ *  @param category       カテゴリ。カテゴリは[Lobi Developer](https://developer.lobi.co/ja)サイト[アプリ管理ページ](https://developer.lobi.co/myapps)にて追加されたカテゴリIDを設定します。カテゴリとは投稿された動画をゲームステージなどでカテゴリ分けして表示するための機能です。
+ *  @param letsPlay       実況の動画かどうかを指定します
+ *  @param metaFields     メタ情報
+ *  @param prepareHandler 表示完了後に行う処理を指定します。バックグラウンドからの復帰時にも呼び出されます
+ *  @param afterHandler   dissmiss完了後に行う処理を指定します
+ */
 + (void)presentLobiPlay:(NSString*)userExId
                category:(NSString*)category
                letsPlay:(BOOL)letsPlay
@@ -213,8 +236,20 @@
          prepareHandler:(void(^)(void))prepareHandler
            afterHandler:(void(^)(void))afterHandler;
 
-+ (void)presentLobiPlayWithEventFields:(NSString*)eventFields;
+/**
+ * イベントを指定してLobiPlayサイトを表示します。
+ *
+ *  @param eventFields    イベント
+ */
++ (void)presentLobiPlayWithEventFields:(NSString*)eventFields __attribute__ ((deprecated));
 
+/**
+ * イベントを指定してLobiPlayサイトを表示します。
+ *
+ *  @param eventFields    イベント
+ *  @param prepareHandler 表示完了後に行う処理を指定します。バックグラウンドからの復帰時にも呼び出されます
+ *  @param afterHandler   dissmiss完了後に行う処理を指定します
+ */
 + (void)presentLobiPlayWithEventFields:(NSString*)eventFields
                         prepareHandler:(void(^)(void))prepareHandler
                           afterHandler:(void(^)(void))afterHandler;
@@ -226,8 +261,8 @@
  *  @param postDescrition コメント
  *  @param postScore スコア
  *  @param postCategory カテゴリには[Lobi Developer](https://developer.lobi.co/ja)サイト[アプリ管理ページ](https://developer.lobi.co/myapps)にて追加されたカテゴリIDを設定します。カテゴリとは投稿された動画をゲームステージなどでカテゴリ分けして表示するための機能です。
- *  @param prepareHandler プレイ動画シェア画面表示時にゲームアニメーションを停止・開始処理をハンドリングする必要があります。prepareHandlerハンドラにてアニメーションの停止処理を実装してください。
- *  @param afterHandler アニメーションの開始処理を実装してください。
+ *  @param prepareHandler 表示完了後に行う処理を指定します。バックグラウンドからの復帰時にも呼び出されます
+ *  @param afterHandler   dissmiss完了後に行う処理を指定します
  */
 + (void)presentLobiPostWithTitle:(NSString *)title
                   postDescrition:(NSString *)postDescrition
@@ -236,6 +271,17 @@
                   prepareHandler:(void(^)(void))prepareHandler
                     afterHandler:(void(^)(void))afterHandler;
 
+/**
+ *  動画のポスト画面を表示します。
+ *
+ *  @param title シェアタイトル
+ *  @param postDescrition コメント
+ *  @param postScore スコア
+ *  @param postCategory カテゴリには[Lobi Developer](https://developer.lobi.co/ja)サイト[アプリ管理ページ](https://developer.lobi.co/myapps)にて追加されたカテゴリIDを設定します。カテゴリとは投稿された動画をゲームステージなどでカテゴリ分けして表示するための機能です。
+ *  @param postMetaData メタ情報
+ *  @param prepareHandler 表示完了後に行う処理を指定します。バックグラウンドからの復帰時にも呼び出されます
+ *  @param afterHandler   dissmiss完了後に行う処理を指定します
+ */
 + (void)presentLobiPostWithTitle:(NSString*)title
                   postDescrition:(NSString*)postDescrition
                        postScore:(int64_t)postScore

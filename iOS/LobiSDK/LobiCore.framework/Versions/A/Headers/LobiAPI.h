@@ -62,6 +62,8 @@
                                iv:(NSString *)iv
                        completion:(LobiNetworkHandler)handler;
 
++ (void)isBoundWithLobiAccount:(LobiNetworkHandler)handler;
+
 @end
 
 #endif

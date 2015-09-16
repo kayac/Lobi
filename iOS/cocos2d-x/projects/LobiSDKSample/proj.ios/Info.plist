@@ -64,5 +64,26 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>nakamapapp-f92bd261db0bf4a1cf277fcee37d26d07d1e06ec</string>
+        <string>nakamap-sso</string>
+        <string>nakamap</string>
+        <string>lobi</string>
+        <string>line</string>
+    </array>    
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>cloudfront.net</key>
+            <dict>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>

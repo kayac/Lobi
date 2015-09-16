@@ -33,6 +33,12 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v6.4.3 - 2015/9/16
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.3.zip) 
+    - iOS9対応。詳細は[iOS9対応について](https://github.com/kayac/Lobi/wiki/LobiSDK-iOS9)をご参照下さい。
+    - iOS Unity5.2対応
+    - Lobiにログイン済みかどうかを取得するAPIを追加
+    
 - v6.4.2 - 2015/8/13
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.2.zip) 
     - Android Unity 5.1対応
