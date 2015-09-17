@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v6.4.4 - 2015/9/17
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.4.zip) 
+    - iOS 動画投稿が正常に開始しない問題の修正
+    
 - v6.4.3 - 2015/9/16
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.3.zip) 
     - iOS9対応。詳細は[iOS9対応について](https://github.com/kayac/Lobi/wiki/LobiSDK-iOS9)をご参照下さい。
