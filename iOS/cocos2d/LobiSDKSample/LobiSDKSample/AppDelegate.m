@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "IntroLayer.h"
 #import <LobiCore/LobiCore.h>
+#import <LobiRec/LobiRec.h>
 
 @implementation MyNavigationController
 
@@ -73,6 +74,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [LobiCore setupClientId:@"f92bd261db0bf4a1cf277fcee37d26d07d1e06ec" accountBaseName:@"kayac"];
+    [LobiRec useOpenGLES];
 
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

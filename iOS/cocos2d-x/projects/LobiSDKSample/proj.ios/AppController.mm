@@ -5,6 +5,7 @@
 #import "RootViewController.h"
 
 #import <LobiCore/LobiCore.h>
+#import <LobiRec/LobiRec.h>
 
 @implementation AppController
 
@@ -30,6 +31,8 @@ static AppDelegate s_sharedApplication;
 {
     [LobiCore setupClientId:@"f92bd261db0bf4a1cf277fcee37d26d07d1e06ec" accountBaseName:@"Kayac"];
     // Override point for customization after application launch.
+    
+    [LobiRec useOpenGLES];
 
     // Add the view controller's view to the window and display.
     window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
