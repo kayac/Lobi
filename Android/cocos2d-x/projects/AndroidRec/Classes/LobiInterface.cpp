@@ -72,12 +72,12 @@ void LobiInterface::recStart()
     LobiAndroidRec::setCapturePerFrame(3);
     LobiAndroidRec::setMicVolume(1.4f);
     LobiAndroidRec::setGameSoundVolume(0.5f);
+    if (LobiAndroidRec::isFaceCaptureSupported()) {
+        LobiAndroidRec::setLiveWipeStatus(LobiAndroidRec::LIVE_WIPE_STATUS_IN_CAMERA);
+        LobiAndroidRec::setWipeSquareSize(100);
+        LobiAndroidRec::setWipePosition(10, 10);
+    }
     LobiAndroidRec::startCapturing();
-}
-
-void LobiInterface::wipePostion(float x, float y)
-{
-    // unsupported
 }
 
 void LobiInterface::recStop()

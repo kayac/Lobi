@@ -17,6 +17,7 @@ using namespace cocos2d;
 // /src/com/kayac/lobi/libnakamap/rec/LobiRec.java と同一の定義をすること。
 int LobiAndroidRec::NO_ERROR = 0;
 int LobiAndroidRec::ERROR_BAD_ENCODER_CONNECTION = 0x80000001;
+int LobiAndroidRec::ERROR_FAILED_TO_LOAD_NATIVE_LIBRARY = 0x80000002;
 
 void LobiAndroidRec::setRecorderSwitch(bool turnedOn) {
     CALL_STATIC_VOID_METHOD("setRecorderSwitch", "(Z)V", turnedOn);
@@ -42,14 +43,59 @@ void LobiAndroidRec::resumeCapturing() {
 void LobiAndroidRec::pauseCapturing() {
     CALL_STATIC_VOID_METHOD("pauseRecording", "()V", NULL);
 }
-void LobiAndroidRec::setLiveWipeStatus(int status) {
-    CALL_STATIC_VOID_METHOD("setLiveWipeStatus", "(I)V", status);
+bool LobiAndroidRec::isFaceCaptureSupported() {
+    bool ret = false;
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "isFaceCaptureSupported", "()Z")) {
+        ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
+        t.env->DeleteLocalRef(t.classID);
+    }
+    return ret;
+}
+void LobiAndroidRec::setLiveWipeStatus(LiveWipeStatus status) {
+    CALL_STATIC_VOID_METHOD("setLiveWipeStatus", "(I)V", (int)status);
+}
+LobiAndroidRec::LiveWipeStatus LobiAndroidRec::getLiveWipeStatus() {
+    LiveWipeStatus ret = LobiAndroidRec::LIVE_WIPE_STATUS_NONE;
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "getLiveWipeStatus", "()I")) {
+        ret = (LiveWipeStatus)t.env->CallStaticIntMethod(t.classID, t.methodID, NULL);
+        t.env->DeleteLocalRef(t.classID);
+    }
+    return ret;
 }
 void LobiAndroidRec::setWipeSquareSize(int wipeSize) {
     CALL_STATIC_VOID_METHOD("setWipeSquareSize", "(I)V", wipeSize);
 }
+int LobiAndroidRec::getWipeSquareSize() {
+    int ret = 0;
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "getWipeSquareSize", "()I")) {
+        ret = t.env->CallStaticIntMethod(t.classID, t.methodID, NULL);
+        t.env->DeleteLocalRef(t.classID);
+    }
+    return ret;
+}
 void LobiAndroidRec::setWipePosition(int x, int y) {
     CALL_STATIC_VOID_METHOD("setWipePosition", "(II)V", x, y);
+}
+int LobiAndroidRec::getWipePositionX() {
+    int ret = 0;
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "getWipePositionX", "()I")) {
+        ret = t.env->CallStaticIntMethod(t.classID, t.methodID, NULL);
+        t.env->DeleteLocalRef(t.classID);
+    }
+    return ret;
+}
+int LobiAndroidRec::getWipePositionY() {
+    int ret = 0;
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "getWipePositionY", "()I")) {
+        ret = t.env->CallStaticIntMethod(t.classID, t.methodID, NULL);
+        t.env->DeleteLocalRef(t.classID);
+    }
+    return ret;
 }
 void LobiAndroidRec::setMicEnable(bool enabled) {
     CALL_STATIC_VOID_METHOD("setMicEnable", "(Z)V", enabled);
