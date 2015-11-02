@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v6.4.5 - 2015/11/2
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.5.zip) 
+    - Android インカメラ録画に対応(Cocos2d-x, Unity 4)
+
 - v6.4.4 - 2015/9/17
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.4.zip) 
     - iOS 動画投稿が正常に開始しない問題の修正
