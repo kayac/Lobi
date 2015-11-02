@@ -43,7 +43,6 @@ namespace LobiInterface
     bool isPaused();
  
     void presentShare();
-    void wipePostion(float x, float y);
     
     void initOpenSLAudio();
 

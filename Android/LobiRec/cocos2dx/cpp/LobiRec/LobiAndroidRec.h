@@ -5,8 +5,15 @@
 
 class LobiAndroidRec {
 public:
+    enum LiveWipeStatus {
+        LIVE_WIPE_STATUS_NONE = 0,
+        LIVE_WIPE_STATUS_IN_CAMERA,
+        LIVE_WIPE_STATUS_ICON
+    };
+
     static int NO_ERROR;
     static int ERROR_BAD_ENCODER_CONNECTION;
+    static int ERROR_FAILED_TO_LOAD_NATIVE_LIBRARY;
 
     static void setRecorderSwitch(bool turnedOn);
     static bool getRecorderSwitch();
@@ -14,9 +21,14 @@ public:
     static void stopCapturing();
     static void resumeCapturing();
     static void pauseCapturing();
-    static void setLiveWipeStatus(int status);
+    static bool isFaceCaptureSupported();
+    static void setLiveWipeStatus(LiveWipeStatus status);
+    static LiveWipeStatus getLiveWipeStatus();
     static void setWipeSquareSize(int wipeSize);
+    static int getWipeSquareSize();
     static void setWipePosition(int x, int y);
+    static int getWipePositionX();
+    static int getWipePositionY();
     static void setMicEnable(bool enabled);
     static void setMicVolume(double volume);
     static void setGameSoundVolume(double volume);

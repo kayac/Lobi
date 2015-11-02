@@ -71,7 +71,7 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
                 android:paddingTop="@dimen/lobi_margin_extra_large"
-                android:visibility="visible" >
+                android:visibility="invisible" >
 
                 <TextView
                     android:id="@+id/lobi_no_contact_banner_textview"

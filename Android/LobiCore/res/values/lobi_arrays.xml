@@ -49,4 +49,8 @@
     <item>@string/lobi_private_groups</item>
     <item>@string/lobi_friend_list</item>
   </string-array>
+  <string-array name="lobi_group_list_fixed_tab_titles_private_disable">
+    <item>@string/lobi_public_groups</item>
+    <item>@string/lobi_friend_list</item>
+  </string-array>
 </resources>

@@ -50,6 +50,23 @@
 + (NSString*)SDKVersion;
 
 /**
+ *  OpenGLESモードで動作すべきかの確認
+ *
+ *  @return OpenGLESモードの場合はYES
+ */
++ (BOOL)shouldUseOpenGLES;
+
+/**
+ *  明示的にMetalを使うことを通知
+ */
++ (void)useMetal;
+
+/**
+ *  明示的にOpenGLESを使うことを通知
+ */
++ (void)useOpenGLES;
+
+/**
  *  録画中、録画停止中を提供します。
  */
 @property (nonatomic, readonly) BOOL isCapturing;

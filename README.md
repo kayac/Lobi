@@ -33,6 +33,12 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v6.4.5 - 2015/11/2
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.5.zip) 
+    - Android インカメラ録画に対応(Cocos2d-x, Unity 4)
+    - iOS Metal サポート(Unity4.6, Unity5.0, Unity5.1) 
+        - これにより cocos2d/2d-xの初期化時に[useOpenGLES](https://github.com/kayac/Lobi/wiki/iOS-Implement-LobiRecSDK-Cocos2d#lobi-sdkの初期化処理) を呼び出す必要があります。
+
 - v6.4.4 - 2015/9/17
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.4.zip) 
     - iOS 動画投稿が正常に開始しない問題の修正

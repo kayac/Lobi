@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kayac.lobi.sdk.rec"
-    android:versionCode="24"
-    android:versionName="5.2.25" >
+    android:versionCode="26"
+    android:versionName="5.2.30" >
 
     <!-- 実況を有効にする場合のみ必要です -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-feature android:name="android.hardware.microphone" android:required="false" />
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
     <application>
         <service android:name="com.kayac.lobi.sdk.rec.service.MovieUploadService" />
 
