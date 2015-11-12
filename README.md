@@ -33,6 +33,9 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v6.4.6 - 2015/11/12 ダウンロード
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.6.zip) 
+    - Unity5.2、Android6.0の環境ではlobirecexternalaudioライブラリを正しく読み込めないことがある問題を修正
 - v6.4.5 - 2015/11/2
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.5.zip) 
     - Android インカメラ録画に対応(Cocos2d-x, Unity 4)
