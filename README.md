@@ -36,6 +36,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 - v6.4.7 - 2016/1/22 ダウンロード
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.7.zip) 
     - Android Unity5.3対応（Unity5.1以降の録音方式を変更）
+    - iOS Metal Unity4.7, Unity5.2, Unity5.3に対応
     - Cocos2d-x 3.6から3.9の録画対応（3.6以降のAudioEngine, SimpleAudioEngineは対応作業中）
 
 - v6.4.6 - 2015/11/12 ダウンロード
