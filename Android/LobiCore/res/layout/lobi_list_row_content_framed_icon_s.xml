@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.kayac.lobi.libnakamap.components.FramedImageLoader
+<com.kayac.lobi.libnakamap.components.ImageLoaderCircleView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:lobi="http://schemas.android.com/apk/res-auto"
     lobi:lobi_frameResourceId="@drawable/lobi_frame_s"

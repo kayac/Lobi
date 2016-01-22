@@ -29,18 +29,13 @@
                 android:layout_width="@dimen/lobi_chat_members_header_member_icon_size"
                 android:layout_height="@dimen/lobi_chat_members_header_member_icon_size" >
 
-                <com.kayac.lobi.libnakamap.components.ImageLoaderView
+                <com.kayac.lobi.libnakamap.components.ImageLoaderCircleView
                     android:id="@+id/lobi_chat_reply_icon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="left"
                     android:scaleType="centerInside"
                     lobi:lobi_useMemoryCache="false" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/lobi_frame_s" />
             </FrameLayout>
 
             <LinearLayout

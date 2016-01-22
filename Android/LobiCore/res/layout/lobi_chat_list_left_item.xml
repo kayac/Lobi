@@ -21,7 +21,7 @@
         android:paddingRight="45dp"
         android:paddingTop="6dp" >
 
-        <com.kayac.lobi.libnakamap.components.ImageLoaderView
+        <com.kayac.lobi.libnakamap.components.ImageLoaderCircleView
             android:id="@+id/lobi_chat_list_item_icon"
             android:layout_width="32dp"
             android:layout_height="32dp" />
