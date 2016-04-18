@@ -33,7 +33,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- v6.4.8 - 2016/4/18 ダウンロード
+- v6.4.8 - 2016/4/18
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.8.zip) 
     - Android Rec 軽微なバグ修正
 
@@ -41,13 +41,13 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 ----------------------------
 
-- v6.4.7 - 2016/1/22 ダウンロード
+- v6.4.7 - 2016/1/22
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.7.zip) 
     - Android Unity5.3対応（Unity5.1以降の録音方式を変更）
     - iOS Metal Unity4.7, Unity5.2, Unity5.3に対応
     - Cocos2d-x 3.6から3.9の録画対応（3.6以降のAudioEngine, SimpleAudioEngineは対応作業中）
 
-- v6.4.6 - 2015/11/12 ダウンロード
+- v6.4.6 - 2015/11/12
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.6.zip) 
     - Unity5.2、Android6.0の環境ではlobirecexternalaudioライブラリを正しく読み込めないことがある問題を修正
 
