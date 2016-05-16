@@ -33,7 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- v6.4.8 - 2016/4/18
+- v6.4.9 - 2016/5/16
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.9.zip) 
+    - Android Rec Cocos2d-x 3.7以降で、GLSurfaceViewをもつActivityが多重に起動している場合のバグを修正
+
+- v6.4.8 - 2016/4/18 (サポート期限 2017/3/16)
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.8.zip) 
     - Android Rec 軽微なバグ修正
 
