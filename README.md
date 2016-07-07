@@ -36,7 +36,7 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 - v6.4.10 - 2016/7/7
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.10.zip) 
     - Android SDK 必要権限の整理
-    - Android Rec Cocos2d-x AudioEngine, SimpleAudioEngineの録音に対応
+    - Android Rec Cocos2d-x AudioEngine、v3.7 v3.8 のSimpleAudioEngineの録音に対応
     - Android Rec Android 6での外部音声ライブラリ（CRI ADX2等）の録音に対応
     - iOS SDK ビルド時に大量のWarningが出力される問題の修正
     - iOS Rec アップロードに失敗した動画が削除されない場合がある問題の修正
