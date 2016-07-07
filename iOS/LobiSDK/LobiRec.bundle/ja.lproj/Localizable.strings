@@ -66,3 +66,16 @@
 "KLV_VIDEO_USER_NAME%@" = "by %@";
 "KLV_VIDEO_VIEWS" = "Views";
 
+"KLV_VIDEO_INFORMATION" = "この動画の情報";
+"KLV_REPLAY" = "もう一度見る";
+"KLV_SHARE" = "シェアする";
+"KLV_USER_VIDEO_LIST" = "この投稿者の動画一覧";
+"KLV_PLEASE_VIDEO_FEEDBACK" = "この動画は役立ちましたか？";
+"KLV_TW_TWEET" = "ツイートする";
+"KLV_FB_SHARE" = "シェアする";
+"KLV_LINE_SEND" = "LINEで送る";
+"KLV_LOBI_SEND" = "Lobiで送る";
+"KLV_COPY_LINK" = "リンクをコピー";
+"KLV_COPY_COMPLETE" = "リンクをコピーしました";
+"KLV_SHARE_WORDING_%@_%@_%@" = "「%@」の動画「%@」を見てるよ %@";
+"KLV_SHARE_WORDING_WITHOUT_URL_%@_%@" = "「%@」の動画「%@」を見てるよ";

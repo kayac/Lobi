@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kayac.lobi.sdk"
-    android:versionCode="23"
-    android:versionName="6.4.9" >
+    android:versionCode="24"
+    android:versionName="6.4.10" >
 
     <!-- Used for accessing nakamap APIs -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- Used for taking pictures and saving them to the gallery -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- Used for chat notification streaming -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
