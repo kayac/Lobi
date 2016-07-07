@@ -264,7 +264,11 @@
 
 - (void)hoge
 {
-    [LobiRanking presentRanking];
+    [LobiRanking presentRanking:^{
+        NSLog(@"presentRanking prepareHandler");
+    } afterHandler:^{
+        NSLog(@"presentRanking afterHandler");
+    }];
 }
 
 
