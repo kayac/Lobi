@@ -16,17 +16,29 @@
 
 void LobiInterface::presentProfile()
 {
-    [LobiCore presentProfile];
+    [LobiCore presentProfile:^{
+        NSLog(@"presentProfile prepareHandler");
+    } afterHandler:^{
+        NSLog(@"presentProfile afterHandler");
+    }];
 }
 
 void LobiInterface::presentLobiPlay()
 {
-    [LobiRec presentLobiPlay];
+    [LobiRec presentLobiPlay:^{
+        NSLog(@"presentLobiPlay prepareHandler");
+    } afterHandler:^{
+        NSLog(@"presentLobiPlay afterHandler");
+    }];
 }
 
 void LobiInterface::presentRanking()
 {
-    [LobiRanking presentRanking];
+    [LobiRanking presentRanking:^{
+        NSLog(@"presentRanking prepareHandler");
+    } afterHandler:^{
+        NSLog(@"presentRanking afterHandler");
+    }];
 }
 
 void LobiInterface::sendRanking()
@@ -120,5 +132,5 @@ bool LobiInterface::isRecording()
 
 bool LobiInterface::isPause()
 {
-    return [LobiRec isPause];
+    return [LobiRec isPaused];
 }
