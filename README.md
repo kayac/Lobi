@@ -33,7 +33,13 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- v6.4.9 - 2016/5/16
+- v6.4.10 - 2016/7/7
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.10.zip) 
+    - Android SDK 必要権限の整理
+    - Android Rec Cocos2d-x AudioEngine, SimpleAudioEngineの録音に対応
+    - Android Rec Android 6での外部音声ライブラリ（CRI ADX2等）の録音に対応
+
+- v6.4.9 - 2016/5/16 (サポート期限 2017/5/7)
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.9.zip) 
     - Android Rec Cocos2d-x 3.7以降で、GLSurfaceViewをもつActivityが多重に起動している場合のバグを修正
 
