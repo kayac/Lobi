@@ -57,7 +57,11 @@
 
         {
             CCMenuItem *profile = [CCMenuItemFont itemWithString:@"プロフィール表示" block:^(id sender) {
-                [LobiCore presentProfile];
+                [LobiCore presentProfile:^{
+                    NSLog(@"presentProfile prepareHandler");
+                } afterHandler:^{
+                    NSLog(@"presentProfile afterHandler");
+                }];
             }];
             
             CCMenu *menu = [CCMenu menuWithItems:profile, nil];
@@ -68,10 +72,16 @@
 
 		{
             CCMenuItem *rankingList = [CCMenuItemFont itemWithString:@"ランキング表示" block:^(id sender) {
-                //[LobiRanking presentRanking];
+                [LobiRanking presentRanking:^{
+                    NSLog(@"presentRanking prepareHandler");
+                } afterHandler:^{
+                    NSLog(@"presentRanking afterHandler");
+                }];
+                /** ランキング情報を取得する例
                 [LobiAPI getRanking:@"devmassive01" type:KLRRankingRangeAll origin:KLRRankingCursorOriginTop cursor:1 limit:10 handler:^(LobiNetworkResponse *res) {
                     NSLog(@"Response:%@",res);
                 }];
+                 */
             }];
             
             CCMenuItem *sendRanking = [CCMenuItemFont itemWithString:@"ランキング送信" block:^(id sender) {
