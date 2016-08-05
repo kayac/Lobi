@@ -11,7 +11,7 @@ Lobi
 		- CocoaTouch / Unity / Cocos2d / Cocos2d-x  
 - Android
 	- LobiRec / ランキング
-		- AndroidOS / Unity / Cocos2d-x  
+		- AndroidOS / Unity (5.4は対応予定) / Cocos2d-x  
 
 [https://github.com/kayac/Lobi/releases](https://github.com/kayac/Lobi/releases)
 
