@@ -33,6 +33,10 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
+- v6.4.11 - 2016/8/23
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.11.zip) 
+    - iOS Rec 動画投稿直後に動画を確認しようとするとクラッシュする問題の修正
+
 - v6.4.10 - 2016/7/7
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.10.zip) 
     - Android SDK 必要権限の整理
