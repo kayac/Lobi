@@ -13,3 +13,5 @@ https://github.com/cocos2d/cocos2d-x
 - `55840b456192e874a42936660b11d4a3e4fb1df8 cocos2d-x-3.7`
 - `12ff8cd2dd1bfdcad78abc5eff494cb8cf0053d8 cocos2d-x-3.8`
 - `0682832ed7f9dfe4a72bd5c9372981d88d389378 cocos2d-x-3.9`
+- `67f4be538b96f9506c30e56e7e5266c0b34e9d26 cocos2d-x-3.10`
+- `794759f76d0191dab4a7e1697e6f1318f3ed6a65 cocos2d-x-3.11`

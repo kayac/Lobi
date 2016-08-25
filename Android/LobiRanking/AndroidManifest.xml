@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kayac.lobi.sdk.ranking"
-    android:versionCode="22"
-    android:versionName="6.4.10" >
+    android:versionCode="23"
+    android:versionName="6.4.12" >
 
     <!-- プロフィール画像の設定時、カメラアプリを利用するために必要です -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />

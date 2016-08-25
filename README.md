@@ -33,11 +33,16 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- v6.4.11 - 2016/8/23
+- v6.4.12 - 2016/8/25
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.12.zip) 
+    - Android Rec Unity 5.3、5.4の録画対応
+    - Android Rec Cocos2d-x v3.9, v3.10, v3.11の録画対応
+
+- v6.4.11 - 2016/8/23 (サポート期限 2017/6/25)
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.11.zip) 
     - iOS Rec 動画投稿直後に動画を確認しようとするとクラッシュする問題の修正
 
-- v6.4.10 - 2016/7/7
+- v6.4.10 - 2016/7/7 (サポート期限 2017/6/23)
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.10.zip) 
     - Android SDK 必要権限の整理
     - Android Rec Cocos2d-x AudioEngine、v3.7 v3.8 のSimpleAudioEngineの録音に対応
