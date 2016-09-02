@@ -45,11 +45,7 @@
 @synthesize msaaFramebuffer=_msaaFramebuffer;
 
 // Create an OpenGL ES 2.0 context
-- (id) initWithDepthFormat:(unsigned int)depthFormat
-           withPixelFormat:(unsigned int)pixelFormat
-            withSharegroup:(EAGLSharegroup *)sharegroup
-         withMultiSampling:(BOOL)multiSampling
-       withNumberOfSamples:(unsigned int)requestedSamples
+- (id) initWithDepthFormat:(unsigned int)depthFormat withPixelFormat:(unsigned int)pixelFormat withSharegroup:(EAGLSharegroup*)sharegroup withMultiSampling:(BOOL) multiSampling withNumberOfSamples:(unsigned int) requestedSamples
 {
     self = [super init];
     if (self)
