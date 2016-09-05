@@ -71,6 +71,16 @@ typedef void (*GLLogFunction) (GLuint program,
 
 @synthesize program = _program;
 
++ (id)programWithVertexShaderByteArray:(const GLchar*)vShaderByteArray fragmentShaderByteArray:(const GLchar*)fShaderByteArray
+{
+	return [[[self alloc] initWithVertexShaderByteArray:vShaderByteArray fragmentShaderByteArray:fShaderByteArray] autorelease];
+}
+
++ (id)programWithVertexShaderFilename:(NSString *)vShaderFilename fragmentShaderFilename:(NSString *)fShaderFilename
+{
+	return [[[self alloc] initWithVertexShaderFilename:vShaderFilename fragmentShaderFilename:fShaderFilename] autorelease];
+}
+
 - (id)initWithVertexShaderByteArray:(const GLchar *)vShaderByteArray fragmentShaderByteArray:(const GLchar *)fShaderByteArray
 {
     if ((self = [super init]) )
@@ -110,8 +120,17 @@ typedef void (*GLLogFunction) (GLuint program,
 
 - (id)initWithVertexShaderFilename:(NSString *)vShaderFilename fragmentShaderFilename:(NSString *)fShaderFilename
 {
-	const GLchar * vertexSource = (GLchar*) [[NSString stringWithContentsOfFile:[[CCFileUtils sharedFileUtils] fullPathForFilenameIgnoringResolutions:vShaderFilename] encoding:NSUTF8StringEncoding error:nil] UTF8String];
-	const GLchar * fragmentSource = (GLchar*) [[NSString stringWithContentsOfFile:[[CCFileUtils sharedFileUtils] fullPathForFilenameIgnoringResolutions:fShaderFilename] encoding:NSUTF8StringEncoding error:nil] UTF8String];
+	NSString *v = [[CCFileUtils sharedFileUtils] fullPathForFilenameIgnoringResolutions:vShaderFilename];
+	NSString *f = [[CCFileUtils sharedFileUtils] fullPathForFilenameIgnoringResolutions:fShaderFilename];
+	if( !(v || f) ) {
+		if(!v)
+			CCLOGWARN(@"Could not open vertex shader: %@", vShaderFilename);
+		if(!f)
+			CCLOGWARN(@"Could not open fragment shader: %@", fShaderFilename);
+		return nil;
+	}
+	const GLchar * vertexSource = (GLchar*) [[NSString stringWithContentsOfFile:v encoding:NSUTF8StringEncoding error:nil] UTF8String];
+	const GLchar * fragmentSource = (GLchar*) [[NSString stringWithContentsOfFile:f encoding:NSUTF8StringEncoding error:nil] UTF8String];
 
 	return [self initWithVertexShaderByteArray:vertexSource fragmentShaderByteArray:fragmentSource];
 }
@@ -122,27 +141,43 @@ typedef void (*GLLogFunction) (GLuint program,
 }
 
 
+#define EXTENSION_STRING "#extension GL_OES_standard_derivatives : enable"
+static NSString * g_extensionStr = @EXTENSION_STRING;
+
 - (BOOL)compileShader:(GLuint *)shader type:(GLenum)type byteArray:(const GLchar *)source
 {
     GLint status;
 
     if (!source)
         return NO;
-		
-		const GLchar *sources[] = {
+    
+    // BEGIN workaround for Xcode bug : related "Failed to compile shader:"
+    BOOL hasExtension = NO;
+    NSString *sourceStr = [NSString stringWithUTF8String:source];
+    if([sourceStr rangeOfString:g_extensionStr].location != NSNotFound) {
+        hasExtension = YES;
+        NSArray *strs = [sourceStr componentsSeparatedByString:g_extensionStr];
+        assert(strs.count == 2);
+        sourceStr = [strs componentsJoinedByString:@"\n"];
+        source = (GLchar *)[sourceStr UTF8String];
+    }
+    
+    const GLchar *sources[] = {
+        (hasExtension ? EXTENSION_STRING "\n" : ""),
 #ifdef __CC_PLATFORM_IOS
-			(type == GL_VERTEX_SHADER ? "precision highp float;\n" : "precision mediump float;\n"),
+        (type == GL_VERTEX_SHADER ? "precision highp float;\n" : "precision mediump float;\n"),
 #endif
-			"uniform mat4 CC_PMatrix;\n"
-			"uniform mat4 CC_MVMatrix;\n"
-			"uniform mat4 CC_MVPMatrix;\n"
-			"uniform vec4 CC_Time;\n"
-			"uniform vec4 CC_SinTime;\n"
-			"uniform vec4 CC_CosTime;\n"
-			"uniform vec4 CC_Random01;\n"
-			"//CC INCLUDES END\n\n",
-			source,
-		};
+        "uniform mat4 CC_PMatrix;\n"
+        "uniform mat4 CC_MVMatrix;\n"
+        "uniform mat4 CC_MVPMatrix;\n"
+        "uniform vec4 CC_Time;\n"
+        "uniform vec4 CC_SinTime;\n"
+        "uniform vec4 CC_CosTime;\n"
+        "uniform vec4 CC_Random01;\n"
+        "//CC INCLUDES END\n\n",
+        source,
+    };
+    // END workaround for Xcode bug
 		
     *shader = glCreateShader(type);
     glShaderSource(*shader, sizeof(sources)/sizeof(*sources), sources, NULL);
@@ -186,16 +221,20 @@ typedef void (*GLLogFunction) (GLuint program,
 	_uniforms[kCCUniformTime] = glGetUniformLocation(_program, kCCUniformTime_s);
 	_uniforms[kCCUniformSinTime] = glGetUniformLocation(_program, kCCUniformSinTime_s);
 	_uniforms[kCCUniformCosTime] = glGetUniformLocation(_program, kCCUniformCosTime_s);
-	
-	_usesTime = (
+
+	_uniforms[kCCUniformRandom01] = glGetUniformLocation(_program, kCCUniformRandom01_s);
+
+	_uniforms[kCCUniformSampler] = glGetUniformLocation(_program, kCCUniformSampler_s);
+
+	_flags.usesMVP = _uniforms[kCCUniformMVPMatrix] != -1;
+	_flags.usesMV = (_uniforms[kCCUniformMVMatrix] != -1 && _uniforms[kCCUniformPMatrix] != -1 );
+	_flags.usesTime = (
 		_uniforms[kCCUniformTime] != -1 ||
 		_uniforms[kCCUniformSinTime] != -1 ||
 		_uniforms[kCCUniformCosTime] != -1
 	);
+	_flags.usesRandom = _uniforms[kCCUniformRandom01] != -1;
 
-	_uniforms[kCCUniformRandom01] = glGetUniformLocation(_program, kCCUniformRandom01_s);
-	
-	_uniforms[kCCUniformSampler] = glGetUniformLocation(_program, kCCUniformSampler_s);
 
 	[self use];
 	
@@ -405,18 +444,22 @@ typedef void (*GLLogFunction) (GLuint program,
 {
 	kmMat4 matrixP;
 	kmMat4 matrixMV;
-	kmMat4 matrixMVP;
-	
+
 	kmGLGetMatrix(KM_GL_PROJECTION, &matrixP );
 	kmGLGetMatrix(KM_GL_MODELVIEW, &matrixMV );
 	
-	kmMat4Multiply(&matrixMVP, &matrixP, &matrixMV);
-	
-	[self setUniformLocation:_uniforms[  kCCUniformPMatrix] withMatrix4fv:  matrixP.mat count:1];
-	[self setUniformLocation:_uniforms[ kCCUniformMVMatrix] withMatrix4fv: matrixMV.mat count:1];
-	[self setUniformLocation:_uniforms[kCCUniformMVPMatrix] withMatrix4fv:matrixMVP.mat count:1];
-	
-	if(_usesTime){
+	if( _flags.usesMVP) {
+		kmMat4 matrixMVP;
+		kmMat4Multiply(&matrixMVP, &matrixP, &matrixMV);
+		[self setUniformLocation:_uniforms[kCCUniformMVPMatrix] withMatrix4fv:matrixMVP.mat count:1];
+	}
+
+	if( _flags.usesMV) {
+		[self setUniformLocation:_uniforms[  kCCUniformPMatrix] withMatrix4fv:  matrixP.mat count:1];
+		[self setUniformLocation:_uniforms[ kCCUniformMVMatrix] withMatrix4fv: matrixMV.mat count:1];
+	}
+
+	if(_flags.usesTime){
 		CCDirector *director = [CCDirector sharedDirector];
 		// This doesn't give the most accurate global time value.
 		// Cocos2D doesn't store a high precision time value, so this will have to do.
@@ -428,9 +471,8 @@ typedef void (*GLLogFunction) (GLuint program,
 		[self setUniformLocation:_uniforms[kCCUniformCosTime] withF1:cosf(time/8.0) f2:cosf(time/4.0) f3:cosf(time/2.0) f4:cosf(time)];
 	}
 	
-	if(_uniforms[kCCUniformRandom01] != -1){
+	if(_flags.usesRandom)
 		[self setUniformLocation:_uniforms[kCCUniformRandom01] withF1:CCRANDOM_0_1() f2:CCRANDOM_0_1() f3:CCRANDOM_0_1() f4:CCRANDOM_0_1()];
-	}
 }
 
 -(void)setUniformForModelViewProjectionMatrix;

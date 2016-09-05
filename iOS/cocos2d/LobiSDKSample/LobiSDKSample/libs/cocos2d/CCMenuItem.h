@@ -47,6 +47,7 @@
 	BOOL _isSelected;
 	
 	BOOL _releaseBlockAtCleanup;
+	CGRect _activeArea;
 }
 
 /** returns whether or not the item is selected
@@ -58,6 +59,9 @@
  @since v2.1
  */
 @property (nonatomic) BOOL releaseBlockAtCleanup;
+
+/** the active area (relative to the current position) */
+@property (nonatomic,assign) CGRect activeArea;
 
 /** Creates a CCMenuItem with a target/selector.
  target/selector will be implemented using blocks.
@@ -77,9 +81,6 @@
  The block will be "copied".
 */
 -(id) initWithBlock:(void(^)(id sender))block;
-
-/** Returns the outside box in points */
--(CGRect) rect;
 
 /** Activate the item */
 -(void) activate;
