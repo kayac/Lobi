@@ -85,5 +85,13 @@
             </dict>
         </dict>
     </dict>
+    
+    <key>NSMicrophoneUsageDescription</key>
+    <string>実況の音声を録音するため、マイクを利用します。</string>
+    <key>NSCameraUsageDescription</key>
+    <string>撮影又は実況用ワイプのため、カメラを利用します。</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>画像投稿又はプロフィールの画像設定に使用するため、写真を利用します。</string>
+    
 </dict>
 </plist>
