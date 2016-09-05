@@ -153,6 +153,7 @@
 		4983020F19D94F4D00E6B6E5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4983020E19D94F4D00E6B6E5 /* MessageUI.framework */; };
 		4983021119D94F5300E6B6E5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4983021019D94F5300E6B6E5 /* MediaPlayer.framework */; };
 		4983021319D94F5F00E6B6E5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4983021219D94F5F00E6B6E5 /* StoreKit.framework */; };
+		5F8423691D79754C0097637F /* CCFontDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8423681D79754C0097637F /* CCFontDefinition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -448,6 +449,8 @@
 		4983020E19D94F4D00E6B6E5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4983021019D94F5300E6B6E5 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		4983021219D94F5F00E6B6E5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5F8423671D79754C0097637F /* CCFontDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCFontDefinition.h; path = libs/cocos2d/CCFontDefinition.h; sourceTree = "<group>"; };
+		5F8423681D79754C0097637F /* CCFontDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCFontDefinition.m; path = libs/cocos2d/CCFontDefinition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -621,6 +624,8 @@
 				493C531518E2D5FC00C12896 /* CCDrawingPrimitives.m */,
 				493C531718E2D5FC00C12896 /* CCDrawNode.h */,
 				493C531818E2D5FC00C12896 /* CCDrawNode.m */,
+				5F8423671D79754C0097637F /* CCFontDefinition.h */,
+				5F8423681D79754C0097637F /* CCFontDefinition.m */,
 				493C531A18E2D5FC00C12896 /* ccFPSImages.h */,
 				493C531B18E2D5FC00C12896 /* ccFPSImages.m */,
 				493C531D18E2D5FC00C12896 /* CCGLProgram.h */,
@@ -1034,6 +1039,7 @@
 				493C53D418E2D5FF00C12896 /* base64.c in Sources */,
 				493C539918E2D5FE00C12896 /* CCTMXLayer.m in Sources */,
 				493C539C18E2D5FE00C12896 /* CCTMXObjectGroup.m in Sources */,
+				5F8423691D79754C0097637F /* CCFontDefinition.m in Sources */,
 				493C53B918E2D5FF00C12896 /* CCES2Renderer.m in Sources */,
 				493C540518E2D60000C12896 /* CDXMacOSXSupport.m in Sources */,
 				493C538118E2D5FE00C12896 /* CCSpriteBatchNode.m in Sources */,
@@ -1131,7 +1137,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1150,7 +1156,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1160,6 +1166,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -1188,6 +1195,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
