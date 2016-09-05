@@ -33,6 +33,7 @@
 #import "CCES2Renderer.h"
 #import "OpenGL_Internal.h"
 
+
 @implementation CCES2Renderer
 
 @synthesize context=context_;
@@ -42,11 +43,7 @@
 @synthesize msaaFramebuffer=msaaFramebuffer_;
 
 // Create an OpenGL ES 2.0 context
-- (id) initWithDepthFormat:(unsigned int)depthFormat
-           withPixelFormat:(unsigned int)pixelFormat
-            withSharegroup:(EAGLSharegroup*)sharegroup
-         withMultiSampling:(BOOL)multiSampling
-       withNumberOfSamples:(unsigned int)requestedSamples
+- (id) initWithDepthFormat:(unsigned int)depthFormat withPixelFormat:(unsigned int)pixelFormat withSharegroup:(EAGLSharegroup*)sharegroup withMultiSampling:(BOOL) multiSampling withNumberOfSamples:(unsigned int) requestedSamples
 {
     self = [super init];
     if (self)
@@ -92,6 +89,7 @@
 
         CHECK_GL_ERROR();
     }
+
     return self;
 }
 
