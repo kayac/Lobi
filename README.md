@@ -39,7 +39,8 @@ SDKを使用するにはアプリケーションの登録しクライアントID
         - Unity Metal で録画開始時にクラッシュする問題の修正
         - 録画中に警告ログが大量発生する問題の修正
         - サンプルプロジェクトの Xcode8 ビルド対応
-        ※Xcode8 でビルドする際は[iOS10対応について](https://github.com/kayac/Lobi/wiki/LobiSDK-iOS10)をご参照下さい
+        
+※Xcode8 でビルドする際は[iOS10対応について](https://github.com/kayac/Lobi/wiki/LobiSDK-iOS10)をご参照下さい
     
 - v6.4.12 - 2016/8/25 (サポート期限 2017/7/6)
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.12.zip) 
