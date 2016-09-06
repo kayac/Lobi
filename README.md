@@ -33,7 +33,16 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- v6.4.12 - 2016/8/25
+- v6.4.13 - 2016/9/6
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.13.zip) 
+    - iOS 10 対応（Xcode8 でビルドしたアプリを iOS10 で動作させるときに発生する問題の修正）
+        - Unity Metal で録画開始時にクラッシュする問題の修正
+        - 録画中に警告ログが大量発生する問題の修正
+        - サンプルプロジェクトの Xcode8 ビルド対応
+        
+※Xcode8 でビルドする際は[iOS10対応について](https://github.com/kayac/Lobi/wiki/LobiSDK-iOS10)をご参照下さい
+    
+- v6.4.12 - 2016/8/25 (サポート期限 2017/7/6)
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.12.zip) 
     - Android Rec Unity 5.3、5.4の録画対応
     - Android Rec Cocos2d-x v3.9, v3.10, v3.11の録画対応
