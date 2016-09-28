@@ -33,7 +33,11 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- v6.4.14 - 2016/9/28
+- v6.4.15 - 2016/9/28
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.15.zip) 
+    - iOS/Android Cocos2d-x のサンプルプロジェクトの容量を大幅に削減
+        
+- v6.4.14 - 2016/9/28 (サポート期限 2017/7/28)
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.14.zip) 
     - iOS Rec Unity 5.4 対応
         - Metal で録画できない問題の修正
