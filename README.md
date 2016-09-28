@@ -33,7 +33,13 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- v6.4.13 - 2016/9/6
+- v6.4.14 - 2016/9/28
+    [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.14.zip) 
+    - iOS Rec Unity 5.4 対応
+        - Metal で録画できない問題の修正
+        - OpengGL の場合 iPhone 6 Plus で録画時にクラッシュする問題の修正
+
+- v6.4.13 - 2016/9/6 (サポート期限 2017/7/28)
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.13.zip) 
     - iOS 10 対応（Xcode8 でビルドしたアプリを iOS10 で動作させるときに発生する問題の修正）
         - Unity Metal で録画開始時にクラッシュする問題の修正
