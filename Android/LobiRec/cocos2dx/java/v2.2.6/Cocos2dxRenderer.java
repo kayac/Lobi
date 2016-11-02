@@ -28,8 +28,10 @@ import javax.microedition.khronos.opengles.GL10;
 
 import android.app.Activity;
 import android.opengl.GLSurfaceView;
+import android.os.Build;
 
 import com.kayac.lobi.libnakamap.rec.cocos2dx.LobiRecCocos2dx;
+import com.kayac.lobi.libnakamap.rec.nougat.LobiRecNougatCocos2dx;
 
 public class Cocos2dxRenderer implements GLSurfaceView.Renderer {
 	// ===========================================================
@@ -49,6 +51,8 @@ public class Cocos2dxRenderer implements GLSurfaceView.Renderer {
 	private int mScreenWidth;
 	private int mScreenHeight;
 	private Activity mActiviy;
+    
+	private boolean mUseRecAfterNougat;
 
 	// ===========================================================
 	// Constructors
@@ -79,7 +83,12 @@ public class Cocos2dxRenderer implements GLSurfaceView.Renderer {
 	public void onSurfaceCreated(final GL10 pGL10, final EGLConfig pEGLConfig) {
 		Cocos2dxRenderer.nativeInit(this.mScreenWidth, this.mScreenHeight);
 		this.mLastTickInNanoSeconds = System.nanoTime();
-		LobiRecCocos2dx.initCapture(mActiviy, this.mScreenWidth, this.mScreenHeight);
+		mUseRecAfterNougat = LobiRecNougatCocos2dx.shouldUseRecAfterNougat();
+		if (mUseRecAfterNougat) {
+			LobiRecNougatCocos2dx.setup(mActiviy);
+		} else {
+			LobiRecCocos2dx.initCapture(mActiviy, this.mScreenWidth, this.mScreenHeight);
+		}
 	}
 
 	@Override
@@ -93,9 +102,13 @@ public class Cocos2dxRenderer implements GLSurfaceView.Renderer {
 		 * since onDrawFrame() was called by system 60 times per second by default.
 		 */
 		if (sAnimationInterval <= 1.0 / 60 * Cocos2dxRenderer.NANOSECONDSPERSECOND) {
-			LobiRecCocos2dx.cameraPreRender();
-			Cocos2dxRenderer.nativeRender();
-			LobiRecCocos2dx.onEndOfFrame();
+			if (mUseRecAfterNougat) {
+				Cocos2dxRenderer.nativeRender();
+			} else {
+				LobiRecCocos2dx.cameraPreRender();
+				Cocos2dxRenderer.nativeRender();
+				LobiRecCocos2dx.onEndOfFrame();
+			}
 		} else {
 			final long now = System.nanoTime();
 			final long remain = mLastTickInNanoSeconds + Cocos2dxRenderer.sAnimationInterval - now;
@@ -109,9 +122,13 @@ public class Cocos2dxRenderer implements GLSurfaceView.Renderer {
 			 * Render time MUST be counted in, or the FPS will slower than appointed.
 			*/
 			mLastTickInNanoSeconds = System.nanoTime();
-			LobiRecCocos2dx.cameraPreRender();
-			Cocos2dxRenderer.nativeRender();
-			LobiRecCocos2dx.onEndOfFrame();
+			if (mUseRecAfterNougat) {
+				Cocos2dxRenderer.nativeRender();
+			} else {
+				LobiRecCocos2dx.cameraPreRender();
+				Cocos2dxRenderer.nativeRender();
+				LobiRecCocos2dx.onEndOfFrame();
+			}
 		}
 	}
 

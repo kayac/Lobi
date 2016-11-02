@@ -22,6 +22,11 @@
     <string name="lobirec_post_video">發表影片</string>
     <string name="lobirec_posted_successfully">已發表成功</string>
     <string name="lobirec_profile">檔案</string>
+    <string name="lobirec_nougat_error_denied_grant_permission">無法使用錄影所需要的手機相關功能</string>
+    <string name="lobirec_nougat_error_other">錄影處理程序發生錯誤</string>
+    <string name="lobirec_nougat_error_set_media_projection">無法使用畫面的擷取功能</string>
+    <string name="lobirec_nougat_error_use_other_app">其他的應用程式正在使用 Lobi 的錄影功能</string>
+    <string name="lobirec_nougat_note_enable_rec">為了正常使用錄影功能，請更新Lobi到最新版本</string>
     <string name="lobirec_recording_failed">錄影失敗</string>
     <string name="lobirec_share">分享</string>
     <string name="lobirec_share_with_sns">以 sns 分享</string>

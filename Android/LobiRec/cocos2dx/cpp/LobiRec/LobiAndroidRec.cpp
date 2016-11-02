@@ -2,11 +2,12 @@
 #include <cocos2d.h>
 #include <platform/android/jni/JniHelper.h>
 
-#define CLASS_NAME "com/kayac/lobi/libnakamap/rec/cocos2dx/LobiRecCocos2dx"
+#define LOBI_REC_COCOS2DX_CLASS_NAME "com/kayac/lobi/libnakamap/rec/cocos2dx/LobiRecCocos2dx"
+#define LOBI_REC_NOUGAT_COCOS2DX_CLASS_NAME "com/kayac/lobi/libnakamap/rec/nougat/LobiRecNougatCocos2dx"
 
 #define CALL_STATIC_VOID_METHOD(methodName,signature,...)     \
     JniMethodInfo t; \
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, methodName, signature)) { \
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), methodName, signature)) { \
         t.env->CallStaticVoidMethod(t.classID, t.methodID, __VA_ARGS__); \
         t.env->DeleteLocalRef(t.classID); \
     }
@@ -19,18 +20,60 @@ int LobiAndroidRec::NO_ERROR = 0;
 int LobiAndroidRec::ERROR_BAD_ENCODER_CONNECTION = 0x80000001;
 int LobiAndroidRec::ERROR_FAILED_TO_LOAD_NATIVE_LIBRARY = 0x80000002;
 
+bool LobiAndroidRec::sUseRecNougat;
+const char* LobiAndroidRec::sClassName;
+
+void LobiAndroidRec::setting() {
+    sUseRecNougat = shouldUseRecAfterNougat();
+    sClassName = sUseRecNougat ?
+        LOBI_REC_NOUGAT_COCOS2DX_CLASS_NAME : LOBI_REC_COCOS2DX_CLASS_NAME;
+}
+
+bool LobiAndroidRec::useRecNougat() {
+    if (sClassName == NULL) {
+        setting();
+    }
+
+    return sUseRecNougat;
+}
+
+const char* LobiAndroidRec::getClassName() {
+    if (sClassName == NULL) {
+        setting();
+    }
+
+    return sClassName;
+}
+
+bool LobiAndroidRec::shouldUseRecAfterNougat() {
+    bool ret = false;
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, LOBI_REC_NOUGAT_COCOS2DX_CLASS_NAME, "shouldUseRecAfterNougat", "()Z")) {
+        ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
+        t.env->DeleteLocalRef(t.classID);
+    }
+    return ret;
+}
+
 void LobiAndroidRec::setRecorderSwitch(bool turnedOn) {
     CALL_STATIC_VOID_METHOD("setRecorderSwitch", "(Z)V", turnedOn);
 }
 bool LobiAndroidRec::getRecorderSwitch() {
     bool ret = false;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "getRecorderSwitch", "()Z")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "getRecorderSwitch", "()Z")) {
         ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
     return ret;
 }
+
+void LobiAndroidRec::prepareRecorder() {
+    if (useRecNougat()) {
+        CALL_STATIC_VOID_METHOD("prepareRecorder", "()V", NULL);
+    }
+}
+
 void LobiAndroidRec::startCapturing() {
     CALL_STATIC_VOID_METHOD("startRecording", "()V", NULL);
 }
@@ -43,76 +86,135 @@ void LobiAndroidRec::resumeCapturing() {
 void LobiAndroidRec::pauseCapturing() {
     CALL_STATIC_VOID_METHOD("pauseRecording", "()V", NULL);
 }
+void LobiAndroidRec::resetRecorder() {
+    if (useRecNougat()) {
+        CALL_STATIC_VOID_METHOD("resetRecorder", "()V", NULL);
+    }
+}
 bool LobiAndroidRec::isFaceCaptureSupported() {
+    if (useRecNougat()) {
+        return false;
+    }
+
     bool ret = false;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "isFaceCaptureSupported", "()Z")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "isFaceCaptureSupported", "()Z")) {
         ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
     return ret;
 }
 void LobiAndroidRec::setLiveWipeStatus(LiveWipeStatus status) {
+    if (useRecNougat()) {
+        return;
+    }
+
     CALL_STATIC_VOID_METHOD("setLiveWipeStatus", "(I)V", (int)status);
 }
 LobiAndroidRec::LiveWipeStatus LobiAndroidRec::getLiveWipeStatus() {
+    if (useRecNougat()) {
+        return LobiAndroidRec::LIVE_WIPE_STATUS_NONE;
+    }
+
     LiveWipeStatus ret = LobiAndroidRec::LIVE_WIPE_STATUS_NONE;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "getLiveWipeStatus", "()I")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "getLiveWipeStatus", "()I")) {
         ret = (LiveWipeStatus)t.env->CallStaticIntMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
     return ret;
 }
 void LobiAndroidRec::setWipeSquareSize(int wipeSize) {
+    if (useRecNougat()) {
+        return;
+    }
+
     CALL_STATIC_VOID_METHOD("setWipeSquareSize", "(I)V", wipeSize);
 }
 int LobiAndroidRec::getWipeSquareSize() {
+    if (useRecNougat()) {
+        return 0;
+    }
+
     int ret = 0;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "getWipeSquareSize", "()I")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "getWipeSquareSize", "()I")) {
         ret = t.env->CallStaticIntMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
     return ret;
 }
 void LobiAndroidRec::setWipePosition(int x, int y) {
+    if (useRecNougat()) {
+        return;
+    }
+
     CALL_STATIC_VOID_METHOD("setWipePosition", "(II)V", x, y);
 }
 int LobiAndroidRec::getWipePositionX() {
+    if (useRecNougat()) {
+        return 0;
+    }
+
     int ret = 0;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "getWipePositionX", "()I")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "getWipePositionX", "()I")) {
         ret = t.env->CallStaticIntMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
     return ret;
 }
 int LobiAndroidRec::getWipePositionY() {
+    if (useRecNougat()) {
+        return 0;
+    }
+
     int ret = 0;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "getWipePositionY", "()I")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "getWipePositionY", "()I")) {
         ret = t.env->CallStaticIntMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
     return ret;
 }
 void LobiAndroidRec::setMicEnable(bool enabled) {
+    if (useRecNougat()) {
+        return;
+    }
+
     CALL_STATIC_VOID_METHOD("setMicEnable", "(Z)V", enabled);
 }
 void LobiAndroidRec::setMicVolume(double volume) {
+    if (useRecNougat()) {
+        return;
+    }
+
     CALL_STATIC_VOID_METHOD("setMicVolume", "(D)V", volume);
 }
 void LobiAndroidRec::setGameSoundVolume(double volume) {
+    if (useRecNougat()) {
+        return;
+    }
     CALL_STATIC_VOID_METHOD("setGameSoundVolume", "(D)V", volume);
 }
 void LobiAndroidRec::setHideFaceOnPreview(bool hidden) {
+    if (useRecNougat()) {
+        return;
+    }
+
     CALL_STATIC_VOID_METHOD("setHideFaceOnPreview", "(Z)V", hidden);
 }
 void LobiAndroidRec::setPreventSpoiler(bool enabled) {
+    if (useRecNougat()) {
+        return;
+    }
+
     CALL_STATIC_VOID_METHOD("setPreventSpoiler", "(Z)V", enabled);
 }
 void LobiAndroidRec::setCapturePerFrame(int frames) {
+    if (useRecNougat()) {
+        return;
+    }
     CALL_STATIC_VOID_METHOD("setCapturePerFrame", "(I)V", frames);
 }
 void LobiAndroidRec::setStickyRecording(bool enabled) {
@@ -121,7 +223,7 @@ void LobiAndroidRec::setStickyRecording(bool enabled) {
 bool LobiAndroidRec::hasMovie() {
     bool ret = false;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "hasMovie", "()Z")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "hasMovie", "()Z")) {
         ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
@@ -130,7 +232,7 @@ bool LobiAndroidRec::hasMovie() {
 bool LobiAndroidRec::isSupported() {
     bool ret = false;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "isSupported", "()Z")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "isSupported", "()Z")) {
         ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
@@ -139,7 +241,7 @@ bool LobiAndroidRec::isSupported() {
 int LobiAndroidRec::checkError() {
     int ret = NO_ERROR;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "checkError", "()I")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "checkError", "()I")) {
         ret = t.env->CallStaticIntMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
@@ -148,7 +250,7 @@ int LobiAndroidRec::checkError() {
 bool LobiAndroidRec::isCapturing() {
     bool ret = false;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "isCapturing", "()Z")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "isCapturing", "()Z")) {
         ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
@@ -157,7 +259,7 @@ bool LobiAndroidRec::isCapturing() {
 bool LobiAndroidRec::isPaused() {
     bool ret = false;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "isPaused", "()Z")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "isPaused", "()Z")) {
         ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
@@ -186,7 +288,7 @@ void LobiAndroidRec::presentLobiPostWithTitle(
 ) {
     JniMethodInfo t;
     if (JniHelper::getStaticMethodInfo(
-            t, CLASS_NAME, "openPostVideoActivity",
+            t, getClassName(), "openPostVideoActivity",
             "("
             "Ljava/lang/String;"
             "Ljava/lang/String;"
@@ -224,7 +326,7 @@ void LobiAndroidRec::presentLobiPostWithTitle(
 
 void LobiAndroidRec::presentLobiPlay() {
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "openLobiPlayActivity", "()Z")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "openLobiPlayActivity", "()Z")) {
         t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
@@ -233,7 +335,7 @@ void LobiAndroidRec::presentLobiPlay() {
 void LobiAndroidRec::presentLobiPlay(const char* videoId) {
     JniMethodInfo t;
     if (JniHelper::getStaticMethodInfo(
-            t, CLASS_NAME, "openLobiPlayActivity",
+            t, getClassName(), "openLobiPlayActivity",
             "("
             "Ljava/lang/String;"
             ")Z"
@@ -263,7 +365,7 @@ void LobiAndroidRec::presentLobiPlay(
 ) {
     JniMethodInfo t;
     if (JniHelper::getStaticMethodInfo(
-            t, CLASS_NAME, "openLobiPlayActivity",
+            t, getClassName(), "openLobiPlayActivity",
             "("
             "Ljava/lang/String;"
             "Ljava/lang/String;"
@@ -300,7 +402,7 @@ void LobiAndroidRec::presentLobiPlayWithEventFields(
 ) {
     JniMethodInfo t;
     if (JniHelper::getStaticMethodInfo(
-            t, CLASS_NAME, "openLobiPlayActivityWithEventFields",
+            t, getClassName(), "openLobiPlayActivityWithEventFields",
             "("
             "Ljava/lang/String;"
             ")Z"
@@ -335,7 +437,7 @@ void LobiAndroidRec::setLoggingEnable(bool enabled) {
 bool LobiAndroidRec::removeUnretainedVideo() {
     bool ret = false;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "removeUnretainedVideo", "()Z")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "removeUnretainedVideo", "()Z")) {
         ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
@@ -346,7 +448,7 @@ int LobiAndroidRec::uploadQueueCount()
 {
     int ret = 0;
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "uploadQueueCount", "()I")) {
+    if (JniHelper::getStaticMethodInfo(t, getClassName(), "uploadQueueCount", "()I")) {
         ret = t.env->CallStaticIntMethod(t.classID, t.methodID, NULL);
         t.env->DeleteLocalRef(t.classID);
     }
@@ -358,3 +460,9 @@ void LobiAndroidRec::removeAllUploadingVideos()
     CALL_STATIC_VOID_METHOD("removeAllUploadingVideos", "()V", NULL);
 }
 
+void LobiAndroidRec::showDownloadLobiDialog()
+{
+    if (useRecNougat()) {
+        CALL_STATIC_VOID_METHOD("showDownloadLobiDialog", "()V", NULL);
+    }
+}

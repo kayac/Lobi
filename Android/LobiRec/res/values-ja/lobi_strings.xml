@@ -19,6 +19,11 @@
     <string name="lobirec_nicovideo">niconico</string>
     <string name="lobirec_no_description">コメントが入力されていません</string>
     <string name="lobirec_no_title">タイトルが入力されていません</string>
+    <string name="lobirec_nougat_error_denied_grant_permission">録画に必要な端末の機能が使用できませんでした</string>
+    <string name="lobirec_nougat_error_other">録画処理でエラーが発生しました</string>
+    <string name="lobirec_nougat_error_set_media_projection">画面のキャプチャ機能が使用できませんでした</string>
+    <string name="lobirec_nougat_error_use_other_app">他のアプリケーションがLobiの録画機能を使用しています</string>
+    <string name="lobirec_nougat_note_enable_rec">録画機能を使用するには最新のLobiアプリが必要です</string>
     <string name="lobirec_post_video">プレイ動画を投稿</string>
     <string name="lobirec_posted_successfully">投稿が成功しました。</string>
     <string name="lobirec_profile">プロフィール</string>

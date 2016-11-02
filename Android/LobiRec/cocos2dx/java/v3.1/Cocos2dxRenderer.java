@@ -28,10 +28,12 @@ import javax.microedition.khronos.opengles.GL10;
 
 import android.app.Activity;
 import android.opengl.GLSurfaceView;
+import android.os.Build;
 
 import org.cocos2dx.lib.Cocos2dxHelper;
 
 import com.kayac.lobi.libnakamap.rec.cocos2dx.LobiRecCocos2dx;
+import com.kayac.lobi.libnakamap.rec.nougat.LobiRecNougatCocos2dx;
 
 public class Cocos2dxRenderer implements GLSurfaceView.Renderer {
 	// ===========================================================
@@ -51,6 +53,8 @@ public class Cocos2dxRenderer implements GLSurfaceView.Renderer {
 	private int mScreenWidth;
 	private int mScreenHeight;
 	private Activity mActiviy;
+    
+	private boolean mUseRecAfterNougat;
 
 	// ===========================================================
 	// Constructors
@@ -77,7 +81,12 @@ public class Cocos2dxRenderer implements GLSurfaceView.Renderer {
 	public void onSurfaceCreated(final GL10 pGL10, final EGLConfig pEGLConfig) {
 		Cocos2dxRenderer.nativeInit(this.mScreenWidth, this.mScreenHeight);
 		this.mLastTickInNanoSeconds = System.nanoTime();
-		LobiRecCocos2dx.initCapture(mActiviy, this.mScreenWidth, this.mScreenHeight, "3");
+		mUseRecAfterNougat = LobiRecNougatCocos2dx.shouldUseRecAfterNougat();
+		if (mUseRecAfterNougat) {
+			LobiRecNougatCocos2dx.setup(mActiviy);
+		} else {
+			LobiRecCocos2dx.initCapture(mActiviy, this.mScreenWidth, this.mScreenHeight, "3");
+		}
 	}
 
 	@Override
@@ -97,13 +106,15 @@ public class Cocos2dxRenderer implements GLSurfaceView.Renderer {
 		final long interval = nowInNanoSeconds - this.mLastTickInNanoSeconds;
 		*/
 
-		LobiRecCocos2dx.cameraPreRender();
-
-		// should render a frame when onDrawFrame() is called or there is a
-		// "ghost"
-		Cocos2dxRenderer.nativeRender();
-
-		LobiRecCocos2dx.onEndOfFrame();
+		if (mUseRecAfterNougat) {
+			// should render a frame when onDrawFrame() is called or there is a
+			// "ghost"
+			Cocos2dxRenderer.nativeRender();
+		} else {
+			LobiRecCocos2dx.cameraPreRender();
+			Cocos2dxRenderer.nativeRender();
+			LobiRecCocos2dx.onEndOfFrame();
+		}
 
 		/*
 		// fps controlling
