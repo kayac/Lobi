@@ -19,6 +19,11 @@
     <string name="lobirec_nicovideo">niconico</string>
     <string name="lobirec_no_description">no description</string>
     <string name="lobirec_no_title">no title</string>
+    <string name="lobirec_nougat_error_denied_grant_permission">Device functions required for Lobi REC is not available.</string>
+    <string name="lobirec_nougat_error_other">An error has occured during recording process.</string>
+    <string name="lobirec_nougat_error_set_media_projection">Screen capture is not available.</string>
+    <string name="lobirec_nougat_error_use_other_app">Lobi REC has been used by other applications.</string>
+    <string name="lobirec_nougat_note_enable_rec">To use the recording function requires the latest Lobi app.</string>
     <string name="lobirec_post_video">post video</string>
     <string name="lobirec_posted_successfully">posted successfully</string>
     <string name="lobirec_profile">profile</string>

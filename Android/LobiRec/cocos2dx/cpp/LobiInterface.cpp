@@ -3,6 +3,11 @@
 #include "LobiRec/LobiAndroidRec.h"
 #include "LobiCore/LobiAndroidCore.h"
 
+bool LobiInterface::shouldUseRecAfterNougat()
+{
+    return LobiAndroidRec::shouldUseRecAfterNougat();
+}
+
 bool LobiInterface::isSignedIn()
 {
     return LobiAndroidCore::isSignedIn();
@@ -62,6 +67,14 @@ void LobiInterface::sendRanking()
     // unsupported
 }
 
+void LobiInterface::prepare() {
+    if (LobiAndroidRec::isSupported()) {
+        LobiAndroidRec::prepareRecorder();
+    } else {
+        LobiAndroidRec::showDownloadLobiDialog();
+    }
+}
+
 void LobiInterface::recStart()
 {
     if (!LobiAndroidRec::isSupported()) {
@@ -93,6 +106,11 @@ void LobiInterface::recPause()
 void LobiInterface::recResume()
 {
     LobiAndroidRec::resumeCapturing();
+}
+
+void LobiInterface::reset()
+{
+    LobiAndroidRec::resetRecorder();
 }
 
 void LobiInterface::presentShare()
@@ -135,4 +153,14 @@ bool LobiInterface::removeUnretainedVideo()
 int LobiInterface::uploadQueueCount()
 {
     return LobiAndroidRec::uploadQueueCount();
+}
+
+void LobiInterface::setClientId(const char* clientId)
+{
+    LobiAndroidCore::setClientId(clientId);
+}
+
+void LobiInterface::showDownloadLobiDialog()
+{
+    LobiAndroidRec::showDownloadLobiDialog();
 }

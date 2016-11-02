@@ -19,6 +19,11 @@
     <string name="lobirec_nicovideo">니코니코</string>
     <string name="lobirec_no_description">설명이 없습니다</string>
     <string name="lobirec_no_title">제목이 없습니다</string>
+    <string name="lobirec_nougat_error_denied_grant_permission">Device functions required for Lobi REC is not available.</string>
+    <string name="lobirec_nougat_error_other">An error has occured during recording process.</string>
+    <string name="lobirec_nougat_error_set_media_projection">Screen capture is not available.</string>
+    <string name="lobirec_nougat_error_use_other_app">Lobi REC has been used by other applications.</string>
+    <string name="lobirec_nougat_note_enable_rec">To use the recording function requires the latest Lobi app.</string>
     <string name="lobirec_post_video">동영상 게시</string>
     <string name="lobirec_posted_successfully">성공적으로 게시되었습니다</string>
     <string name="lobirec_profile">프로필</string>

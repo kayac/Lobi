@@ -11,6 +11,7 @@
  
 namespace LobiInterface
 {
+    bool shouldUseRecAfterNougat();
     bool isSignedIn();
     void presentProfile();
     void presentChat();
@@ -34,6 +35,7 @@ namespace LobiInterface
     void presentRanking();
     void sendRanking();
      
+    void prepare();
     void recStart();
     void recStop();
     bool isRecording();
@@ -41,6 +43,7 @@ namespace LobiInterface
     void recResume();
     bool isPause(); // deprecated
     bool isPaused();
+    void reset();
  
     void presentShare();
     
@@ -48,6 +51,9 @@ namespace LobiInterface
 
     bool removeUnretainedVideo();
     int  uploadQueueCount();
+    void setClientId(const char* clientId);
+    
+    void  showDownloadLobiDialog();
 }
  
 #endif

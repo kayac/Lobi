@@ -136,3 +136,16 @@ void LobiAndroidCore::bindToLobiAccount()
         CCLOG("failed to find method named bindToLobiAccount");
     }
 }
+
+void LobiAndroidCore::setClientId(const char* clientId)
+{
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, "com/kayac/lobi/sdk/LobiCore", "setClientId", "(Ljava/lang/String;)V")) {
+        jstring jClientId = t.env->NewStringUTF(clientId);
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, jClientId, 0, 0);
+        t.env->DeleteLocalRef(t.classID);
+        t.env->DeleteLocalRef(jClientId);
+    } else {
+        CCLOG("failed to find method named setClientId");
+    }
+}
