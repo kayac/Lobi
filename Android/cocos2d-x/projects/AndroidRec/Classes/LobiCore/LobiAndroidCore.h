@@ -17,6 +17,7 @@ public:
         const char* iv, 
         const void (*callback)(JNIEnv* env, jobject obj, jint code));
     static void bindToLobiAccount();
+    static void setClientId(const char* clientId);
 };
 
 

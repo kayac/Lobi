@@ -22,8 +22,10 @@ public:
     // a selector callback
     void menuCloseCallback(CCObject* pSender);
     
+    void prepareCB(CCObject* pSender);
     void recStartCB(CCObject* pSender);
     void recStopCB(CCObject* pSender);
+    void resetCB(CCObject* pSender);
     void presentShareCB(CCObject* pSender);
 
     void ccTouchesBegan(CCSet *pTouches, CCEvent *pEvent);

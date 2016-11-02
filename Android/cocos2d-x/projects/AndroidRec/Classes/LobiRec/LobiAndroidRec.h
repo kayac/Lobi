@@ -15,12 +15,15 @@ public:
     static int ERROR_BAD_ENCODER_CONNECTION;
     static int ERROR_FAILED_TO_LOAD_NATIVE_LIBRARY;
 
+    static bool shouldUseRecAfterNougat();
     static void setRecorderSwitch(bool turnedOn);
     static bool getRecorderSwitch();
+    static void prepareRecorder();
     static void startCapturing();
     static void stopCapturing();
     static void resumeCapturing();
     static void pauseCapturing();
+    static void resetRecorder();
     static bool isFaceCaptureSupported();
     static void setLiveWipeStatus(LiveWipeStatus status);
     static LiveWipeStatus getLiveWipeStatus();
@@ -67,6 +70,15 @@ public:
     static bool removeUnretainedVideo();
     static int  uploadQueueCount();
     static void removeAllUploadingVideos();
+    static void showDownloadLobiDialog();
+
+private:
+    static bool sUseRecNougat;
+    static const char* sClassName;
+
+    static void setting();
+    static bool useRecNougat();
+    static const char* getClassName();
 };
 
 

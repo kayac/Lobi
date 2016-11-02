@@ -46,6 +46,17 @@ bool HelloWorld::init()
     CCMenuItemFont::setFontName("Arial");
     CCMenuItemFont::setFontSize(16);
     {
+        if (LobiInterface::shouldUseRecAfterNougat())
+        {
+            CCMenuItemFont *prepare = CCMenuItemFont::create("録画準備画面を開く", this, menu_selector(HelloWorld::prepareCB));
+            CCMenuItemFont *reset = CCMenuItemFont::create("状態リセット", this, menu_selector(HelloWorld::resetCB));
+            
+            CCMenu* nougatMenu = CCMenu::create(prepare, reset, NULL);
+            nougatMenu->alignItemsHorizontallyWithPadding(20);
+            nougatMenu->setPosition(ccp(size.width/2, size.height/2 -50));
+            addChild(nougatMenu, 1);
+        }
+        
         CCMenuItemFont *recStart = CCMenuItemFont::create("録画開始", this, menu_selector(HelloWorld::recStartCB));
         CCMenuItemFont *recStop   = CCMenuItemFont::create("録画停止", this, menu_selector(HelloWorld::recStopCB));
         CCMenuItemFont *share   = CCMenuItemFont::create("動画シェア", this, menu_selector(HelloWorld::presentShareCB));
@@ -156,6 +167,16 @@ void HelloWorld::ccTouchesEnded(CCSet *pTouches, CCEvent *pEvent)
     {
         emitter->setPosition( ccpSub(location, pos) );
     }
+}
+
+void HelloWorld::prepareCB(CCObject* pSender)
+{
+    LobiInterface::prepare();
+}
+
+void HelloWorld::resetCB(CCObject* pSender)
+{
+    LobiInterface::reset();
 }
 
 void HelloWorld::recStartCB(CCObject* pSender)
