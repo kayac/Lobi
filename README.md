@@ -33,13 +33,13 @@ SDKを使用するにはアプリケーションの登録しクライアントID
 
 リリースノート
 ----------------------------
-- v6.4.16 - 2016/11/2
+- v6.4.16 - 2016/11/2 (サポート期限 2017/9/2)
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.16.zip)
 	- Android Rec SDKをAndroid 7.0以上に対応。対応させる場合、追加の組み込みが必要になります。以下をご参照ください。
 		- [Android Unity Lobi Rec SDK 導入手順書](https://github.com/kayac/Lobi/wiki/Android-Implement-LobiRecSDK-Unity)
 		- [Android Cocos2d-x Lobi Rec SDK 導入手書](https://github.com/kayac/Lobi/wiki/Android-implement-LobiRecSDK-Cocos2d-x)
 	
-- v6.4.15 - 2016/9/28
+- v6.4.15 - 2016/9/28 (サポート期限 2017/7/28)
     [ダウンロード](https://github.com/kayac/Lobi/archive/v6.4.15.zip) 
     - iOS/Android Cocos2d-x のサンプルプロジェクトの容量を大幅に削減
         
