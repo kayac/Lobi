@@ -19,6 +19,7 @@ public:
     static void setRecorderSwitch(bool turnedOn);
     static bool getRecorderSwitch();
     static void prepareRecorder();
+    static bool isPrepareRecording();
     static void startCapturing();
     static void stopCapturing();
     static void resumeCapturing();
