@@ -74,6 +74,18 @@ void LobiAndroidRec::prepareRecorder() {
     }
 }
 
+bool LobiAndroidRec::isPrepareRecording() {
+    bool ret = false;
+    if (useRecNougat()) {
+        JniMethodInfo t;
+        if (JniHelper::getStaticMethodInfo(t, getClassName(), "isPrepareRecording", "()Z")) {
+            ret = t.env->CallStaticBooleanMethod(t.classID, t.methodID, NULL);
+            t.env->DeleteLocalRef(t.classID);
+        }
+    }
+    return ret;
+}
+
 void LobiAndroidRec::startCapturing() {
     CALL_STATIC_VOID_METHOD("startRecording", "()V", NULL);
 }
@@ -423,6 +435,9 @@ void LobiAndroidRec::presentLobiPlayWithEventFields(
 }
 
 void LobiAndroidRec::initOpenSLAudio(int sampleRate) {
+    if (useRecNougat()) {
+        return;
+    }
     CALL_STATIC_VOID_METHOD("initOpenSLAudio", "(I)V", sampleRate);
 }
 
