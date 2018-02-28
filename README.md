@@ -3,7 +3,7 @@ Lobi
 
 Lobi REC SDK・Ranking SDKサービス終了のご案内
 -----------
-本日、2018年2月28日をもって、Lobi REC SDK・Ranking SDKのサービスを終了いたしました。
+2018年2月28日をもって、Lobi REC SDK・Ranking SDKのサービスを終了いたしました。
 
 これまで約4年半の長きにわたって、Lobi REC SDK・Ranking SDKをご支援・ご愛顧いただき、誠にありがとうございました。
 
